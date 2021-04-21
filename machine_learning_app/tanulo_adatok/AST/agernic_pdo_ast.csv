@@ -1,0 +1,1 @@
+program expressionstatement assign variable users_name call propertylookup variable pdo identifier prepare string 'SELECT * FROM employees WHERE name = :name' expressionstatement call propertylookup variable users_name identifier execute array entry string 'name' variable name foreach variable users_name variable row block noop commentline commentline^

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainController">
+   <children>
+      <Label layoutX="23.0" layoutY="23.0" />
+      <TextArea fx:id="phpcode" layoutX="23.0" layoutY="23.0" prefHeight="350.0" prefWidth="286.0" promptText="php code" />
+      <Button fx:id="button1" layoutX="377.0" layoutY="67.0" mnemonicParsing="false" onAction="#showResult" text="Kész" />
+   </children>
+</AnchorPane>

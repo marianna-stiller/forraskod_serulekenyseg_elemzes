@@ -1,0 +1,543 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 7,
+      "column": 0,
+      "offset": 191
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 32,
+          "offset": 38
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 32,
+            "offset": 38
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 14,
+              "offset": 20
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 0,
+                "offset": 6
+              },
+              "end": {
+                "line": 2,
+                "column": 7,
+                "offset": 13
+              }
+            },
+            "name": "mysqli",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 9,
+                "offset": 15
+              },
+              "end": {
+                "line": 2,
+                "column": 14,
+                "offset": 20
+              }
+            },
+            "name": "query"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "string",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 15,
+                "offset": 21
+              },
+              "end": {
+                "line": 2,
+                "column": 30,
+                "offset": 36
+              }
+            },
+            "value": "SET NAMES gbk",
+            "raw": "'SET NAMES gbk'",
+            "unicode": false,
+            "isDoubleQuote": false
+          }
+        ]
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 39
+        },
+        "end": {
+          "line": 3,
+          "column": 70,
+          "offset": 109
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 0,
+            "offset": 39
+          },
+          "end": {
+            "line": 3,
+            "column": 70,
+            "offset": 109
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 39
+            },
+            "end": {
+              "line": 3,
+              "column": 5,
+              "offset": 44
+            }
+          },
+          "name": "stmt",
+          "curly": false
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 8,
+              "offset": 47
+            },
+            "end": {
+              "line": 3,
+              "column": 69,
+              "offset": 108
+            }
+          },
+          "what": {
+            "kind": "propertylookup",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 8,
+                "offset": 47
+              },
+              "end": {
+                "line": 3,
+                "column": 24,
+                "offset": 63
+              }
+            },
+            "what": {
+              "kind": "variable",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 8,
+                  "offset": 47
+                },
+                "end": {
+                  "line": 3,
+                  "column": 15,
+                  "offset": 54
+                }
+              },
+              "name": "mysqli",
+              "curly": false
+            },
+            "offset": {
+              "kind": "identifier",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 17,
+                  "offset": 56
+                },
+                "end": {
+                  "line": 3,
+                  "column": 24,
+                  "offset": 63
+                }
+              },
+              "name": "prepare"
+            }
+          },
+          "arguments": [
+            {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 25,
+                  "offset": 64
+                },
+                "end": {
+                  "line": 3,
+                  "column": 68,
+                  "offset": 107
+                }
+              },
+              "value": "SELECT * FROM test WHERE name = ? LIMIT 1",
+              "raw": "'SELECT * FROM test WHERE name = ? LIMIT 1'",
+              "unicode": false,
+              "isDoubleQuote": false
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 110
+        },
+        "end": {
+          "line": 4,
+          "column": 30,
+          "offset": 140
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 4,
+            "column": 0,
+            "offset": 110
+          },
+          "end": {
+            "line": 4,
+            "column": 30,
+            "offset": 140
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 110
+            },
+            "end": {
+              "line": 4,
+              "column": 6,
+              "offset": 116
+            }
+          },
+          "name": "param",
+          "curly": false
+        },
+        "right": {
+          "kind": "string",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 4,
+              "column": 9,
+              "offset": 119
+            },
+            "end": {
+              "line": 4,
+              "column": 29,
+              "offset": 139
+            }
+          },
+          "value": "¿' OR 1=1 /*",
+          "raw": "\"\\xbf\\x27 OR 1=1 /*\"",
+          "unicode": false,
+          "isDoubleQuote": true
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 141
+        },
+        "end": {
+          "line": 5,
+          "column": 31,
+          "offset": 172
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 5,
+            "column": 0,
+            "offset": 141
+          },
+          "end": {
+            "line": 5,
+            "column": 31,
+            "offset": 172
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 141
+            },
+            "end": {
+              "line": 5,
+              "column": 17,
+              "offset": 158
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 0,
+                "offset": 141
+              },
+              "end": {
+                "line": 5,
+                "column": 5,
+                "offset": 146
+              }
+            },
+            "name": "stmt",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 7,
+                "offset": 148
+              },
+              "end": {
+                "line": 5,
+                "column": 17,
+                "offset": 158
+              }
+            },
+            "name": "bind_param"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "string",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 18,
+                "offset": 159
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 162
+              }
+            },
+            "value": "s",
+            "raw": "'s'",
+            "unicode": false,
+            "isDoubleQuote": false
+          },
+          {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 23,
+                "offset": 164
+              },
+              "end": {
+                "line": 5,
+                "column": 29,
+                "offset": 170
+              }
+            },
+            "name": "param",
+            "curly": false
+          }
+        ]
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 6,
+          "column": 0,
+          "offset": 173
+        },
+        "end": {
+          "line": 6,
+          "column": 17,
+          "offset": 190
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 6,
+            "column": 0,
+            "offset": 173
+          },
+          "end": {
+            "line": 6,
+            "column": 17,
+            "offset": 190
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 173
+            },
+            "end": {
+              "line": 6,
+              "column": 14,
+              "offset": 187
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 6,
+                "column": 0,
+                "offset": 173
+              },
+              "end": {
+                "line": 6,
+                "column": 5,
+                "offset": 178
+              }
+            },
+            "name": "stmt",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 6,
+                "column": 7,
+                "offset": 180
+              },
+              "end": {
+                "line": 6,
+                "column": 14,
+                "offset": 187
+              }
+            },
+            "name": "execute"
+          }
+        },
+        "arguments": []
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

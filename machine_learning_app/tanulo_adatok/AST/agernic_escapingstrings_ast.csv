@@ -1,0 +1,1 @@
+program expressionstatement assign variable user_name call name mysqli_real_escape_string variable con offsetlookup variable _POST string \user_name\ expressionstatement assign variable password call name mysqli_real_escape_string variable con offsetlookup variable _POST string \password\ expressionstatement call name mysqli_close variable con^

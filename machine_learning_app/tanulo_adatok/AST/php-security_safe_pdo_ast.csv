@@ -1,0 +1,1 @@
+program expressionstatement assign variable query call propertylookup variable con identifier prepare string \SELECT * FROM users WHERE email = :email \ expressionstatement call propertylookup variable query identifier execute array entry string 'email' variable email^

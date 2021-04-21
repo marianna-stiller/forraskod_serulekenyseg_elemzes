@@ -1,0 +1,1 @@
+program expressionstatement assign variable stmt call name odbc_prepare variable conn string 'SELECT * FROM users WHERE email = ?' expressionstatement assign variable success call name odbc_execute variable stmt array entry variable email^

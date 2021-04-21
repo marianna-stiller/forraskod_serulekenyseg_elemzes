@@ -1,0 +1,1 @@
+program expressionstatement assign variable id offsetlookup variable _GET string 'id' expressionstatement assign variable delete_query bin string 'DELETE FROM students where id = ' variable id expressionstatement assign variable result call propertylookup variable pdo identifier exec variable delete_query^

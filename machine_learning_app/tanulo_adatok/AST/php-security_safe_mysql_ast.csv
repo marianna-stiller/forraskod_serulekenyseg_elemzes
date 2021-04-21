@@ -1,0 +1,1 @@
+program expressionstatement assign variable email call propertylookup variable mysqli identifier real_escape_string variable email expressionstatement call propertylookup variable con identifier query encapsed encapsedpart string SELECT * FROM users WHERE email = '( encapsedpart variable email encapsedpart string )' \SELECT * FROM users WHERE email = '($email)'\^

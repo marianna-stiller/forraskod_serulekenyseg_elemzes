@@ -1,0 +1,1 @@
+program expressionstatement assign variable ids call name join string '' variable ids expressionstatement call propertylookup variable dbConn identifier GetAll encapsed encapsedpart string SELECT * FROM campaigns WHERE id IN ( encapsedpart variable ids encapsedpart string ) \SELECT * FROM campaigns WHERE id IN ($ids)\^

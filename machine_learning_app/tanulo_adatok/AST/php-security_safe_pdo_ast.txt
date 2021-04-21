@@ -1,0 +1,320 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 4,
+      "column": 0,
+      "offset": 116
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 68,
+          "offset": 74
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 68,
+            "offset": 74
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 12
+            }
+          },
+          "name": "query",
+          "curly": false
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 9,
+              "offset": 15
+            },
+            "end": {
+              "line": 2,
+              "column": 67,
+              "offset": 73
+            }
+          },
+          "what": {
+            "kind": "propertylookup",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 9,
+                "offset": 15
+              },
+              "end": {
+                "line": 2,
+                "column": 22,
+                "offset": 28
+              }
+            },
+            "what": {
+              "kind": "variable",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 9,
+                  "offset": 15
+                },
+                "end": {
+                  "line": 2,
+                  "column": 13,
+                  "offset": 19
+                }
+              },
+              "name": "con",
+              "curly": false
+            },
+            "offset": {
+              "kind": "identifier",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 15,
+                  "offset": 21
+                },
+                "end": {
+                  "line": 2,
+                  "column": 22,
+                  "offset": 28
+                }
+              },
+              "name": "prepare"
+            }
+          },
+          "arguments": [
+            {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 23,
+                  "offset": 29
+                },
+                "end": {
+                  "line": 2,
+                  "column": 66,
+                  "offset": 72
+                }
+              },
+              "value": "SELECT * FROM users WHERE email = :email ",
+              "raw": "\"SELECT * FROM users WHERE email = :email \"",
+              "unicode": false,
+              "isDoubleQuote": true
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 75
+        },
+        "end": {
+          "line": 3,
+          "column": 40,
+          "offset": 115
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 0,
+            "offset": 75
+          },
+          "end": {
+            "line": 3,
+            "column": 40,
+            "offset": 115
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 75
+            },
+            "end": {
+              "line": 3,
+              "column": 15,
+              "offset": 90
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 0,
+                "offset": 75
+              },
+              "end": {
+                "line": 3,
+                "column": 6,
+                "offset": 81
+              }
+            },
+            "name": "query",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 8,
+                "offset": 83
+              },
+              "end": {
+                "line": 3,
+                "column": 15,
+                "offset": 90
+              }
+            },
+            "name": "execute"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "array",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 16,
+                "offset": 91
+              },
+              "end": {
+                "line": 3,
+                "column": 38,
+                "offset": 113
+              }
+            },
+            "items": [
+              {
+                "kind": "entry",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 3,
+                    "column": 22,
+                    "offset": 97
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 37,
+                    "offset": 112
+                  }
+                },
+                "key": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 3,
+                      "column": 22,
+                      "offset": 97
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 29,
+                      "offset": 104
+                    }
+                  },
+                  "value": "email",
+                  "raw": "'email'",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "value": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 3,
+                      "column": 31,
+                      "offset": 106
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 37,
+                      "offset": 112
+                    }
+                  },
+                  "name": "email",
+                  "curly": false
+                },
+                "byRef": false,
+                "unpack": false
+              }
+            ],
+            "shortForm": false
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

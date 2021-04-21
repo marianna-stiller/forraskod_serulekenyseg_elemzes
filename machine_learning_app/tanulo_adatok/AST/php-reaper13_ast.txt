@@ -1,0 +1,1270 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 31,
+      "column": 0,
+      "offset": 647
+    }
+  },
+  "children": [
+    {
+      "kind": "class",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 7
+        },
+        "end": {
+          "line": 30,
+          "column": 1,
+          "offset": 646
+        }
+      },
+      "name": {
+        "kind": "identifier",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 6,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 32,
+            "offset": 39
+          }
+        },
+        "name": "InterpolatingClassConstant"
+      },
+      "isAnonymous": false,
+      "extends": null,
+      "implements": null,
+      "body": [
+        {
+          "kind": "classconstant",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 10,
+              "offset": 52
+            },
+            "end": {
+              "line": 5,
+              "column": 21,
+              "offset": 63
+            }
+          },
+          "constants": [
+            {
+              "kind": "constant",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 5,
+                  "column": 10,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 5,
+                  "column": 21,
+                  "offset": 63
+                }
+              },
+              "name": {
+                "kind": "identifier",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 10,
+                    "offset": 52
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 15,
+                    "offset": 57
+                  }
+                },
+                "name": "limit"
+              },
+              "value": {
+                "kind": "number",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 18,
+                    "offset": 60
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 21,
+                    "offset": 63
+                  }
+                },
+                "value": "100"
+              }
+            }
+          ],
+          "visibility": ""
+        },
+        {
+          "kind": "propertystatement",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 7,
+              "column": 11,
+              "offset": 77
+            },
+            "end": {
+              "line": 7,
+              "column": 23,
+              "offset": 89
+            }
+          },
+          "properties": [
+            {
+              "kind": "property",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 7,
+                  "column": 11,
+                  "offset": 77
+                },
+                "end": {
+                  "line": 7,
+                  "column": 23,
+                  "offset": 89
+                }
+              },
+              "name": {
+                "kind": "identifier",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 7,
+                    "column": 11,
+                    "offset": 77
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 17,
+                    "offset": 83
+                  }
+                },
+                "name": "limit"
+              },
+              "value": {
+                "kind": "number",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 7,
+                    "column": 20,
+                    "offset": 86
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 23,
+                    "offset": 89
+                  }
+                },
+                "value": "100"
+              },
+              "nullable": false,
+              "type": null
+            }
+          ],
+          "visibility": "public",
+          "isStatic": false
+        },
+        {
+          "kind": "method",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 9,
+              "column": 4,
+              "offset": 96
+            },
+            "end": {
+              "line": 14,
+              "column": 5,
+              "offset": 267
+            }
+          },
+          "name": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 9,
+                "column": 13,
+                "offset": 105
+              },
+              "end": {
+                "line": 9,
+                "column": 50,
+                "offset": 142
+              }
+            },
+            "name": "testWithConstantInFirstArgumentIsSafe"
+          },
+          "arguments": [],
+          "byref": false,
+          "type": null,
+          "nullable": false,
+          "body": {
+            "kind": "block",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 9,
+                "column": 53,
+                "offset": 145
+              },
+              "end": {
+                "line": 14,
+                "column": 5,
+                "offset": 267
+              }
+            },
+            "children": [
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 11,
+                    "column": 8,
+                    "offset": 156
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 86,
+                    "offset": 234
+                  }
+                },
+                "expression": {
+                  "kind": "assign",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 11,
+                      "column": 8,
+                      "offset": 156
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 86,
+                      "offset": 234
+                    }
+                  },
+                  "left": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 11,
+                        "column": 8,
+                        "offset": 156
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 17,
+                        "offset": 165
+                      }
+                    },
+                    "name": "projects",
+                    "curly": false
+                  },
+                  "right": {
+                    "kind": "call",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 11,
+                        "column": 20,
+                        "offset": 168
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 85,
+                        "offset": 233
+                      }
+                    },
+                    "what": {
+                      "kind": "propertylookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 11,
+                          "column": 20,
+                          "offset": 168
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 41,
+                          "offset": 189
+                        }
+                      },
+                      "what": {
+                        "kind": "propertylookup",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 11,
+                            "column": 20,
+                            "offset": 168
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 33,
+                            "offset": 181
+                          }
+                        },
+                        "what": {
+                          "kind": "variable",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 11,
+                              "column": 20,
+                              "offset": 168
+                            },
+                            "end": {
+                              "line": 11,
+                              "column": 25,
+                              "offset": 173
+                            }
+                          },
+                          "name": "this",
+                          "curly": false
+                        },
+                        "offset": {
+                          "kind": "identifier",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 11,
+                              "column": 27,
+                              "offset": 175
+                            },
+                            "end": {
+                              "line": 11,
+                              "column": 33,
+                              "offset": 181
+                            }
+                          },
+                          "name": "dbConn"
+                        }
+                      },
+                      "offset": {
+                        "kind": "identifier",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 11,
+                            "column": 35,
+                            "offset": 183
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 41,
+                            "offset": 189
+                          }
+                        },
+                        "name": "GetAll"
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "kind": "bin",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 11,
+                            "column": 42,
+                            "offset": 190
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 84,
+                            "offset": 232
+                          }
+                        },
+                        "type": ".",
+                        "left": {
+                          "kind": "string",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 11,
+                              "column": 42,
+                              "offset": 190
+                            },
+                            "end": {
+                              "line": 11,
+                              "column": 70,
+                              "offset": 218
+                            }
+                          },
+                          "value": "SELECT * from users LIMIT ",
+                          "raw": "'SELECT * from users LIMIT '",
+                          "unicode": false,
+                          "isDoubleQuote": false
+                        },
+                        "right": {
+                          "kind": "staticlookup",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 11,
+                              "column": 73,
+                              "offset": 221
+                            },
+                            "end": {
+                              "line": 11,
+                              "column": 84,
+                              "offset": 232
+                            }
+                          },
+                          "what": {
+                            "kind": "selfreference",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 11,
+                                "column": 73,
+                                "offset": 221
+                              },
+                              "end": {
+                                "line": 11,
+                                "column": 77,
+                                "offset": 225
+                              }
+                            },
+                            "raw": "self"
+                          },
+                          "offset": {
+                            "kind": "identifier",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 11,
+                                "column": 79,
+                                "offset": 227
+                              },
+                              "end": {
+                                "line": 11,
+                                "column": 84,
+                                "offset": 232
+                              }
+                            },
+                            "name": "limit"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "operator": "="
+                }
+              },
+              {
+                "kind": "return",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 13,
+                    "column": 8,
+                    "offset": 244
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 25,
+                    "offset": 261
+                  }
+                },
+                "expr": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 13,
+                      "column": 15,
+                      "offset": 251
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 24,
+                      "offset": 260
+                    }
+                  },
+                  "name": "projects",
+                  "curly": false
+                }
+              }
+            ]
+          },
+          "isAbstract": false,
+          "isFinal": false,
+          "visibility": "",
+          "isStatic": false
+        },
+        {
+          "kind": "method",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 16,
+              "column": 4,
+              "offset": 273
+            },
+            "end": {
+              "line": 22,
+              "column": 5,
+              "offset": 479
+            }
+          },
+          "name": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 16,
+                "column": 13,
+                "offset": 282
+              },
+              "end": {
+                "line": 16,
+                "column": 60,
+                "offset": 329
+              }
+            },
+            "name": "testWithConstantInVariableAsFirstArgumentIsSafe"
+          },
+          "arguments": [],
+          "byref": false,
+          "type": null,
+          "nullable": false,
+          "body": {
+            "kind": "block",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 16,
+                "column": 63,
+                "offset": 332
+              },
+              "end": {
+                "line": 22,
+                "column": 5,
+                "offset": 479
+              }
+            },
+            "children": [
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 18,
+                    "column": 8,
+                    "offset": 343
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 60,
+                    "offset": 395
+                  }
+                },
+                "expression": {
+                  "kind": "assign",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 18,
+                      "column": 8,
+                      "offset": 343
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 60,
+                      "offset": 395
+                    }
+                  },
+                  "left": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 18,
+                        "column": 8,
+                        "offset": 343
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 14,
+                        "offset": 349
+                      }
+                    },
+                    "name": "query",
+                    "curly": false
+                  },
+                  "right": {
+                    "kind": "bin",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 18,
+                        "column": 17,
+                        "offset": 352
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 59,
+                        "offset": 394
+                      }
+                    },
+                    "type": ".",
+                    "left": {
+                      "kind": "string",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 18,
+                          "column": 17,
+                          "offset": 352
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 45,
+                          "offset": 380
+                        }
+                      },
+                      "value": "SELECT * from users LIMIT ",
+                      "raw": "'SELECT * from users LIMIT '",
+                      "unicode": false,
+                      "isDoubleQuote": false
+                    },
+                    "right": {
+                      "kind": "staticlookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 18,
+                          "column": 48,
+                          "offset": 383
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 59,
+                          "offset": 394
+                        }
+                      },
+                      "what": {
+                        "kind": "selfreference",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 18,
+                            "column": 48,
+                            "offset": 383
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 52,
+                            "offset": 387
+                          }
+                        },
+                        "raw": "self"
+                      },
+                      "offset": {
+                        "kind": "identifier",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 18,
+                            "column": 54,
+                            "offset": 389
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 59,
+                            "offset": 394
+                          }
+                        },
+                        "name": "limit"
+                      }
+                    }
+                  },
+                  "operator": "="
+                }
+              },
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 19,
+                    "column": 8,
+                    "offset": 404
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 50,
+                    "offset": 446
+                  }
+                },
+                "expression": {
+                  "kind": "assign",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 19,
+                      "column": 8,
+                      "offset": 404
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 50,
+                      "offset": 446
+                    }
+                  },
+                  "left": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 19,
+                        "column": 8,
+                        "offset": 404
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 17,
+                        "offset": 413
+                      }
+                    },
+                    "name": "projects",
+                    "curly": false
+                  },
+                  "right": {
+                    "kind": "call",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 19,
+                        "column": 20,
+                        "offset": 416
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 49,
+                        "offset": 445
+                      }
+                    },
+                    "what": {
+                      "kind": "propertylookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 19,
+                          "column": 20,
+                          "offset": 416
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 41,
+                          "offset": 437
+                        }
+                      },
+                      "what": {
+                        "kind": "propertylookup",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 19,
+                            "column": 20,
+                            "offset": 416
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 33,
+                            "offset": 429
+                          }
+                        },
+                        "what": {
+                          "kind": "variable",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 19,
+                              "column": 20,
+                              "offset": 416
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 25,
+                              "offset": 421
+                            }
+                          },
+                          "name": "this",
+                          "curly": false
+                        },
+                        "offset": {
+                          "kind": "identifier",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 19,
+                              "column": 27,
+                              "offset": 423
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 33,
+                              "offset": 429
+                            }
+                          },
+                          "name": "dbConn"
+                        }
+                      },
+                      "offset": {
+                        "kind": "identifier",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 19,
+                            "column": 35,
+                            "offset": 431
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 41,
+                            "offset": 437
+                          }
+                        },
+                        "name": "GetAll"
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "kind": "variable",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 19,
+                            "column": 42,
+                            "offset": 438
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 48,
+                            "offset": 444
+                          }
+                        },
+                        "name": "query",
+                        "curly": false
+                      }
+                    ]
+                  },
+                  "operator": "="
+                }
+              },
+              {
+                "kind": "return",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 21,
+                    "column": 8,
+                    "offset": 456
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 25,
+                    "offset": 473
+                  }
+                },
+                "expr": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 21,
+                      "column": 15,
+                      "offset": 463
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 24,
+                      "offset": 472
+                    }
+                  },
+                  "name": "projects",
+                  "curly": false
+                }
+              }
+            ]
+          },
+          "isAbstract": false,
+          "isFinal": false,
+          "visibility": "",
+          "isStatic": false
+        },
+        {
+          "kind": "method",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 24,
+              "column": 4,
+              "offset": 485
+            },
+            "end": {
+              "line": 29,
+              "column": 5,
+              "offset": 644
+            }
+          },
+          "name": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 24,
+                "column": 13,
+                "offset": 494
+              },
+              "end": {
+                "line": 24,
+                "column": 37,
+                "offset": 518
+              }
+            },
+            "name": "testWithVariableIsUnsafe"
+          },
+          "arguments": [],
+          "byref": false,
+          "type": null,
+          "nullable": false,
+          "body": {
+            "kind": "block",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 24,
+                "column": 40,
+                "offset": 521
+              },
+              "end": {
+                "line": 29,
+                "column": 5,
+                "offset": 644
+              }
+            },
+            "children": [
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 26,
+                    "column": 8,
+                    "offset": 532
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 87,
+                    "offset": 611
+                  }
+                },
+                "expression": {
+                  "kind": "assign",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 26,
+                      "column": 8,
+                      "offset": 532
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 87,
+                      "offset": 611
+                    }
+                  },
+                  "left": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 26,
+                        "column": 8,
+                        "offset": 532
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 17,
+                        "offset": 541
+                      }
+                    },
+                    "name": "projects",
+                    "curly": false
+                  },
+                  "right": {
+                    "kind": "call",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 26,
+                        "column": 20,
+                        "offset": 544
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 86,
+                        "offset": 610
+                      }
+                    },
+                    "what": {
+                      "kind": "propertylookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 26,
+                          "column": 20,
+                          "offset": 544
+                        },
+                        "end": {
+                          "line": 26,
+                          "column": 41,
+                          "offset": 565
+                        }
+                      },
+                      "what": {
+                        "kind": "propertylookup",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 26,
+                            "column": 20,
+                            "offset": 544
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 33,
+                            "offset": 557
+                          }
+                        },
+                        "what": {
+                          "kind": "variable",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 26,
+                              "column": 20,
+                              "offset": 544
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 25,
+                              "offset": 549
+                            }
+                          },
+                          "name": "this",
+                          "curly": false
+                        },
+                        "offset": {
+                          "kind": "identifier",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 26,
+                              "column": 27,
+                              "offset": 551
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 33,
+                              "offset": 557
+                            }
+                          },
+                          "name": "dbConn"
+                        }
+                      },
+                      "offset": {
+                        "kind": "identifier",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 26,
+                            "column": 35,
+                            "offset": 559
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 41,
+                            "offset": 565
+                          }
+                        },
+                        "name": "GetAll"
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "kind": "bin",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 26,
+                            "column": 42,
+                            "offset": 566
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 85,
+                            "offset": 609
+                          }
+                        },
+                        "type": ".",
+                        "left": {
+                          "kind": "string",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 26,
+                              "column": 42,
+                              "offset": 566
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 70,
+                              "offset": 594
+                            }
+                          },
+                          "value": "SELECT * from users LIMIT ",
+                          "raw": "'SELECT * from users LIMIT '",
+                          "unicode": false,
+                          "isDoubleQuote": false
+                        },
+                        "right": {
+                          "kind": "propertylookup",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 26,
+                              "column": 73,
+                              "offset": 597
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 85,
+                              "offset": 609
+                            }
+                          },
+                          "what": {
+                            "kind": "variable",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 26,
+                                "column": 73,
+                                "offset": 597
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 78,
+                                "offset": 602
+                              }
+                            },
+                            "name": "this",
+                            "curly": false
+                          },
+                          "offset": {
+                            "kind": "identifier",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 26,
+                                "column": 80,
+                                "offset": 604
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 85,
+                                "offset": 609
+                              }
+                            },
+                            "name": "limit"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "operator": "="
+                }
+              },
+              {
+                "kind": "return",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 28,
+                    "column": 8,
+                    "offset": 621
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 25,
+                    "offset": 638
+                  }
+                },
+                "expr": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 28,
+                      "column": 15,
+                      "offset": 628
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 24,
+                      "offset": 637
+                    }
+                  },
+                  "name": "projects",
+                  "curly": false
+                }
+              }
+            ]
+          },
+          "isAbstract": false,
+          "isFinal": false,
+          "visibility": "",
+          "isStatic": false
+        }
+      ],
+      "isAbstract": false,
+      "isFinal": false
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

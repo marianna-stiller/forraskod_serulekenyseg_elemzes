@@ -1,0 +1,378 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0,
+      "offset": 124
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 117,
+          "offset": 123
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 117,
+            "offset": 123
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 15,
+              "offset": 21
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 0,
+                "offset": 6
+              },
+              "end": {
+                "line": 2,
+                "column": 7,
+                "offset": 13
+              }
+            },
+            "name": "dbConn",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 9,
+                "offset": 15
+              },
+              "end": {
+                "line": 2,
+                "column": 15,
+                "offset": 21
+              }
+            },
+            "name": "GetAll"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "bin",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 16,
+                "offset": 22
+              },
+              "end": {
+                "line": 2,
+                "column": 91,
+                "offset": 97
+              }
+            },
+            "type": ".",
+            "left": {
+              "kind": "bin",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 16,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 2,
+                  "column": 85,
+                  "offset": 91
+                }
+              },
+              "type": ".",
+              "left": {
+                "kind": "string",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 16,
+                    "offset": 22
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 65,
+                    "offset": 71
+                  }
+                },
+                "value": "SELECT * FROM campaigns WHERE FIND_IN_SET (id, ",
+                "raw": "'SELECT * FROM campaigns WHERE FIND_IN_SET (id, '",
+                "unicode": false,
+                "isDoubleQuote": false
+              },
+              "right": {
+                "kind": "call",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 68,
+                    "offset": 74
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 85,
+                    "offset": 91
+                  }
+                },
+                "what": {
+                  "kind": "propertylookup",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 2,
+                      "column": 68,
+                      "offset": 74
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 82,
+                      "offset": 88
+                    }
+                  },
+                  "what": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 2,
+                        "column": 68,
+                        "offset": 74
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 75,
+                        "offset": 81
+                      }
+                    },
+                    "name": "dbConn",
+                    "curly": false
+                  },
+                  "offset": {
+                    "kind": "identifier",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 2,
+                        "column": 77,
+                        "offset": 83
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 82,
+                        "offset": 88
+                      }
+                    },
+                    "name": "Param"
+                  }
+                },
+                "arguments": [
+                  {
+                    "kind": "name",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 2,
+                        "column": 83,
+                        "offset": 89
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 84,
+                        "offset": 90
+                      }
+                    },
+                    "resolution": "uqn",
+                    "name": "”"
+                  }
+                ]
+              }
+            },
+            "right": {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 88,
+                  "offset": 94
+                },
+                "end": {
+                  "line": 2,
+                  "column": 91,
+                  "offset": 97
+                }
+              },
+              "value": ")",
+              "raw": "')'",
+              "unicode": false,
+              "isDoubleQuote": false
+            }
+          },
+          {
+            "kind": "array",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 93,
+                "offset": 99
+              },
+              "end": {
+                "line": 2,
+                "column": 115,
+                "offset": 121
+              }
+            },
+            "items": [
+              {
+                "kind": "entry",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 99,
+                    "offset": 105
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 114,
+                    "offset": 120
+                  }
+                },
+                "key": null,
+                "value": {
+                  "kind": "call",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 2,
+                      "column": 99,
+                      "offset": 105
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 114,
+                      "offset": 120
+                    }
+                  },
+                  "what": {
+                    "kind": "name",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 2,
+                        "column": 99,
+                        "offset": 105
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 103,
+                        "offset": 109
+                      }
+                    },
+                    "resolution": "uqn",
+                    "name": "join"
+                  },
+                  "arguments": [
+                    {
+                      "kind": "string",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 2,
+                          "column": 104,
+                          "offset": 110
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 107,
+                          "offset": 113
+                        }
+                      },
+                      "value": ",",
+                      "raw": "','",
+                      "unicode": false,
+                      "isDoubleQuote": false
+                    },
+                    {
+                      "kind": "variable",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 2,
+                          "column": 109,
+                          "offset": 115
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 113,
+                          "offset": 119
+                        }
+                      },
+                      "name": "ids",
+                      "curly": false
+                    }
+                  ]
+                },
+                "byRef": false,
+                "unpack": false
+              }
+            ],
+            "shortForm": false
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

@@ -1,0 +1,511 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 13,
+      "column": 0,
+      "offset": 249
+    }
+  },
+  "children": [
+    {
+      "kind": "class",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 7
+        },
+        "end": {
+          "line": 12,
+          "column": 1,
+          "offset": 248
+        }
+      },
+      "name": {
+        "kind": "identifier",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 6,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 37,
+            "offset": 44
+          }
+        },
+        "name": "NoStringInterpolationInArgument"
+      },
+      "isAnonymous": false,
+      "extends": null,
+      "implements": null,
+      "body": [
+        {
+          "kind": "propertystatement",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 14,
+              "offset": 61
+            },
+            "end": {
+              "line": 5,
+              "column": 29,
+              "offset": 76
+            }
+          },
+          "properties": [
+            {
+              "kind": "property",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 5,
+                  "column": 14,
+                  "offset": 61
+                },
+                "end": {
+                  "line": 5,
+                  "column": 29,
+                  "offset": 76
+                }
+              },
+              "name": {
+                "kind": "identifier",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 14,
+                    "offset": 61
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 20,
+                    "offset": 67
+                  }
+                },
+                "name": "dummy"
+              },
+              "value": {
+                "kind": "string",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 23,
+                    "offset": 70
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 29,
+                    "offset": 76
+                  }
+                },
+                "value": "blah",
+                "raw": "'blah'",
+                "unicode": false,
+                "isDoubleQuote": false
+              },
+              "nullable": false,
+              "type": null
+            }
+          ],
+          "visibility": "protected",
+          "isStatic": false
+        },
+        {
+          "kind": "method",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 7,
+              "column": 4,
+              "offset": 83
+            },
+            "end": {
+              "line": 11,
+              "column": 5,
+              "offset": 246
+            }
+          },
+          "name": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 7,
+                "column": 13,
+                "offset": 92
+              },
+              "end": {
+                "line": 7,
+                "column": 17,
+                "offset": 96
+              }
+            },
+            "name": "test"
+          },
+          "arguments": [],
+          "byref": false,
+          "type": null,
+          "nullable": false,
+          "body": {
+            "kind": "block",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 7,
+                "column": 20,
+                "offset": 99
+              },
+              "end": {
+                "line": 11,
+                "column": 5,
+                "offset": 246
+              }
+            },
+            "children": [
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 8,
+                    "column": 8,
+                    "offset": 109
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 24,
+                    "offset": 125
+                  }
+                },
+                "expression": {
+                  "kind": "assign",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 8,
+                      "column": 8,
+                      "offset": 109
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 24,
+                      "offset": 125
+                    }
+                  },
+                  "left": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 8,
+                        "column": 8,
+                        "offset": 109
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 14,
+                        "offset": 115
+                      }
+                    },
+                    "name": "clock",
+                    "curly": false
+                  },
+                  "right": {
+                    "kind": "call",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 8,
+                        "column": 17,
+                        "offset": 118
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 23,
+                        "offset": 124
+                      }
+                    },
+                    "what": {
+                      "kind": "name",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 8,
+                          "column": 17,
+                          "offset": 118
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 21,
+                          "offset": 122
+                        }
+                      },
+                      "resolution": "uqn",
+                      "name": "time"
+                    },
+                    "arguments": []
+                  },
+                  "operator": "="
+                }
+              },
+              {
+                "kind": "expressionstatement",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 9,
+                    "column": 8,
+                    "offset": 134
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 91,
+                    "offset": 217
+                  }
+                },
+                "expression": {
+                  "kind": "call",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 9,
+                      "column": 8,
+                      "offset": 134
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 91,
+                      "offset": 217
+                    }
+                  },
+                  "what": {
+                    "kind": "propertylookup",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 9,
+                        "column": 8,
+                        "offset": 134
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 36,
+                        "offset": 162
+                      }
+                    },
+                    "what": {
+                      "kind": "staticlookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 9,
+                          "column": 8,
+                          "offset": 134
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 28,
+                          "offset": 154
+                        }
+                      },
+                      "what": {
+                        "kind": "name",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 9,
+                            "column": 8,
+                            "offset": 134
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 19,
+                            "offset": 145
+                          }
+                        },
+                        "resolution": "uqn",
+                        "name": "Connections"
+                      },
+                      "offset": {
+                        "kind": "variable",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 9,
+                            "column": 21,
+                            "offset": 147
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 28,
+                            "offset": 154
+                          }
+                        },
+                        "name": "dbConn",
+                        "curly": false
+                      }
+                    },
+                    "offset": {
+                      "kind": "identifier",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 9,
+                          "column": 30,
+                          "offset": 156
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 36,
+                          "offset": 162
+                        }
+                      },
+                      "name": "GetRow"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "kind": "string",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 9,
+                          "column": 37,
+                          "offset": 163
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 74,
+                          "offset": 200
+                        }
+                      },
+                      "value": "SELECT id FROM users WHERE role = ?",
+                      "raw": "\"SELECT id FROM users WHERE role = ?\"",
+                      "unicode": false,
+                      "isDoubleQuote": true
+                    },
+                    {
+                      "kind": "array",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 9,
+                          "column": 76,
+                          "offset": 202
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 89,
+                          "offset": 215
+                        }
+                      },
+                      "items": [
+                        {
+                          "kind": "entry",
+                          "loc": {
+                            "source": null,
+                            "start": {
+                              "line": 9,
+                              "column": 82,
+                              "offset": 208
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 88,
+                              "offset": 214
+                            }
+                          },
+                          "key": null,
+                          "value": {
+                            "kind": "string",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 9,
+                                "column": 82,
+                                "offset": 208
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 88,
+                                "offset": 214
+                              }
+                            },
+                            "value": "blah",
+                            "raw": "'blah'",
+                            "unicode": false,
+                            "isDoubleQuote": false
+                          },
+                          "byRef": false,
+                          "unpack": false
+                        }
+                      ],
+                      "shortForm": false
+                    }
+                  ]
+                }
+              },
+              {
+                "kind": "return",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 10,
+                    "column": 8,
+                    "offset": 226
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 22,
+                    "offset": 240
+                  }
+                },
+                "expr": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 10,
+                      "column": 15,
+                      "offset": 233
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 21,
+                      "offset": 239
+                    }
+                  },
+                  "name": "clock",
+                  "curly": false
+                }
+              }
+            ]
+          },
+          "isAbstract": false,
+          "isFinal": false,
+          "visibility": "",
+          "isStatic": false
+        }
+      ],
+      "isAbstract": false,
+      "isFinal": false
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

@@ -1,0 +1,1 @@
+program class  identifier SQLInFunctionWithinIfStatement propertystatement property  identifier dummy string 'blah' method  identifier test parameter  identifier sql_user_roles block if bin call name count call propertylookup staticlookup name Connections variable dbConn identifier GetAll variable sql_user_roles number block return boolean false block return boolean true^

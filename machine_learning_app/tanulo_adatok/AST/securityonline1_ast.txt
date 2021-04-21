@@ -1,0 +1,199 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 59,
+      "offset": 65
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 59,
+          "offset": 65
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 59,
+            "offset": 65
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 15,
+              "offset": 21
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 0,
+                "offset": 6
+              },
+              "end": {
+                "line": 2,
+                "column": 7,
+                "offset": 13
+              }
+            },
+            "name": "dbConn",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 9,
+                "offset": 15
+              },
+              "end": {
+                "line": 2,
+                "column": 15,
+                "offset": 21
+              }
+            },
+            "name": "GetRow"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "encapsed",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 16,
+                "offset": 22
+              },
+              "end": {
+                "line": 2,
+                "column": 57,
+                "offset": 63
+              }
+            },
+            "value": [
+              {
+                "kind": "encapsedpart",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 17,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 48,
+                    "offset": 54
+                  }
+                },
+                "expression": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 2,
+                      "column": 17,
+                      "offset": 23
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 48,
+                      "offset": 54
+                    }
+                  },
+                  "value": "SELECT * FROM users WHERE id = ",
+                  "raw": "SELECT * FROM users WHERE id = ",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "syntax": null,
+                "curly": false
+              },
+              {
+                "kind": "encapsedpart",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 48,
+                    "offset": 54
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 56,
+                    "offset": 62
+                  }
+                },
+                "expression": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 2,
+                      "column": 48,
+                      "offset": 54
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 56,
+                      "offset": 62
+                    }
+                  },
+                  "name": "user_id",
+                  "curly": false
+                },
+                "syntax": "simple",
+                "curly": false
+              }
+            ],
+            "raw": "\"SELECT * FROM users WHERE id = $user_id\"",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

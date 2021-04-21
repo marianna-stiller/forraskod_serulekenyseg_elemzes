@@ -1,0 +1,1 @@
+program expressionstatement assign variable stmt call propertylookup variable db identifier prepare string 'update people set name = ? where id = ?' expressionstatement call propertylookup variable stmt identifier bind_param string 'si' variable name variable id expressionstatement call propertylookup variable stmt identifier execute^

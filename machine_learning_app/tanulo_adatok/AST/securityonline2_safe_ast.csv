@@ -1,0 +1,1 @@
+program expressionstatement call propertylookup variable dbConn identifier GetAll bin bin string 'SELECT * FROM campaigns WHERE FIND_IN_SET (id ' call propertylookup variable dbConn identifier Param name ” string ')' array entry call name join string '' variable ids^

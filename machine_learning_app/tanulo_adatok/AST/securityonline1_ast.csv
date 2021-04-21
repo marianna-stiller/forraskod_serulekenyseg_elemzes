@@ -1,0 +1,1 @@
+program expressionstatement call propertylookup variable dbConn identifier GetRow encapsed encapsedpart string SELECT * FROM users WHERE id = encapsedpart variable user_id \SELECT * FROM users WHERE id = $user_id\^

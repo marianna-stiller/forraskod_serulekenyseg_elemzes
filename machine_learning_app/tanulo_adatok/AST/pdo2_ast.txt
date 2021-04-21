@@ -1,0 +1,383 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 0,
+      "offset": 150
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 25,
+          "offset": 31
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 25,
+            "offset": 31
+          }
+        },
+        "what": {
+          "kind": "name",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 17,
+              "offset": 23
+            }
+          },
+          "resolution": "uqn",
+          "name": "mysql_set_charset"
+        },
+        "arguments": [
+          {
+            "kind": "string",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 18,
+                "offset": 24
+              },
+              "end": {
+                "line": 2,
+                "column": 23,
+                "offset": 29
+              }
+            },
+            "value": "gbk",
+            "raw": "'gbk'",
+            "unicode": false,
+            "isDoubleQuote": false
+          }
+        ]
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 32
+        },
+        "end": {
+          "line": 3,
+          "column": 54,
+          "offset": 86
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 0,
+            "offset": 32
+          },
+          "end": {
+            "line": 3,
+            "column": 54,
+            "offset": 86
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 32
+            },
+            "end": {
+              "line": 3,
+              "column": 4,
+              "offset": 36
+            }
+          },
+          "name": "var",
+          "curly": false
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 7,
+              "offset": 39
+            },
+            "end": {
+              "line": 3,
+              "column": 53,
+              "offset": 85
+            }
+          },
+          "what": {
+            "kind": "name",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 7,
+                "offset": 39
+              },
+              "end": {
+                "line": 3,
+                "column": 31,
+                "offset": 63
+              }
+            },
+            "resolution": "uqn",
+            "name": "mysql_real_escape_string"
+          },
+          "arguments": [
+            {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 32,
+                  "offset": 64
+                },
+                "end": {
+                  "line": 3,
+                  "column": 52,
+                  "offset": 84
+                }
+              },
+              "value": "¿' OR 1=1 /*",
+              "raw": "\"\\xbf\\x27 OR 1=1 /*\"",
+              "unicode": false,
+              "isDoubleQuote": true
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 87
+        },
+        "end": {
+          "line": 4,
+          "column": 62,
+          "offset": 149
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 4,
+            "column": 0,
+            "offset": 87
+          },
+          "end": {
+            "line": 4,
+            "column": 62,
+            "offset": 149
+          }
+        },
+        "what": {
+          "kind": "name",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 87
+            },
+            "end": {
+              "line": 4,
+              "column": 11,
+              "offset": 98
+            }
+          },
+          "resolution": "uqn",
+          "name": "mysql_query"
+        },
+        "arguments": [
+          {
+            "kind": "encapsed",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 4,
+                "column": 12,
+                "offset": 99
+              },
+              "end": {
+                "line": 4,
+                "column": 60,
+                "offset": 147
+              }
+            },
+            "value": [
+              {
+                "kind": "encapsedpart",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 4,
+                    "column": 13,
+                    "offset": 100
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 46,
+                    "offset": 133
+                  }
+                },
+                "expression": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 4,
+                      "column": 13,
+                      "offset": 100
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 46,
+                      "offset": 133
+                    }
+                  },
+                  "value": "SELECT * FROM test WHERE name = '",
+                  "raw": "SELECT * FROM test WHERE name = '",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "syntax": null,
+                "curly": false
+              },
+              {
+                "kind": "encapsedpart",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 4,
+                    "column": 46,
+                    "offset": 133
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 50,
+                    "offset": 137
+                  }
+                },
+                "expression": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 4,
+                      "column": 46,
+                      "offset": 133
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 50,
+                      "offset": 137
+                    }
+                  },
+                  "name": "var",
+                  "curly": false
+                },
+                "syntax": "simple",
+                "curly": false
+              },
+              {
+                "kind": "encapsedpart",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 4,
+                    "column": 50,
+                    "offset": 137
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 59,
+                    "offset": 146
+                  }
+                },
+                "expression": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 4,
+                      "column": 50,
+                      "offset": 137
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 59,
+                      "offset": 146
+                    }
+                  },
+                  "value": "' LIMIT 1",
+                  "raw": "' LIMIT 1",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "syntax": null,
+                "curly": false
+              }
+            ],
+            "raw": "\"SELECT * FROM test WHERE name = '$var' LIMIT 1\"",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

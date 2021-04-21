@@ -1,0 +1,1 @@
+program expressionstatement assign variable username call name strip_tags call name trim offsetlookup variable _POST string \username\ expressionstatement assign variable password call name strip_tags call name trim offsetlookup variable _POST string \password\^

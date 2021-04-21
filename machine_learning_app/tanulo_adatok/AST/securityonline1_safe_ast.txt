@@ -1,0 +1,183 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0,
+      "offset": 78
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 71,
+          "offset": 77
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 71,
+            "offset": 77
+          }
+        },
+        "what": {
+          "kind": "propertylookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 15,
+              "offset": 21
+            }
+          },
+          "what": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 0,
+                "offset": 6
+              },
+              "end": {
+                "line": 2,
+                "column": 7,
+                "offset": 13
+              }
+            },
+            "name": "dbConn",
+            "curly": false
+          },
+          "offset": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 9,
+                "offset": 15
+              },
+              "end": {
+                "line": 2,
+                "column": 15,
+                "offset": 21
+              }
+            },
+            "name": "GetRow"
+          }
+        },
+        "arguments": [
+          {
+            "kind": "string",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 16,
+                "offset": 22
+              },
+              "end": {
+                "line": 2,
+                "column": 50,
+                "offset": 56
+              }
+            },
+            "value": "SELECT * FROM users WHERE id = ?",
+            "raw": "\"SELECT * FROM users WHERE id = ?\"",
+            "unicode": false,
+            "isDoubleQuote": true
+          },
+          {
+            "kind": "array",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 52,
+                "offset": 58
+              },
+              "end": {
+                "line": 2,
+                "column": 69,
+                "offset": 75
+              }
+            },
+            "items": [
+              {
+                "kind": "entry",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 2,
+                    "column": 58,
+                    "offset": 64
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 68,
+                    "offset": 74
+                  }
+                },
+                "key": null,
+                "value": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 2,
+                      "column": 58,
+                      "offset": 64
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 68,
+                      "offset": 74
+                    }
+                  },
+                  "value": "$user_id",
+                  "raw": "'$user_id'",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "byRef": false,
+                "unpack": false
+              }
+            ],
+            "shortForm": false
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

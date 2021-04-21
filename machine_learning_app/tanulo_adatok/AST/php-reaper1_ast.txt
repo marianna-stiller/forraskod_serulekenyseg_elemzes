@@ -1,0 +1,1027 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 27,
+      "column": 0,
+      "offset": 609
+    }
+  },
+  "children": [
+    {
+      "kind": "class",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 7
+        },
+        "end": {
+          "line": 26,
+          "column": 1,
+          "offset": 608
+        }
+      },
+      "name": {
+        "kind": "identifier",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 6,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 28,
+            "offset": 35
+          }
+        },
+        "name": "SQLInIfElseIfStatement"
+      },
+      "isAnonymous": false,
+      "extends": null,
+      "implements": null,
+      "body": [
+        {
+          "kind": "propertystatement",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 14,
+              "offset": 52
+            },
+            "end": {
+              "line": 5,
+              "column": 29,
+              "offset": 67
+            }
+          },
+          "properties": [
+            {
+              "kind": "property",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 5,
+                  "column": 14,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 5,
+                  "column": 29,
+                  "offset": 67
+                }
+              },
+              "name": {
+                "kind": "identifier",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 14,
+                    "offset": 52
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 20,
+                    "offset": 58
+                  }
+                },
+                "name": "dummy"
+              },
+              "value": {
+                "kind": "string",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 5,
+                    "column": 23,
+                    "offset": 61
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 29,
+                    "offset": 67
+                  }
+                },
+                "value": "blah",
+                "raw": "'blah'",
+                "unicode": false,
+                "isDoubleQuote": false
+              },
+              "nullable": false,
+              "type": null
+            }
+          ],
+          "visibility": "protected",
+          "isStatic": false
+        },
+        {
+          "kind": "method",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 7,
+              "column": 4,
+              "offset": 74
+            },
+            "end": {
+              "line": 25,
+              "column": 5,
+              "offset": 606
+            }
+          },
+          "name": {
+            "kind": "identifier",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 7,
+                "column": 13,
+                "offset": 83
+              },
+              "end": {
+                "line": 7,
+                "column": 17,
+                "offset": 87
+              }
+            },
+            "name": "test"
+          },
+          "arguments": [
+            {
+              "kind": "parameter",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 7,
+                  "column": 18,
+                  "offset": 88
+                },
+                "end": {
+                  "line": 7,
+                  "column": 24,
+                  "offset": 94
+                }
+              },
+              "name": {
+                "kind": "identifier",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 7,
+                    "column": 18,
+                    "offset": 88
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 24,
+                    "offset": 94
+                  }
+                },
+                "name": "users"
+              },
+              "value": null,
+              "type": null,
+              "byref": false,
+              "variadic": false,
+              "nullable": false
+            }
+          ],
+          "byref": false,
+          "type": null,
+          "nullable": false,
+          "body": {
+            "kind": "block",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 7,
+                "column": 26,
+                "offset": 96
+              },
+              "end": {
+                "line": 25,
+                "column": 5,
+                "offset": 606
+              }
+            },
+            "children": [
+              {
+                "kind": "if",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 9,
+                    "column": 8,
+                    "offset": 107
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 9,
+                    "offset": 600
+                  }
+                },
+                "test": {
+                  "kind": "bin",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 9,
+                      "column": 11,
+                      "offset": 110
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 28,
+                      "offset": 127
+                    }
+                  },
+                  "type": ">",
+                  "left": {
+                    "kind": "call",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 9,
+                        "column": 11,
+                        "offset": 110
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 24,
+                        "offset": 123
+                      }
+                    },
+                    "what": {
+                      "kind": "name",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 9,
+                          "column": 11,
+                          "offset": 110
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 16,
+                          "offset": 115
+                        }
+                      },
+                      "resolution": "uqn",
+                      "name": "count"
+                    },
+                    "arguments": [
+                      {
+                        "kind": "variable",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 9,
+                            "column": 17,
+                            "offset": 116
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 23,
+                            "offset": 122
+                          }
+                        },
+                        "name": "users",
+                        "curly": false
+                      }
+                    ]
+                  },
+                  "right": {
+                    "kind": "number",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 9,
+                        "column": 27,
+                        "offset": 126
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 28,
+                        "offset": 127
+                      }
+                    },
+                    "value": "0"
+                  }
+                },
+                "body": {
+                  "kind": "block",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 9,
+                      "column": 30,
+                      "offset": 129
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 9,
+                      "offset": 166
+                    }
+                  },
+                  "children": [
+                    {
+                      "kind": "return",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 10,
+                          "column": 12,
+                          "offset": 143
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 25,
+                          "offset": 156
+                        }
+                      },
+                      "expr": {
+                        "kind": "boolean",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 10,
+                            "column": 19,
+                            "offset": 150
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 24,
+                            "offset": 155
+                          }
+                        },
+                        "value": false,
+                        "raw": "false"
+                      }
+                    }
+                  ]
+                },
+                "alternate": {
+                  "kind": "block",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 12,
+                      "column": 13,
+                      "offset": 180
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 9,
+                      "offset": 600
+                    }
+                  },
+                  "children": [
+                    {
+                      "kind": "if",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 16,
+                          "column": 12,
+                          "offset": 197
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 13,
+                          "offset": 589
+                        }
+                      },
+                      "test": {
+                        "kind": "boolean",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 16,
+                            "column": 15,
+                            "offset": 200
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 19,
+                            "offset": 204
+                          }
+                        },
+                        "value": true,
+                        "raw": "true"
+                      },
+                      "body": {
+                        "kind": "block",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 16,
+                            "column": 21,
+                            "offset": 206
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 13,
+                            "offset": 589
+                          }
+                        },
+                        "children": [
+                          {
+                            "kind": "expressionstatement",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 17,
+                                "column": 16,
+                                "offset": 224
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 65,
+                                "offset": 273
+                              }
+                            },
+                            "expression": {
+                              "kind": "assign",
+                              "loc": {
+                                "source": null,
+                                "start": {
+                                  "line": 17,
+                                  "column": 16,
+                                  "offset": 224
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 65,
+                                  "offset": 273
+                                }
+                              },
+                              "left": {
+                                "kind": "offsetlookup",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 17,
+                                    "column": 16,
+                                    "offset": 224
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 49,
+                                    "offset": 257
+                                  }
+                                },
+                                "what": {
+                                  "kind": "variable",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 17,
+                                      "column": 16,
+                                      "offset": 224
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 36,
+                                      "offset": 244
+                                    }
+                                  },
+                                  "name": "where_clauses_roles",
+                                  "curly": false
+                                },
+                                "offset": {
+                                  "kind": "string",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 17,
+                                      "column": 37,
+                                      "offset": 245
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 48,
+                                      "offset": 256
+                                    }
+                                  },
+                                  "value": "user_id=?",
+                                  "raw": "'user_id=?'",
+                                  "unicode": false,
+                                  "isDoubleQuote": false
+                                }
+                              },
+                              "right": {
+                                "kind": "offsetlookup",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 17,
+                                    "column": 52,
+                                    "offset": 260
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 64,
+                                    "offset": 272
+                                  }
+                                },
+                                "what": {
+                                  "kind": "variable",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 17,
+                                      "column": 52,
+                                      "offset": 260
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 58,
+                                      "offset": 266
+                                    }
+                                  },
+                                  "name": "users",
+                                  "curly": false
+                                },
+                                "offset": {
+                                  "kind": "string",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 17,
+                                      "column": 59,
+                                      "offset": 267
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 63,
+                                      "offset": 271
+                                    }
+                                  },
+                                  "value": "id",
+                                  "raw": "'id'",
+                                  "unicode": false,
+                                  "isDoubleQuote": false
+                                }
+                              },
+                              "operator": "="
+                            }
+                          },
+                          {
+                            "kind": "expressionstatement",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 18,
+                                "column": 16,
+                                "offset": 290
+                              },
+                              "end": {
+                                "line": 20,
+                                "column": 93,
+                                "offset": 462
+                              }
+                            },
+                            "expression": {
+                              "kind": "assign",
+                              "loc": {
+                                "source": null,
+                                "start": {
+                                  "line": 18,
+                                  "column": 16,
+                                  "offset": 290
+                                },
+                                "end": {
+                                  "line": 20,
+                                  "column": 93,
+                                  "offset": 462
+                                }
+                              },
+                              "left": {
+                                "kind": "variable",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 18,
+                                    "column": 16,
+                                    "offset": 290
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 31,
+                                    "offset": 305
+                                  }
+                                },
+                                "name": "sql_user_roles",
+                                "curly": false
+                              },
+                              "right": {
+                                "kind": "bin",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 18,
+                                    "column": 34,
+                                    "offset": 308
+                                  },
+                                  "end": {
+                                    "line": 20,
+                                    "column": 92,
+                                    "offset": 461
+                                  }
+                                },
+                                "type": ".",
+                                "left": {
+                                  "kind": "string",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 18,
+                                      "column": 34,
+                                      "offset": 308
+                                    },
+                                    "end": {
+                                      "line": 20,
+                                      "column": 42,
+                                      "offset": 411
+                                    }
+                                  },
+                                  "value": "SELECT *\n                                   FROM user_roles\n                                   WHERE ",
+                                  "raw": "'SELECT *\n                                   FROM user_roles\n                                   WHERE '",
+                                  "unicode": false,
+                                  "isDoubleQuote": false
+                                },
+                                "right": {
+                                  "kind": "call",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 20,
+                                      "column": 45,
+                                      "offset": 414
+                                    },
+                                    "end": {
+                                      "line": 20,
+                                      "column": 92,
+                                      "offset": 461
+                                    }
+                                  },
+                                  "what": {
+                                    "kind": "name",
+                                    "loc": {
+                                      "source": null,
+                                      "start": {
+                                        "line": 20,
+                                        "column": 45,
+                                        "offset": 414
+                                      },
+                                      "end": {
+                                        "line": 20,
+                                        "column": 49,
+                                        "offset": 418
+                                      }
+                                    },
+                                    "resolution": "uqn",
+                                    "name": "join"
+                                  },
+                                  "arguments": [
+                                    {
+                                      "kind": "string",
+                                      "loc": {
+                                        "source": null,
+                                        "start": {
+                                          "line": 20,
+                                          "column": 50,
+                                          "offset": 419
+                                        },
+                                        "end": {
+                                          "line": 20,
+                                          "column": 57,
+                                          "offset": 426
+                                        }
+                                      },
+                                      "value": " AND ",
+                                      "raw": "' AND '",
+                                      "unicode": false,
+                                      "isDoubleQuote": false
+                                    },
+                                    {
+                                      "kind": "call",
+                                      "loc": {
+                                        "source": null,
+                                        "start": {
+                                          "line": 20,
+                                          "column": 59,
+                                          "offset": 428
+                                        },
+                                        "end": {
+                                          "line": 20,
+                                          "column": 91,
+                                          "offset": 460
+                                        }
+                                      },
+                                      "what": {
+                                        "kind": "name",
+                                        "loc": {
+                                          "source": null,
+                                          "start": {
+                                            "line": 20,
+                                            "column": 59,
+                                            "offset": 428
+                                          },
+                                          "end": {
+                                            "line": 20,
+                                            "column": 69,
+                                            "offset": 438
+                                          }
+                                        },
+                                        "resolution": "uqn",
+                                        "name": "array_keys"
+                                      },
+                                      "arguments": [
+                                        {
+                                          "kind": "variable",
+                                          "loc": {
+                                            "source": null,
+                                            "start": {
+                                              "line": 20,
+                                              "column": 70,
+                                              "offset": 439
+                                            },
+                                            "end": {
+                                              "line": 20,
+                                              "column": 90,
+                                              "offset": 459
+                                            }
+                                          },
+                                          "name": "where_clauses_roles",
+                                          "curly": false
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              },
+                              "operator": "="
+                            }
+                          },
+                          {
+                            "kind": "expressionstatement",
+                            "loc": {
+                              "source": null,
+                              "start": {
+                                "line": 21,
+                                "column": 16,
+                                "offset": 479
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 112,
+                                "offset": 575
+                              }
+                            },
+                            "expression": {
+                              "kind": "assign",
+                              "loc": {
+                                "source": null,
+                                "start": {
+                                  "line": 21,
+                                  "column": 16,
+                                  "offset": 479
+                                },
+                                "end": {
+                                  "line": 21,
+                                  "column": 112,
+                                  "offset": 575
+                                }
+                              },
+                              "left": {
+                                "kind": "variable",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 21,
+                                    "column": 16,
+                                    "offset": 479
+                                  },
+                                  "end": {
+                                    "line": 21,
+                                    "column": 27,
+                                    "offset": 490
+                                  }
+                                },
+                                "name": "user_roles",
+                                "curly": false
+                              },
+                              "right": {
+                                "kind": "call",
+                                "loc": {
+                                  "source": null,
+                                  "start": {
+                                    "line": 21,
+                                    "column": 30,
+                                    "offset": 493
+                                  },
+                                  "end": {
+                                    "line": 21,
+                                    "column": 111,
+                                    "offset": 574
+                                  }
+                                },
+                                "what": {
+                                  "kind": "propertylookup",
+                                  "loc": {
+                                    "source": null,
+                                    "start": {
+                                      "line": 21,
+                                      "column": 30,
+                                      "offset": 493
+                                    },
+                                    "end": {
+                                      "line": 21,
+                                      "column": 58,
+                                      "offset": 521
+                                    }
+                                  },
+                                  "what": {
+                                    "kind": "staticlookup",
+                                    "loc": {
+                                      "source": null,
+                                      "start": {
+                                        "line": 21,
+                                        "column": 30,
+                                        "offset": 493
+                                      },
+                                      "end": {
+                                        "line": 21,
+                                        "column": 50,
+                                        "offset": 513
+                                      }
+                                    },
+                                    "what": {
+                                      "kind": "name",
+                                      "loc": {
+                                        "source": null,
+                                        "start": {
+                                          "line": 21,
+                                          "column": 30,
+                                          "offset": 493
+                                        },
+                                        "end": {
+                                          "line": 21,
+                                          "column": 41,
+                                          "offset": 504
+                                        }
+                                      },
+                                      "resolution": "uqn",
+                                      "name": "Connections"
+                                    },
+                                    "offset": {
+                                      "kind": "variable",
+                                      "loc": {
+                                        "source": null,
+                                        "start": {
+                                          "line": 21,
+                                          "column": 43,
+                                          "offset": 506
+                                        },
+                                        "end": {
+                                          "line": 21,
+                                          "column": 50,
+                                          "offset": 513
+                                        }
+                                      },
+                                      "name": "dbConn",
+                                      "curly": false
+                                    }
+                                  },
+                                  "offset": {
+                                    "kind": "identifier",
+                                    "loc": {
+                                      "source": null,
+                                      "start": {
+                                        "line": 21,
+                                        "column": 52,
+                                        "offset": 515
+                                      },
+                                      "end": {
+                                        "line": 21,
+                                        "column": 58,
+                                        "offset": 521
+                                      }
+                                    },
+                                    "name": "GetAll"
+                                  }
+                                },
+                                "arguments": [
+                                  {
+                                    "kind": "variable",
+                                    "loc": {
+                                      "source": null,
+                                      "start": {
+                                        "line": 21,
+                                        "column": 59,
+                                        "offset": 522
+                                      },
+                                      "end": {
+                                        "line": 21,
+                                        "column": 74,
+                                        "offset": 537
+                                      }
+                                    },
+                                    "name": "sql_user_roles",
+                                    "curly": false
+                                  },
+                                  {
+                                    "kind": "call",
+                                    "loc": {
+                                      "source": null,
+                                      "start": {
+                                        "line": 21,
+                                        "column": 76,
+                                        "offset": 539
+                                      },
+                                      "end": {
+                                        "line": 21,
+                                        "column": 110,
+                                        "offset": 573
+                                      }
+                                    },
+                                    "what": {
+                                      "kind": "name",
+                                      "loc": {
+                                        "source": null,
+                                        "start": {
+                                          "line": 21,
+                                          "column": 76,
+                                          "offset": 539
+                                        },
+                                        "end": {
+                                          "line": 21,
+                                          "column": 88,
+                                          "offset": 551
+                                        }
+                                      },
+                                      "resolution": "uqn",
+                                      "name": "array_values"
+                                    },
+                                    "arguments": [
+                                      {
+                                        "kind": "variable",
+                                        "loc": {
+                                          "source": null,
+                                          "start": {
+                                            "line": 21,
+                                            "column": 89,
+                                            "offset": 552
+                                          },
+                                          "end": {
+                                            "line": 21,
+                                            "column": 109,
+                                            "offset": 572
+                                          }
+                                        },
+                                        "name": "where_clauses_roles",
+                                        "curly": false
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "operator": "="
+                            }
+                          }
+                        ]
+                      },
+                      "alternate": null,
+                      "shortForm": false
+                    }
+                  ]
+                },
+                "shortForm": false
+              }
+            ]
+          },
+          "isAbstract": false,
+          "isFinal": false,
+          "visibility": "",
+          "isStatic": false
+        }
+      ],
+      "isAbstract": false,
+      "isFinal": false
+    }
+  ],
+  "errors": [],
+  "comments": []
+}

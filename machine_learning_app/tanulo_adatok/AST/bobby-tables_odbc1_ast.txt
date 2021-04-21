@@ -1,0 +1,306 @@
+{
+  "kind": "program",
+  "loc": {
+    "source": null,
+    "start": {
+      "line": 1,
+      "column": 0,
+      "offset": 0
+    },
+    "end": {
+      "line": 4,
+      "column": 0,
+      "offset": 120
+    }
+  },
+  "children": [
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 69,
+          "offset": 75
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 2,
+            "column": 0,
+            "offset": 6
+          },
+          "end": {
+            "line": 2,
+            "column": 69,
+            "offset": 75
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 11
+            }
+          },
+          "name": "stmt",
+          "curly": false
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 2,
+              "column": 8,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 68,
+              "offset": 74
+            }
+          },
+          "what": {
+            "kind": "name",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 8,
+                "offset": 14
+              },
+              "end": {
+                "line": 2,
+                "column": 20,
+                "offset": 26
+              }
+            },
+            "resolution": "uqn",
+            "name": "odbc_prepare"
+          },
+          "arguments": [
+            {
+              "kind": "variable",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 22,
+                  "offset": 28
+                },
+                "end": {
+                  "line": 2,
+                  "column": 27,
+                  "offset": 33
+                }
+              },
+              "name": "conn",
+              "curly": false
+            },
+            {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 2,
+                  "column": 29,
+                  "offset": 35
+                },
+                "end": {
+                  "line": 2,
+                  "column": 66,
+                  "offset": 72
+                }
+              },
+              "value": "SELECT * FROM users WHERE email = ?",
+              "raw": "'SELECT * FROM users WHERE email = ?'",
+              "unicode": false,
+              "isDoubleQuote": false
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 76
+        },
+        "end": {
+          "line": 3,
+          "column": 43,
+          "offset": 119
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 0,
+            "offset": 76
+          },
+          "end": {
+            "line": 3,
+            "column": 43,
+            "offset": 119
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 76
+            },
+            "end": {
+              "line": 3,
+              "column": 8,
+              "offset": 84
+            }
+          },
+          "name": "success",
+          "curly": false
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 11,
+              "offset": 87
+            },
+            "end": {
+              "line": 3,
+              "column": 42,
+              "offset": 118
+            }
+          },
+          "what": {
+            "kind": "name",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 11,
+                "offset": 87
+              },
+              "end": {
+                "line": 3,
+                "column": 23,
+                "offset": 99
+              }
+            },
+            "resolution": "uqn",
+            "name": "odbc_execute"
+          },
+          "arguments": [
+            {
+              "kind": "variable",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 25,
+                  "offset": 101
+                },
+                "end": {
+                  "line": 3,
+                  "column": 30,
+                  "offset": 106
+                }
+              },
+              "name": "stmt",
+              "curly": false
+            },
+            {
+              "kind": "array",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 32,
+                  "offset": 108
+                },
+                "end": {
+                  "line": 3,
+                  "column": 40,
+                  "offset": 116
+                }
+              },
+              "items": [
+                {
+                  "kind": "entry",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 3,
+                      "column": 33,
+                      "offset": 109
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 39,
+                      "offset": 115
+                    }
+                  },
+                  "key": null,
+                  "value": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 3,
+                        "column": 33,
+                        "offset": 109
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 39,
+                        "offset": 115
+                      }
+                    },
+                    "name": "email",
+                    "curly": false
+                  },
+                  "byRef": false,
+                  "unpack": false
+                }
+              ],
+              "shortForm": true
+            }
+          ]
+        },
+        "operator": "="
+      }
+    }
+  ],
+  "errors": [],
+  "comments": []
+}
