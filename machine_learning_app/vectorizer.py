@@ -110,7 +110,7 @@ if __name__ == '__main__':
     myvectorizer.createVectors()
     myvectorizer.saveVectorAs('test')
     # to import
-    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities.csv',2000,200)
+    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities_ast.csv',2000,200)
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()

@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import pickle
 from matplotlib import cm
 from keras.utils import to_categorical
-from sklearn.preprocessing import OneHotEncoder
 from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
 from sklearn import svm
 from sklearn.calibration import CalibratedClassifierCV
@@ -50,7 +49,11 @@ def main(argv=None):
     for train_index, validation_index in kFold.split(origX, origY):
         trainX, validationX = origX[train_index], origX[validation_index]
         trainY, validationY = origY[train_index], origY[validation_index]
-     
+		# OHE
+        trainY_encoded = to_categorical(trainY)
+        trainY = trainY_encoded
+        validationY_encoded = to_categorical(validationY)
+        validationY = validationY_encoded
         # Create classifier for a specific class
         Classifier = classifier(trainX, trainY)
         # Test the binary model
@@ -60,23 +63,17 @@ def main(argv=None):
     classifier2(origX2,origY2)
 
 def classifier2(X, Y):
-    #print("X:",X)
-
     # Load the pickled model
     myClassifier2 = pickle.loads(s)
 
-    # TODO onehotencoding + predict_proba(X)
-    predict = myClassifier2.predict_proba(X)
-    print(predict)
+    predict1 = myClassifier2.predict_proba(X)
+    predict2 = myClassifier2.predict(X)
 
+    print(predict1.item(0))
+    print(predict1.item(1))
 
 def classifier(X, Y):
-    #print("X:",X)
-    #encoded = to_categorical(Y)
-    #Y = encoded
-    print("Y:",Y)
-
-    global s 
+    global s
     """Linear SVM
 
        Parameters:
@@ -118,7 +115,6 @@ def classifier(X, Y):
     return myClassifier
 
 def test_bmodel(X, Y, classifier):
-
     """This method tests a classifier using validation data.
 
         Parameters:
@@ -139,10 +135,7 @@ def test_bmodel(X, Y, classifier):
         a       : input array
         axis    : by default, the index is into the flattened array, otherwise along the specified axis
     """
-    
     Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
-    print("Y_pred:",Y_pred)
-
     # Evaluate
     """precision_recall_fscore_support
     
@@ -157,6 +150,8 @@ def test_bmodel(X, Y, classifier):
 
     classes = ['vulnerable', 'not vulnerable']
     # Compute confusion matrix
+    #print("Y:",Y)
+    #print("Y_pred:",Y_pred)
     confusion_m = confusion_matrix(Y,Y_pred,labels=[0,1])
     np.set_printoptions(precision=2)
 
