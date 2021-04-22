@@ -49,11 +49,7 @@ def main(argv=None):
     for train_index, validation_index in kFold.split(origX, origY):
         trainX, validationX = origX[train_index], origX[validation_index]
         trainY, validationY = origY[train_index], origY[validation_index]
-		# OHE
-        trainY_encoded = to_categorical(trainY)
-        trainY = trainY_encoded
-        validationY_encoded = to_categorical(validationY)
-        validationY = validationY_encoded
+
         # Create classifier for a specific class
         Classifier = classifier(trainX, trainY)
         # Test the binary model
@@ -71,6 +67,9 @@ def classifier2(X, Y):
 
     print(predict1.item(0))
     print(predict1.item(1))
+    print(myClassifier2.classes_)
+    print(predict1)
+    print(predict2)
 
 def classifier(X, Y):
     global s
