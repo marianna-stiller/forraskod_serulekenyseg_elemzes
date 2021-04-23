@@ -5,4 +5,5 @@ Előfeltétel:
 
 Lépések:
 * cd machine_learning_app
+* mvn compile test package
 * mvn exec:java
