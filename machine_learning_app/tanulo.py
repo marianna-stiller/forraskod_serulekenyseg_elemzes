@@ -70,37 +70,15 @@ def classifier(X, Y):
 
        Returns the trained classifier.
     """
-    # 1
-    myClassifier = ExtraTreesClassifier()
-    # 2
-    # myClassifier = GaussianNB()
-    # 3
-    # myClassifier = GradientBoostingClassifier()
-    # 4
-    # myClassifier = DecisionTreeClassifier()
-    # 5
-    # myClassifier = KNeighborsClassifier()
-    # 6
-    # myClassifier = LogisticRegression(multi_class='ovr')
-    # 7
-    #mySVM = svm.LinearSVC(multi_class='ovr')
-    #myClassifier = CalibratedClassifierCV(mySVM)
 
-    # myClassifier = CalibratedClassifierCV(myLog)
-    # myClassifier = MultinomialNB()
-    # myClassifier = BernoulliNB()
-    # myClassifier = GaussianProcessClassifier(multi_class='one_vs_rest')
-    # myClassifier = ExtraTreeClassifier()
-    # myClassifier = LabelSpreading()
-    # myClassifier = LabelPropagation()
-    # myClassifier = MLPClassifier(hidden_layer_sizes=25, max_iter=50, early_stopping=True)
+    myClassifier = ExtraTreesClassifier()
     
     myClassifier.fit(X, Y)
 
     s = pickle.dumps(myClassifier)
 
     return myClassifier
-    
+
 
 def test_bmodel(X, Y, classifier):
     """This method tests a classifier using validation data.
