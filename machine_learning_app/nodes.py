@@ -1,3 +1,11 @@
+"""
+This file selects the important values from the ASTs and writes into CSVs.
+
+For example:
+acunetix_ast.txt line 2:	"kind": "program",
+acunetix_ast.csv word 1:	program
+"""
+
 import csv
 import re
 import os

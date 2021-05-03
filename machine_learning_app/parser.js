@@ -1,6 +1,11 @@
+/*
+This file parses the test php code (toimport_vulnerabilities.php)
+and convert it to AST (toimport_vulnerabilities_ast.txt).
+*/
+
 var fs = require('fs');
 var path = require('path');
-var engine = require('php-parser');
+var engine = require('php-parser'); // https://github.com/glayzzle/php-parser
 var util = require('util');
 
 var parser = new engine({

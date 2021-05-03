@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Spyder Editor
-
-This is a temporary script file.
+This file implements the real learning.
 """
 
 import sys
@@ -36,30 +33,25 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
 
-    """ Preparing and caller section of the classifier """
-
-   # Import dataset
     origX = np.load("testX.npy")
     origY = np.load("testy.npy").astype(int)
     origX2 = np.load("toimportX.npy")
     origY2 = np.load("toimporty.npy").astype(int)
 
-    kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5) # n_samples=102
+    kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
 
     for train_index, validation_index in kFold.split(origX, origY):
         trainX, validationX = origX[train_index], origX[validation_index]
         trainY, validationY = origY[train_index], origY[validation_index]
 
-        # Create classifier for a specific class
         Classifier = classifier(trainX, trainY)
-        # Test the binary model
+
         results = test_bmodel(validationX, validationY, Classifier)
         #print(results)
 
     classifier2(origX2,origY2)
 
 def classifier2(X, Y):
-    # Load the pickled model
     myClassifier2 = pickle.loads(s)
 
     predict1 = myClassifier2.predict_proba(X)
@@ -126,56 +118,34 @@ def test_bmodel(X, Y, classifier):
         corresponding metrics (precision, recall, Fscore and support).
     """
 
-    """ argmax
-    
-        Returns the indices of the maximum values along an axis.
-        Parameters:
-        -----------
-        a       : input array
-        axis    : by default, the index is into the flattened array, otherwise along the specified axis
-    """
     Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
-    # Evaluate
-    """precision_recall_fscore_support
-    
-        Returns: precision, recall, fbeta_score, support
-        Parameters:
-        -----------
-        Y       : ground truth (correct) target values.
-        Y_pred  : estimated targets as returned by a classifier.
-        pos_label: setting labels=[pos_label] and average!='binary' will report scores for that label only.
-        average ('micro')   : calculate metrics globally by counting the total true positives, false negatives and false positives. 
-    """
 
-    classes = ['vulnerable', 'not vulnerable']
     # Compute confusion matrix
-    #print("Y:",Y)
-    #print("Y_pred:",Y_pred)
-    confusion_m = confusion_matrix(Y,Y_pred,labels=[0,1])
-    np.set_printoptions(precision=2)
+    #classes = ['vulnerable', 'not vulnerable']
+    #confusion_m = confusion_matrix(Y,Y_pred,labels=[0,1])
+    #np.set_printoptions(precision=2)
 
     # Plot non-normalized confusion matrix
-    # plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization', cmap=plt.cm.Blues)
+    #plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization', cmap=plt.cm.Blues)
 
     # Plot normalized confusion matrix
-    # plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix', cmap=plt.cm.Blues, normalize=True)
+    #plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix', cmap=plt.cm.Blues, normalize=True)
 
     evaluation = precision_recall_fscore_support(Y, Y_pred, pos_label=1, average='micro')
 
     return evaluation
 
 def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.cm.Blues, normalize=False):
-    """
-    given a sklearn confusion matrix (cm), make a nice plot
+    """ This method make the plots.
 
-    Parameters:
-    -----------
-    cm              : confusion matrix from sklearn.metrics.confusion_matrix
-    target_names    : given classification classes such as [0, 1, 2] the class names, for example: ['high', 'medium', 'low']
-    title           : the text to display at the top of the matrix
-    cmap            : the gradient of the values displayed from matplotlib.pyplot.cm
-                        plt.get_cmap('jet') or plt.cm.Blues
-    normalize       : If False, plot the raw numbers; If True, plot the proportions
+        Parameters:
+        -----------
+        cm              : confusion matrix from sklearn.metrics.confusion_matrix
+        target_names    : given classification classes such as [0, 1, 2] the class names, for example: ['high', 'medium', 'low']
+        title           : the text to display at the top of the matrix
+        cmap            : the gradient of the values displayed from matplotlib.pyplot.cm
+                            plt.get_cmap('jet') or plt.cm.Blues
+        normalize       : if False, plot the raw numbers; if True, plot the proportions
 
     """
 

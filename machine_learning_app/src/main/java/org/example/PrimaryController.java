@@ -75,8 +75,6 @@ public class PrimaryController implements Initializable {
             progress_no.setText(progress.getProgress() +"%");
         } catch (IOException e) {
             e.printStackTrace();
-            progress.setProgress(0);
-            progress_no.setText(Math.round(progress.getProgress()) +"%");
         }
         Date after_date = new Date();
         long after_timeMilli = after_date.getTime();

@@ -1,3 +1,10 @@
+"""
+This file concatenates the CSVs.
+
+WARNING: DO NOT RUN!
+The numbers at the end of lines (0,1) were entered **manually**.
+"""
+
 import os
 import pandas as pd
 import glob
