@@ -46,21 +46,18 @@ def main(argv=None):
 
         Classifier = classifier(trainX, trainY)
 
-        results = test_bmodel(validationX, validationY, Classifier)
-        #print(results)
+        test_bmodel(validationX, validationY, Classifier)
 
     classifier2(origX2,origY2)
 
 def classifier2(X, Y):
     myClassifier2 = pickle.loads(s)
 
-    predict1 = myClassifier2.predict_proba(X)
-    predict2 = myClassifier2.predict(X)
+    predict = myClassifier2.predict_proba(X)
 
-    print(predict1.item(0))
-    print(predict1.item(1))
-    #print(predict1)
-    #print(predict2)
+    print(predict.item(0))
+    print(predict.item(1))
+
 
 def classifier(X, Y):
     global s
@@ -99,10 +96,11 @@ def classifier(X, Y):
     # myClassifier = MLPClassifier(hidden_layer_sizes=25, max_iter=50, early_stopping=True)
     
     myClassifier.fit(X, Y)
-    # Save the trained model as a pickle string
+
     s = pickle.dumps(myClassifier)
 
     return myClassifier
+    
 
 def test_bmodel(X, Y, classifier):
     """This method tests a classifier using validation data.

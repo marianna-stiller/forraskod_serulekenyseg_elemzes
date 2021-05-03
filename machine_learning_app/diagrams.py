@@ -1,15 +1,49 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import itertools
+import sys
 
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import RepeatedStratifiedKFold
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.metrics import precision_recall_fscore_support
+
+
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv
+
+    origX = np.load("testX.npy")
+    origY = np.load("testy.npy").astype(int)
+    
+    kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
+
+    for train_index, validation_index in kFold.split(origX, origY):
+        trainX, validationX = origX[train_index], origX[validation_index]
+        trainY, validationY = origY[train_index], origY[validation_index]
+
+        Classifier = classifier(trainX, trainY)
+        test_bmodel(validationX, validationY, Classifier)
+
+
+def classifier(X, Y):
+    myClassifier = ExtraTreesClassifier()
+    myClassifier.fit(X, Y)
+    return myClassifier
+
+def test_bmodel(X, Y, classifier):
+    Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
 
     # Compute confusion matrix
-    #classes = ['vulnerable', 'not vulnerable']
-    #confusion_m = confusion_matrix(Y,Y_pred,labels=[0,1])
-    #np.set_printoptions(precision=2)
+    classes = ['vulnerable', 'not vulnerable']
+    confusion_m = confusion_matrix(Y,Y_pred,labels=[0,1])
+    np.set_printoptions(precision=2)
 
     # Plot non-normalized confusion matrix
-    #plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization', cmap=plt.cm.Blues)
+    plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization', cmap=plt.cm.Blues)
 
     # Plot normalized confusion matrix
-    #plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix', cmap=plt.cm.Blues, normalize=True)
+    plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix', cmap=plt.cm.Blues, normalize=True)
 
 
 def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.cm.Blues, normalize=False):
@@ -52,3 +86,6 @@ def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.c
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.show()
+
+if __name__ == "__main__":
+    sys.exit(main())
