@@ -41,24 +41,34 @@ def main(argv=None):
     #     Classifier = classifier(trainX, trainY)
     #     confusionm(validationX, validationY, Classifier)
 
+    X, y = datasets.make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=2)
+    train_samples = 5
+    X_train = X[:train_samples] # 5
+    X_test = X[train_samples:] # 95
+    y_train = y[:train_samples] # 5
+    y_test = y[train_samples:] # 95
+    plot_classification(X_train, y_train, X_test, y_test, 100)
+    Classifier = classifier(X_train, y_train)
+    confusionm(X_test, y_test, Classifier, 100)
+
     X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
     train_samples = 100
     X_train = X[:train_samples] # 100
     X_test = X[train_samples:] # 99.900
     y_train = y[:train_samples] # 100
     y_test = y[train_samples:] # 99.900
-    plot_classification(X_train, y_train, X_test, y_test)
+    plot_classification(X_train, y_train, X_test, y_test, 100000)
     Classifier = classifier(X_train, y_train)
-    confusionm(X_test, y_test, Classifier)
+    confusionm(X_test, y_test, Classifier, 100000)
 
 
 def classifier(X, Y):
-    myClassifier = etc
+    myClassifier = gnb
     myClassifier.fit(X, Y)
     return myClassifier
 
 
-def confusionm(X, Y, classifier):
+def confusionm(X, Y, classifier, title):
     """ """
     Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
 
@@ -68,10 +78,10 @@ def confusionm(X, Y, classifier):
     np.set_printoptions(precision=2)
 
     # Plot non-normalized confusion matrix
-    plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization', cmap=plt.cm.Blues)
+    plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization for '+str(title)+' samples', cmap=plt.cm.Blues)
 
     # Plot normalized confusion matrix
-    plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix', cmap=plt.cm.Blues, normalize=True)
+    plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix for'+str(title)+' samples', cmap=plt.cm.Blues, normalize=True)
 
 
 def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.cm.Blues, normalize=False):
@@ -116,7 +126,7 @@ def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.c
     plt.show()
 
 
-def plot_classification(X_train, y_train ,X_test, y_test):
+def plot_classification(X_train, y_train ,X_test, y_test, title):
     plt.figure(figsize=(10, 10))
     ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
     ax2 = plt.subplot2grid((3, 1), (2, 0))
@@ -149,7 +159,7 @@ def plot_classification(X_train, y_train ,X_test, y_test):
     ax1.set_ylabel("Fraction of positives")
     ax1.set_ylim([-0.05, 1.05])
     ax1.legend(loc="lower right")
-    ax1.set_title('Calibration plots  (reliability curve)')
+    ax1.set_title('Reliability curve for '+str(title)+' samples')
 
     ax2.set_xlabel("Mean predicted value")
     ax2.set_ylabel("Count")

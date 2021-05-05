@@ -11,12 +11,18 @@ import matplotlib.pyplot as plt
 import pickle
 from matplotlib import cm
 from keras.utils import to_categorical
-from sklearn.ensemble import ExtraTreesClassifier
 from sklearn import svm
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
+
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+
 
 develop = False
 
@@ -24,7 +30,13 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
 
-    """ Preparing and caller section of the classifier """
+    gnb_pr_ar = []
+    etc = ExtraTreesClassifier()
+    etc_pr_ar = []
+    dtc = DecisionTreeClassifier()
+    dtc_pr_ar = []
+    nknc = KNeighborsClassifier()
+    nknc_pr_ar = []
 
     origX = np.load("testX.npy")
     origY = np.load("testy.npy").astype(int)
@@ -37,21 +49,37 @@ def main(argv=None):
         trainX, validationX = origX[train_index], origX[validation_index]
         trainY, validationY = origY[train_index], origY[validation_index]
         
+        # Gaussian Naive Bayes
         Classifier = classifier(trainX, trainY)
         results = test_bmodel(validationX, validationY, Classifier)
-        
-    classifier2(origX2,origY2)
+        gnb_pr_ar.append(results)
+        # Extra Trees
+        etc.fit(trainX, trainY)
+        etc_pr_ar.append(test_bmodel(validationX, validationY, etc))
+        # Decision Tree
+        dtc.fit(trainX, trainY)
+        dtc_pr_ar.append(test_bmodel(validationX, validationY, dtc))
+        # KNeighbors
+        nknc.fit(trainX, trainY)
+        nknc_pr_ar.append(test_bmodel(validationX, validationY, nknc))
 
+    classifier2(origX2,origY2)
+    print("Gaussian precision:",average(gnb_pr_ar))
+    print("Extra Trees preicison:",average(etc_pr_ar))
+    print("Decision Tree precision:",average(dtc_pr_ar))
+    print("KNeighbors precision:",average(nknc_pr_ar))
+
+
+def average(lst):
+    return sum(lst) / len(lst)
 
 def classifier2(X, Y):
     myClassifier2 = pickle.loads(s)
 
     predict = myClassifier2.predict_proba(X)
-
     print(predict.item(0))
     print(predict.item(1))
     print(myClassifier2.predict(X))
-
 
 
 def classifier(X, Y):
@@ -65,10 +93,9 @@ def classifier(X, Y):
 
        Returns the trained classifier.
     """
-    myClassifier = ExtraTreesClassifier()
+    myClassifier = GaussianNB()
     myClassifier.fit(X, Y)
     s = pickle.dumps(myClassifier)
-
     return myClassifier
 
 

@@ -111,7 +111,7 @@ public class PrimaryController implements Initializable {
                 piechart.getStylesheets().add("css/style2.css");
             }
         });
-        describe1.setText("A kód SQL injection-re "+Math.round(vulnerable)+"%-ban érzékeny a tanuló adatok alapján.");
+        describe1.setText("A program "+Math.round(vulnerable)+"%-os (pontosabban "+vulnerable+"%-os) valószínűségűre állapította meg a kód sérülékenységét SQL Injection-el szemben.");
     }
 
     public void back() throws IOException {
