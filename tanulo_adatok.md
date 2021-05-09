@@ -1,4 +1,4 @@
-### Sérülékeny példák (58)
+### Sérülékeny példák (57)
 
 1. dvwa_low --> dvwa_low_ast 0
 1. dvwa_medium --> dvwa_medium_ast 0
@@ -58,7 +58,7 @@
 1. php-reaper18 --> php-reaper18_ast 0
 1. stackoverflow --> stackoverflow_ast 0
 
-### Nem sérülékeny példák (44)
+### Nem sérülékeny példák (45)
 
 1. dvwa_impossible --> dvwa_impossible_ast 1
 2. dvwa_high --> dvwa_high_ast 1
