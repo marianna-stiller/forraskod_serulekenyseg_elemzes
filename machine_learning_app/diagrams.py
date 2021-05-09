@@ -8,38 +8,29 @@ from sklearn import datasets
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import precision_recall_fscore_support
-from sklearn.ensemble import ExtraTreesClassifier, GradientBoostingClassifier
-from sklearn.naive_bayes import GaussianNB
 from sklearn.calibration import calibration_curve
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import make_moons, make_circles, make_classification
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from matplotlib.colors import ListedColormap
+
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import LinearSVC
 
 gnb = GaussianNB()
-etc = ExtraTreesClassifier()
-gbc = GradientBoostingClassifier()
-dtc = DecisionTreeClassifier()
-nknc = KNeighborsClassifier()
+rfc = RandomForestClassifier()
+knc = KNeighborsClassifier()
 lr = LogisticRegression()
 svc = LinearSVC(C=1.0)
-
 
 def main(argv=None):
     if argv is None:
         argv = sys.argv
 
-    # origX = np.load("testX.npy")
-    # origY = np.load("testy.npy").astype(int)
-    # kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
-    # for train_index, validation_index in kFold.split(origX, origY):
-    #     trainX, validationX = origX[train_index], origX[validation_index]
-    #     trainY, validationY = origY[train_index], origY[validation_index]
-
-    #     plot_classification(trainX, trainY, validationX, validationY)        
-    #     Classifier = classifier(trainX, trainY)
-    #     confusionm(validationX, validationY, Classifier)
+    plot_classifier_comparison()
 
     X, y = datasets.make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=2)
     train_samples = 5
@@ -49,6 +40,7 @@ def main(argv=None):
     y_test = y[train_samples:] # 95
     plot_classification(X_train, y_train, X_test, y_test, 100)
     Classifier = classifier(X_train, y_train)
+    
     confusionm(X_test, y_test, Classifier, 100)
 
     X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
@@ -67,9 +59,8 @@ def classifier(X, Y):
     myClassifier.fit(X, Y)
     return myClassifier
 
-
 def confusionm(X, Y, classifier, title):
-    """ """
+    """This method make confusion matrix"""
     Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
 
     # Compute confusion matrix
@@ -132,11 +123,9 @@ def plot_classification(X_train, y_train ,X_test, y_test, title):
     ax2 = plt.subplot2grid((3, 1), (2, 0))
 
     ax1.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
-    for clf, name in [  (gnb, 'Naive Bayes'), 
-                        (etc, 'Extra Trees'), 
-                        (gbc, 'Gradient Boostring'),
-                        (dtc, 'Decision Tree'),
-                        (nknc, 'NK Neighbors'), 
+    for clf, name in [  (gnb, 'Gaussian Naive Bayes'), 
+                        (rfc, 'Random Forest'), 
+                        (knc, 'K-Nearest Neighbors'), 
                         (lr, 'Logistic Regression'),
                         (svc, 'Linear SVC')
                      ]:
@@ -164,6 +153,95 @@ def plot_classification(X_train, y_train ,X_test, y_test, title):
     ax2.set_xlabel("Mean predicted value")
     ax2.set_ylabel("Count")
     ax2.legend(loc="upper center", ncol=2)
+
+    plt.tight_layout()
+    plt.show()
+
+def plot_classifier_comparison():
+    h = .02  # step size in the mesh
+
+    names = ["Gaussian Naive Bayes", "Random Forest", "K-Nearest Neighbors", 
+    "Logistic Regression", "LinearSVC"]
+
+    classifiers = [gnb, rfc, knc, lr, svc]
+
+    X, y = make_classification(n_features=2, n_redundant=0, n_informative=2,
+                            random_state=1, n_clusters_per_class=1)
+    rng = np.random.RandomState(2)
+    X += 2 * rng.uniform(size=X.shape)
+    linearly_separable = (X, y)
+
+    datasets = [make_moons(noise=0.3, random_state=0),
+                make_circles(noise=0.2, factor=0.5, random_state=1),
+                linearly_separable
+                ]
+
+    figure = plt.figure(figsize=(27, 9))
+    i = 1
+    # iterate over datasets
+    for ds_cnt, ds in enumerate(datasets):
+        # preprocess dataset, split into training and test part
+        X, y = ds
+        X = StandardScaler().fit_transform(X)
+        X_train, X_test, y_train, y_test = \
+            train_test_split(X, y, test_size=.4, random_state=42)
+
+        x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5
+        y_min, y_max = X[:, 1].min() - .5, X[:, 1].max() + .5
+        xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                            np.arange(y_min, y_max, h))
+
+        # just plot the dataset first
+        cm = plt.cm.RdBu
+        cm_bright = ListedColormap(['#FF0000', '#0000FF'])
+        ax = plt.subplot(len(datasets), len(classifiers) + 1, i)
+        if ds_cnt == 0:
+            ax.set_title("Input data")
+        # Plot the training points
+        ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap=cm_bright,
+                edgecolors='k')
+        # Plot the testing points
+        ax.scatter(X_test[:, 0], X_test[:, 1], c=y_test, cmap=cm_bright, alpha=0.6,
+                edgecolors='k')
+        ax.set_xlim(xx.min(), xx.max())
+        ax.set_ylim(yy.min(), yy.max())
+        ax.set_xticks(())
+        ax.set_yticks(())
+        i += 1
+
+        # iterate over classifiers
+        for name, clf in zip(names, classifiers):
+            ax = plt.subplot(len(datasets), len(classifiers) + 1, i)
+            clf.fit(X_train, y_train)
+            score = clf.score(X_test, y_test)
+
+            # Plot the decision boundary. For that, we will assign a color to each
+            # point in the mesh [x_min, x_max]x[y_min, y_max].
+            if hasattr(clf, "decision_function"):
+                Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
+            else:
+                Z = clf.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
+
+            # Put the result into a color plot
+            Z = Z.reshape(xx.shape)
+            ax.contourf(xx, yy, Z, cmap=cm, alpha=.8)
+
+            # Plot the training points
+            ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap=cm_bright,
+                    edgecolors='k')
+            # Plot the testing points
+            ax.scatter(X_test[:, 0], X_test[:, 1], c=y_test, cmap=cm_bright,
+                    edgecolors='k', alpha=0.6)
+
+            ax.set_xlim(xx.min(), xx.max())
+            ax.set_ylim(yy.min(), yy.max())
+            ax.set_xticks(())
+            ax.set_yticks(())
+            if ds_cnt == 0:
+                ax.set_title(name)
+            ax.text(xx.max() - .3, yy.min() + .3, ('%.2f' % score).lstrip('0'),
+                    size=15, horizontalalignment='right')
+            i += 1
 
     plt.tight_layout()
     plt.show()

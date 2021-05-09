@@ -18,25 +18,26 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.calibration import CalibratedClassifierCV
+from sklearn.svm import LinearSVC
 
 develop = False
+gnb_pr_ar = []
+rfc = RandomForestClassifier()
+rfc_pr_ar = []
+nknc = KNeighborsClassifier()
+nknc_pr_ar = []
+lr = LogisticRegression(solver='lbfgs', max_iter=10000, multi_class='ovr')
+lr_pr_ar = []
+lsvc = CalibratedClassifierCV(LinearSVC(max_iter=10000, multi_class='ovr'))
+lsvc_pr_ar = []
 
 def main(argv=None):
     if argv is None:
         argv = sys.argv
-
-    gnb_pr_ar = []
-    etc = ExtraTreesClassifier()
-    etc_pr_ar = []
-    dtc = DecisionTreeClassifier()
-    dtc_pr_ar = []
-    nknc = KNeighborsClassifier()
-    nknc_pr_ar = []
 
     origX = np.load("testX.npy")
     origY = np.load("testy.npy").astype(int)
@@ -48,26 +49,30 @@ def main(argv=None):
     for train_index, validation_index in kFold.split(origX, origY):
         trainX, validationX = origX[train_index], origX[validation_index]
         trainY, validationY = origY[train_index], origY[validation_index]
-        
-        # Gaussian Naive Bayes
+
+        # Naive Bayes: Gaussian
         Classifier = classifier(trainX, trainY)
         results = test_bmodel(validationX, validationY, Classifier)
         gnb_pr_ar.append(results)
-        # Extra Trees
-        etc.fit(trainX, trainY)
-        etc_pr_ar.append(test_bmodel(validationX, validationY, etc))
-        # Decision Tree
-        dtc.fit(trainX, trainY)
-        dtc_pr_ar.append(test_bmodel(validationX, validationY, dtc))
-        # KNeighbors
+        # Ensemble Method: Random Forest
+        rfc.fit(trainX, trainY)
+        rfc_pr_ar.append(test_bmodel(validationX, validationY, rfc))
+        # Nearest Neighbors: K-Nearest Neighbors
         nknc.fit(trainX, trainY)
         nknc_pr_ar.append(test_bmodel(validationX, validationY, nknc))
+        # Linear Model: Logistic Regression
+        lr.fit(trainX, trainY)
+        lr_pr_ar.append(test_bmodel(validationX, validationY, lr))
+        # Support Vector Machine: LinearSVC
+        lsvc.fit(trainX, trainY)
+        lsvc_pr_ar.append(test_bmodel(validationX, validationY, lsvc))
 
     classifier2(origX2,origY2)
-    print("Gaussian precision:",average(gnb_pr_ar))
-    print("Extra Trees preicison:",average(etc_pr_ar))
-    print("Decision Tree precision:",average(dtc_pr_ar))
-    print("KNeighbors precision:",average(nknc_pr_ar))
+    print("Gaussian Naive Bayes precision:", average(gnb_pr_ar))
+    print("Random Forest preicison:", average(rfc_pr_ar))
+    print("K-Nearest Neighbors precision:", average(nknc_pr_ar))
+    print("Logistic Regression precision:", average(lr_pr_ar))
+    print("LinearSVC precision:", average(lsvc_pr_ar))
 
 
 def average(lst):
