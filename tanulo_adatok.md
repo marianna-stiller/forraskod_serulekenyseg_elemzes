@@ -1,7 +1,7 @@
 ### Sérülékeny példák (58)
 
-* dvwa_low --> dvwa_low_ast 0
-* dvwa_medium --> dvwa_medium_ast 0
+1. dvwa_low --> dvwa_low_ast 0
+1. dvwa_medium --> dvwa_medium_ast 0
 1. CVE-2020-5515 (`CVE-2020-5515`) --> CVE-2020-5515_ast 0
 1. CVE-2020-6117 (`CVE-2020-6117`, `CVE-2020-6118`, `CVE-2020-6119`, `CVE-2020-6120`, `CVE-2020-6121`, `CVE-2020-6122`) -->  CVE-2020-6117_ast 0
 1. CVE-2020-6123 (`CVE-2020-6123`) --> CVE-2020-6132_ast 0
