@@ -62,7 +62,7 @@ public class PrimaryController implements Initializable {
             runtime.exec("node parser.js");
             runtime.exec("py nodes.py");
             runtime.exec("py vectorizer.py");
-            Process process = runtime.exec("py tanulo.py");
+            Process process = runtime.exec("py trainer.py");
             InputStream is = process.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);

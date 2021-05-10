@@ -1,8 +1,5 @@
 """
 This file concatenates the CSVs.
-
-WARNING: DO NOT RUN!
-The numbers at the end of lines (0,1) were entered **manually**.
 """
 
 import os
@@ -14,7 +11,7 @@ lines = []
 db = 0
 
 for entry in entries:
-	if os.path.splitext(entry)[1] == '.csv' and os.path.splitext(entry)[0] != 'concatenated':
+	if os.path.splitext(entry)[1] == '.csv' and os.path.splitext(entry)[0] != 'concatenated' and os.path.splitext(entry)[0] != 'concatenated_titled' and os.path.splitext(entry)[0] != 'toimport_vulnerabilities_ast':
 		db += 1
 		with open(entry, 'r') as f:
 			for line in f:

@@ -8,9 +8,9 @@
       "offset": 0
     },
     "end": {
-      "line": 24,
+      "line": 31,
       "column": 2,
-      "offset": 739
+      "offset": 1160
     }
   },
   "children": [
@@ -26,7 +26,7 @@
         "end": {
           "line": 22,
           "column": 1,
-          "offset": 735
+          "offset": 620
         }
       },
       "test": {
@@ -40,8 +40,8 @@
           },
           "end": {
             "line": 3,
-            "column": 34,
-            "offset": 41
+            "column": 31,
+            "offset": 38
           }
         },
         "variables": [
@@ -56,8 +56,8 @@
               },
               "end": {
                 "line": 3,
-                "column": 32,
-                "offset": 39
+                "column": 29,
+                "offset": 36
               }
             },
             "what": {
@@ -71,11 +71,11 @@
                 },
                 "end": {
                   "line": 3,
-                  "column": 20,
-                  "offset": 27
+                  "column": 17,
+                  "offset": 24
                 }
               },
-              "name": "_REQUEST",
+              "name": "_POST",
               "curly": false
             },
             "offset": {
@@ -84,13 +84,13 @@
                 "source": null,
                 "start": {
                   "line": 3,
-                  "column": 22,
-                  "offset": 29
+                  "column": 19,
+                  "offset": 26
                 },
                 "end": {
                   "line": 3,
-                  "column": 30,
-                  "offset": 37
+                  "column": 27,
+                  "offset": 34
                 }
               },
               "value": "Submit",
@@ -107,13 +107,13 @@
           "source": null,
           "start": {
             "line": 3,
-            "column": 37,
-            "offset": 44
+            "column": 34,
+            "offset": 41
           },
           "end": {
             "line": 22,
             "column": 1,
-            "offset": 735
+            "offset": 620
           }
         },
         "children": [
@@ -127,16 +127,16 @@
                   "start": {
                     "line": 4,
                     "column": 1,
-                    "offset": 47
+                    "offset": 44
                   },
                   "end": {
                     "line": 5,
                     "column": 0,
-                    "offset": 60
+                    "offset": 57
                   }
                 },
                 "value": "// Get input\n",
-                "offset": 47
+                "offset": 44
               }
             ],
             "loc": {
@@ -144,12 +144,12 @@
               "start": {
                 "line": 5,
                 "column": 1,
-                "offset": 61
+                "offset": 58
               },
               "end": {
                 "line": 5,
-                "column": 25,
-                "offset": 85
+                "column": 22,
+                "offset": 79
               }
             },
             "expression": {
@@ -159,12 +159,12 @@
                 "start": {
                   "line": 5,
                   "column": 1,
-                  "offset": 61
+                  "offset": 58
                 },
                 "end": {
                   "line": 5,
-                  "column": 25,
-                  "offset": 85
+                  "column": 22,
+                  "offset": 79
                 }
               },
               "left": {
@@ -174,12 +174,12 @@
                   "start": {
                     "line": 5,
                     "column": 1,
-                    "offset": 61
+                    "offset": 58
                   },
                   "end": {
                     "line": 5,
                     "column": 4,
-                    "offset": 64
+                    "offset": 61
                   }
                 },
                 "name": "id",
@@ -192,12 +192,12 @@
                   "start": {
                     "line": 5,
                     "column": 7,
-                    "offset": 67
+                    "offset": 64
                   },
                   "end": {
                     "line": 5,
-                    "column": 24,
-                    "offset": 84
+                    "column": 21,
+                    "offset": 78
                   }
                 },
                 "what": {
@@ -207,15 +207,15 @@
                     "start": {
                       "line": 5,
                       "column": 7,
-                      "offset": 67
+                      "offset": 64
                     },
                     "end": {
                       "line": 5,
-                      "column": 16,
-                      "offset": 76
+                      "column": 13,
+                      "offset": 70
                     }
                   },
-                  "name": "_REQUEST",
+                  "name": "_POST",
                   "curly": false
                 },
                 "offset": {
@@ -224,13 +224,13 @@
                     "source": null,
                     "start": {
                       "line": 5,
-                      "column": 18,
-                      "offset": 78
+                      "column": 15,
+                      "offset": 72
                     },
                     "end": {
                       "line": 5,
-                      "column": 22,
-                      "offset": 82
+                      "column": 19,
+                      "offset": 76
                     }
                   },
                   "value": "id",
@@ -244,37 +244,17 @@
           },
           {
             "kind": "expressionstatement",
-            "leadingComments": [
-              {
-                "kind": "commentline",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 7,
-                    "column": 1,
-                    "offset": 88
-                  },
-                  "end": {
-                    "line": 8,
-                    "column": 0,
-                    "offset": 106
-                  }
-                },
-                "value": "// Check database\n",
-                "offset": 88
-              }
-            ],
             "loc": {
               "source": null,
               "start": {
-                "line": 8,
+                "line": 7,
                 "column": 1,
-                "offset": 107
+                "offset": 82
               },
               "end": {
-                "line": 8,
-                "column": 76,
-                "offset": 182
+                "line": 7,
+                "column": 66,
+                "offset": 147
               }
             },
             "expression": {
@@ -282,14 +262,14 @@
               "loc": {
                 "source": null,
                 "start": {
-                  "line": 8,
+                  "line": 7,
                   "column": 1,
-                  "offset": 107
+                  "offset": 82
                 },
                 "end": {
-                  "line": 8,
-                  "column": 76,
-                  "offset": 182
+                  "line": 7,
+                  "column": 66,
+                  "offset": 147
                 }
               },
               "left": {
@@ -297,14 +277,173 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 8,
+                    "line": 7,
                     "column": 1,
-                    "offset": 107
+                    "offset": 82
                   },
                   "end": {
-                    "line": 8,
+                    "line": 7,
+                    "column": 4,
+                    "offset": 85
+                  }
+                },
+                "name": "id",
+                "curly": false
+              },
+              "right": {
+                "kind": "call",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 7,
                     "column": 7,
-                    "offset": 113
+                    "offset": 88
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 65,
+                    "offset": 146
+                  }
+                },
+                "what": {
+                  "kind": "name",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 7,
+                      "column": 7,
+                      "offset": 88
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 32,
+                      "offset": 113
+                    }
+                  },
+                  "resolution": "uqn",
+                  "name": "mysqli_real_escape_string"
+                },
+                "arguments": [
+                  {
+                    "kind": "offsetlookup",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 7,
+                        "column": 33,
+                        "offset": 114
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 59,
+                        "offset": 140
+                      }
+                    },
+                    "what": {
+                      "kind": "variable",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 7,
+                          "column": 33,
+                          "offset": 114
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 41,
+                          "offset": 122
+                        }
+                      },
+                      "name": "GLOBALS",
+                      "curly": false
+                    },
+                    "offset": {
+                      "kind": "string",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 7,
+                          "column": 42,
+                          "offset": 123
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 58,
+                          "offset": 139
+                        }
+                      },
+                      "value": "___mysqli_ston",
+                      "raw": "\"___mysqli_ston\"",
+                      "unicode": false,
+                      "isDoubleQuote": true
+                    }
+                  },
+                  {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 7,
+                        "column": 61,
+                        "offset": 142
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 64,
+                        "offset": 145
+                      }
+                    },
+                    "name": "id",
+                    "curly": false
+                  }
+                ]
+              },
+              "operator": "="
+            }
+          },
+          {
+            "kind": "expressionstatement",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 150
+              },
+              "end": {
+                "line": 9,
+                "column": 74,
+                "offset": 223
+              }
+            },
+            "expression": {
+              "kind": "assign",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 9,
+                  "column": 1,
+                  "offset": 150
+                },
+                "end": {
+                  "line": 9,
+                  "column": 74,
+                  "offset": 223
+                }
+              },
+              "left": {
+                "kind": "variable",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 9,
+                    "column": 1,
+                    "offset": 150
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 7,
+                    "offset": 156
                   }
                 },
                 "name": "query",
@@ -315,14 +454,14 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 8,
+                    "line": 9,
                     "column": 11,
-                    "offset": 117
+                    "offset": 160
                   },
                   "end": {
-                    "line": 8,
-                    "column": 75,
-                    "offset": 181
+                    "line": 9,
+                    "column": 73,
+                    "offset": 222
                   }
                 },
                 "value": [
@@ -331,14 +470,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 8,
+                        "line": 9,
                         "column": 12,
-                        "offset": 118
+                        "offset": 161
                       },
                       "end": {
-                        "line": 8,
-                        "column": 69,
-                        "offset": 175
+                        "line": 9,
+                        "column": 68,
+                        "offset": 217
                       }
                     },
                     "expression": {
@@ -346,18 +485,18 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 8,
+                          "line": 9,
                           "column": 12,
-                          "offset": 118
+                          "offset": 161
                         },
                         "end": {
-                          "line": 8,
-                          "column": 69,
-                          "offset": 175
+                          "line": 9,
+                          "column": 68,
+                          "offset": 217
                         }
                       },
-                      "value": "SELECT first_name, last_name FROM users WHERE user_id = '",
-                      "raw": "SELECT first_name, last_name FROM users WHERE user_id = '",
+                      "value": "SELECT first_name, last_name FROM users WHERE user_id = ",
+                      "raw": "SELECT first_name, last_name FROM users WHERE user_id = ",
                       "unicode": false,
                       "isDoubleQuote": false
                     },
@@ -369,14 +508,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 8,
-                        "column": 69,
-                        "offset": 175
+                        "line": 9,
+                        "column": 68,
+                        "offset": 217
                       },
                       "end": {
-                        "line": 8,
-                        "column": 72,
-                        "offset": 178
+                        "line": 9,
+                        "column": 71,
+                        "offset": 220
                       }
                     },
                     "expression": {
@@ -384,14 +523,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 8,
-                          "column": 69,
-                          "offset": 175
+                          "line": 9,
+                          "column": 68,
+                          "offset": 217
                         },
                         "end": {
-                          "line": 8,
-                          "column": 72,
-                          "offset": 178
+                          "line": 9,
+                          "column": 71,
+                          "offset": 220
                         }
                       },
                       "name": "id",
@@ -405,14 +544,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 8,
-                        "column": 72,
-                        "offset": 178
+                        "line": 9,
+                        "column": 71,
+                        "offset": 220
                       },
                       "end": {
-                        "line": 8,
-                        "column": 74,
-                        "offset": 180
+                        "line": 9,
+                        "column": 72,
+                        "offset": 221
                       }
                     },
                     "expression": {
@@ -420,18 +559,18 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 8,
-                          "column": 72,
-                          "offset": 178
+                          "line": 9,
+                          "column": 71,
+                          "offset": 220
                         },
                         "end": {
-                          "line": 8,
-                          "column": 74,
-                          "offset": 180
+                          "line": 9,
+                          "column": 72,
+                          "offset": 221
                         }
                       },
-                      "value": "';",
-                      "raw": "';",
+                      "value": ";",
+                      "raw": ";",
                       "unicode": false,
                       "isDoubleQuote": false
                     },
@@ -439,7 +578,7 @@
                     "curly": false
                   }
                 ],
-                "raw": "\"SELECT first_name, last_name FROM users WHERE user_id = '$id';\"",
+                "raw": "\"SELECT first_name, last_name FROM users WHERE user_id = $id;\"",
                 "type": "string"
               },
               "operator": "="
@@ -450,14 +589,14 @@
             "loc": {
               "source": null,
               "start": {
-                "line": 9,
+                "line": 10,
                 "column": 1,
-                "offset": 184
+                "offset": 225
               },
               "end": {
-                "line": 9,
-                "column": 249,
-                "offset": 432
+                "line": 10,
+                "column": 132,
+                "offset": 356
               }
             },
             "expression": {
@@ -465,14 +604,14 @@
               "loc": {
                 "source": null,
                 "start": {
-                  "line": 9,
+                  "line": 10,
                   "column": 1,
-                  "offset": 184
+                  "offset": 225
                 },
                 "end": {
-                  "line": 9,
-                  "column": 249,
-                  "offset": 432
+                  "line": 10,
+                  "column": 132,
+                  "offset": 356
                 }
               },
               "type": "or",
@@ -481,14 +620,14 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 9,
+                    "line": 10,
                     "column": 1,
-                    "offset": 184
+                    "offset": 225
                   },
                   "end": {
-                    "line": 9,
-                    "column": 248,
-                    "offset": 431
+                    "line": 10,
+                    "column": 131,
+                    "offset": 355
                   }
                 },
                 "left": {
@@ -496,14 +635,14 @@
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 9,
+                      "line": 10,
                       "column": 1,
-                      "offset": 184
+                      "offset": 225
                     },
                     "end": {
-                      "line": 9,
+                      "line": 10,
                       "column": 8,
-                      "offset": 191
+                      "offset": 232
                     }
                   },
                   "name": "result",
@@ -514,14 +653,14 @@
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 9,
+                      "line": 10,
                       "column": 11,
-                      "offset": 194
+                      "offset": 235
                     },
                     "end": {
-                      "line": 9,
-                      "column": 249,
-                      "offset": 432
+                      "line": 10,
+                      "column": 132,
+                      "offset": 356
                     }
                   },
                   "what": {
@@ -529,14 +668,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 9,
+                        "line": 10,
                         "column": 11,
-                        "offset": 194
+                        "offset": 235
                       },
                       "end": {
-                        "line": 9,
+                        "line": 10,
                         "column": 23,
-                        "offset": 206
+                        "offset": 247
                       }
                     },
                     "resolution": "uqn",
@@ -548,14 +687,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 9,
+                          "line": 10,
                           "column": 24,
-                          "offset": 207
+                          "offset": 248
                         },
                         "end": {
-                          "line": 9,
+                          "line": 10,
                           "column": 50,
-                          "offset": 233
+                          "offset": 274
                         }
                       },
                       "what": {
@@ -563,14 +702,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 9,
+                            "line": 10,
                             "column": 24,
-                            "offset": 207
+                            "offset": 248
                           },
                           "end": {
-                            "line": 9,
+                            "line": 10,
                             "column": 32,
-                            "offset": 215
+                            "offset": 256
                           }
                         },
                         "name": "GLOBALS",
@@ -581,14 +720,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 9,
+                            "line": 10,
                             "column": 33,
-                            "offset": 216
+                            "offset": 257
                           },
                           "end": {
-                            "line": 9,
+                            "line": 10,
                             "column": 49,
-                            "offset": 232
+                            "offset": 273
                           }
                         },
                         "value": "___mysqli_ston",
@@ -602,14 +741,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 9,
-                          "column": 53,
-                          "offset": 236
+                          "line": 10,
+                          "column": 52,
+                          "offset": 276
                         },
                         "end": {
-                          "line": 9,
-                          "column": 59,
-                          "offset": 242
+                          "line": 10,
+                          "column": 58,
+                          "offset": 282
                         }
                       },
                       "name": "query",
@@ -624,14 +763,14 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 9,
-                    "column": 65,
-                    "offset": 248
+                    "line": 10,
+                    "column": 63,
+                    "offset": 287
                   },
                   "end": {
-                    "line": 9,
-                    "column": 248,
-                    "offset": 431
+                    "line": 10,
+                    "column": 131,
+                    "offset": 355
                   }
                 },
                 "expression": {
@@ -639,14 +778,14 @@
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 9,
-                      "column": 70,
-                      "offset": 253
+                      "line": 10,
+                      "column": 68,
+                      "offset": 292
                     },
                     "end": {
-                      "line": 9,
-                      "column": 246,
-                      "offset": 429
+                      "line": 10,
+                      "column": 129,
+                      "offset": 353
                     }
                   },
                   "type": ".",
@@ -655,14 +794,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 9,
-                        "column": 70,
-                        "offset": 253
+                        "line": 10,
+                        "column": 68,
+                        "offset": 292
                       },
                       "end": {
-                        "line": 9,
-                        "column": 234,
-                        "offset": 417
+                        "line": 10,
+                        "column": 118,
+                        "offset": 342
                       }
                     },
                     "type": ".",
@@ -671,14 +810,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 9,
-                          "column": 70,
-                          "offset": 253
+                          "line": 10,
+                          "column": 68,
+                          "offset": 292
                         },
                         "end": {
-                          "line": 9,
-                          "column": 77,
-                          "offset": 260
+                          "line": 10,
+                          "column": 75,
+                          "offset": 299
                         }
                       },
                       "value": "<pre>",
@@ -687,326 +826,94 @@
                       "isDoubleQuote": false
                     },
                     "right": {
-                      "kind": "retif",
+                      "kind": "call",
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 9,
-                          "column": 81,
-                          "offset": 264
+                          "line": 10,
+                          "column": 78,
+                          "offset": 302
                         },
                         "end": {
-                          "line": 9,
-                          "column": 234,
-                          "offset": 417
+                          "line": 10,
+                          "column": 118,
+                          "offset": 342
                         }
                       },
-                      "test": {
-                        "kind": "call",
+                      "what": {
+                        "kind": "name",
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 9,
-                            "column": 82,
-                            "offset": 265
-                          },
-                          "end": {
-                            "line": 9,
-                            "column": 119,
+                            "line": 10,
+                            "column": 78,
                             "offset": 302
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 90,
+                            "offset": 314
                           }
                         },
-                        "what": {
-                          "kind": "name",
+                        "resolution": "uqn",
+                        "name": "mysqli_error"
+                      },
+                      "arguments": [
+                        {
+                          "kind": "offsetlookup",
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 9,
-                              "column": 82,
-                              "offset": 265
-                            },
-                            "end": {
-                              "line": 9,
+                              "line": 10,
                               "column": 91,
-                              "offset": 274
-                            }
-                          },
-                          "resolution": "uqn",
-                          "name": "is_object"
-                        },
-                        "arguments": [
-                          {
-                            "kind": "offsetlookup",
-                            "loc": {
-                              "source": null,
-                              "start": {
-                                "line": 9,
-                                "column": 92,
-                                "offset": 275
-                              },
-                              "end": {
-                                "line": 9,
-                                "column": 118,
-                                "offset": 301
-                              }
-                            },
-                            "what": {
-                              "kind": "variable",
-                              "loc": {
-                                "source": null,
-                                "start": {
-                                  "line": 9,
-                                  "column": 92,
-                                  "offset": 275
-                                },
-                                "end": {
-                                  "line": 9,
-                                  "column": 100,
-                                  "offset": 283
-                                }
-                              },
-                              "name": "GLOBALS",
-                              "curly": false
-                            },
-                            "offset": {
-                              "kind": "string",
-                              "loc": {
-                                "source": null,
-                                "start": {
-                                  "line": 9,
-                                  "column": 101,
-                                  "offset": 284
-                                },
-                                "end": {
-                                  "line": 9,
-                                  "column": 117,
-                                  "offset": 300
-                                }
-                              },
-                              "value": "___mysqli_ston",
-                              "raw": "\"___mysqli_ston\"",
-                              "unicode": false,
-                              "isDoubleQuote": true
-                            }
-                          }
-                        ],
-                        "parenthesizedExpression": true
-                      },
-                      "trueExpr": {
-                        "kind": "call",
-                        "loc": {
-                          "source": null,
-                          "start": {
-                            "line": 9,
-                            "column": 123,
-                            "offset": 306
-                          },
-                          "end": {
-                            "line": 9,
-                            "column": 163,
-                            "offset": 346
-                          }
-                        },
-                        "what": {
-                          "kind": "name",
-                          "loc": {
-                            "source": null,
-                            "start": {
-                              "line": 9,
-                              "column": 123,
-                              "offset": 306
+                              "offset": 315
                             },
                             "end": {
-                              "line": 9,
-                              "column": 135,
-                              "offset": 318
+                              "line": 10,
+                              "column": 117,
+                              "offset": 341
                             }
                           },
-                          "resolution": "uqn",
-                          "name": "mysqli_error"
-                        },
-                        "arguments": [
-                          {
-                            "kind": "offsetlookup",
-                            "loc": {
-                              "source": null,
-                              "start": {
-                                "line": 9,
-                                "column": 136,
-                                "offset": 319
-                              },
-                              "end": {
-                                "line": 9,
-                                "column": 162,
-                                "offset": 345
-                              }
-                            },
-                            "what": {
-                              "kind": "variable",
-                              "loc": {
-                                "source": null,
-                                "start": {
-                                  "line": 9,
-                                  "column": 136,
-                                  "offset": 319
-                                },
-                                "end": {
-                                  "line": 9,
-                                  "column": 144,
-                                  "offset": 327
-                                }
-                              },
-                              "name": "GLOBALS",
-                              "curly": false
-                            },
-                            "offset": {
-                              "kind": "string",
-                              "loc": {
-                                "source": null,
-                                "start": {
-                                  "line": 9,
-                                  "column": 145,
-                                  "offset": 328
-                                },
-                                "end": {
-                                  "line": 9,
-                                  "column": 161,
-                                  "offset": 344
-                                }
-                              },
-                              "value": "___mysqli_ston",
-                              "raw": "\"___mysqli_ston\"",
-                              "unicode": false,
-                              "isDoubleQuote": true
-                            }
-                          }
-                        ]
-                      },
-                      "falseExpr": {
-                        "kind": "retif",
-                        "loc": {
-                          "source": null,
-                          "start": {
-                            "line": 9,
-                            "column": 167,
-                            "offset": 350
-                          },
-                          "end": {
-                            "line": 9,
-                            "column": 233,
-                            "offset": 416
-                          }
-                        },
-                        "test": {
-                          "kind": "assign",
-                          "loc": {
-                            "source": null,
-                            "start": {
-                              "line": 9,
-                              "column": 168,
-                              "offset": 351
-                            },
-                            "end": {
-                              "line": 9,
-                              "column": 207,
-                              "offset": 390
-                            }
-                          },
-                          "left": {
+                          "what": {
                             "kind": "variable",
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 9,
-                                "column": 168,
-                                "offset": 351
+                                "line": 10,
+                                "column": 91,
+                                "offset": 315
                               },
                               "end": {
-                                "line": 9,
-                                "column": 182,
-                                "offset": 365
+                                "line": 10,
+                                "column": 99,
+                                "offset": 323
                               }
                             },
-                            "name": "___mysqli_res",
+                            "name": "GLOBALS",
                             "curly": false
                           },
-                          "right": {
-                            "kind": "call",
+                          "offset": {
+                            "kind": "string",
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 9,
-                                "column": 185,
-                                "offset": 368
+                                "line": 10,
+                                "column": 100,
+                                "offset": 324
                               },
                               "end": {
-                                "line": 9,
-                                "column": 207,
-                                "offset": 390
+                                "line": 10,
+                                "column": 116,
+                                "offset": 340
                               }
                             },
-                            "what": {
-                              "kind": "name",
-                              "loc": {
-                                "source": null,
-                                "start": {
-                                  "line": 9,
-                                  "column": 185,
-                                  "offset": 368
-                                },
-                                "end": {
-                                  "line": 9,
-                                  "column": 205,
-                                  "offset": 388
-                                }
-                              },
-                              "resolution": "uqn",
-                              "name": "mysqli_connect_error"
-                            },
-                            "arguments": []
-                          },
-                          "operator": "=",
-                          "parenthesizedExpression": true
-                        },
-                        "trueExpr": {
-                          "kind": "variable",
-                          "loc": {
-                            "source": null,
-                            "start": {
-                              "line": 9,
-                              "column": 211,
-                              "offset": 394
-                            },
-                            "end": {
-                              "line": 9,
-                              "column": 225,
-                              "offset": 408
-                            }
-                          },
-                          "name": "___mysqli_res",
-                          "curly": false
-                        },
-                        "falseExpr": {
-                          "kind": "boolean",
-                          "loc": {
-                            "source": null,
-                            "start": {
-                              "line": 9,
-                              "column": 228,
-                              "offset": 411
-                            },
-                            "end": {
-                              "line": 9,
-                              "column": 233,
-                              "offset": 416
-                            }
-                          },
-                          "value": false,
-                          "raw": "false"
-                        },
-                        "parenthesizedExpression": true
-                      },
-                      "parenthesizedExpression": true
+                            "value": "___mysqli_ston",
+                            "raw": "\"___mysqli_ston\"",
+                            "unicode": false,
+                            "isDoubleQuote": true
+                          }
+                        }
+                      ]
                     }
                   },
                   "right": {
@@ -1014,14 +921,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 9,
-                        "column": 238,
-                        "offset": 421
+                        "line": 10,
+                        "column": 121,
+                        "offset": 345
                       },
                       "end": {
-                        "line": 9,
-                        "column": 246,
-                        "offset": 429
+                        "line": 10,
+                        "column": 129,
+                        "offset": 353
                       }
                     },
                     "value": "</pre>",
@@ -1042,31 +949,31 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 11,
+                    "line": 12,
                     "column": 1,
-                    "offset": 435
+                    "offset": 359
                   },
                   "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 0,
-                    "offset": 450
+                    "offset": 374
                   }
                 },
                 "value": "// Get results\n",
-                "offset": 435
+                "offset": 359
               }
             ],
             "loc": {
               "source": null,
               "start": {
-                "line": 12,
+                "line": 13,
                 "column": 1,
-                "offset": 451
+                "offset": 375
               },
               "end": {
-                "line": 19,
+                "line": 20,
                 "column": 2,
-                "offset": 689
+                "offset": 617
               }
             },
             "test": {
@@ -1074,14 +981,14 @@
               "loc": {
                 "source": null,
                 "start": {
-                  "line": 12,
+                  "line": 13,
                   "column": 8,
-                  "offset": 458
+                  "offset": 382
                 },
                 "end": {
-                  "line": 12,
+                  "line": 13,
                   "column": 44,
-                  "offset": 494
+                  "offset": 418
                 }
               },
               "left": {
@@ -1089,14 +996,14 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 12,
+                    "line": 13,
                     "column": 8,
-                    "offset": 458
+                    "offset": 382
                   },
                   "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 12,
-                    "offset": 462
+                    "offset": 386
                   }
                 },
                 "name": "row",
@@ -1107,14 +1014,14 @@
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 12,
+                    "line": 13,
                     "column": 15,
-                    "offset": 465
+                    "offset": 389
                   },
                   "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 44,
-                    "offset": 494
+                    "offset": 418
                   }
                 },
                 "what": {
@@ -1122,14 +1029,14 @@
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 12,
+                      "line": 13,
                       "column": 15,
-                      "offset": 465
+                      "offset": 389
                     },
                     "end": {
-                      "line": 12,
+                      "line": 13,
                       "column": 33,
-                      "offset": 483
+                      "offset": 407
                     }
                   },
                   "resolution": "uqn",
@@ -1141,14 +1048,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 12,
+                        "line": 13,
                         "column": 35,
-                        "offset": 485
+                        "offset": 409
                       },
                       "end": {
-                        "line": 12,
+                        "line": 13,
                         "column": 42,
-                        "offset": 492
+                        "offset": 416
                       }
                     },
                     "name": "result",
@@ -1163,14 +1070,14 @@
               "loc": {
                 "source": null,
                 "start": {
-                  "line": 12,
+                  "line": 13,
                   "column": 47,
-                  "offset": 497
+                  "offset": 421
                 },
                 "end": {
-                  "line": 19,
+                  "line": 20,
                   "column": 2,
-                  "offset": 689
+                  "offset": 617
                 }
               },
               "children": [
@@ -1182,31 +1089,31 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 13,
+                          "line": 14,
                           "column": 2,
-                          "offset": 501
+                          "offset": 425
                         },
                         "end": {
-                          "line": 14,
+                          "line": 15,
                           "column": 0,
-                          "offset": 515
+                          "offset": 443
                         }
                       },
-                      "value": "// Get values\n",
-                      "offset": 501
+                      "value": "// Display values\n",
+                      "offset": 425
                     }
                   ],
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 14,
+                      "line": 15,
                       "column": 2,
-                      "offset": 517
+                      "offset": 445
                     },
                     "end": {
-                      "line": 14,
+                      "line": 15,
                       "column": 30,
-                      "offset": 545
+                      "offset": 473
                     }
                   },
                   "expression": {
@@ -1214,14 +1121,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 14,
+                        "line": 15,
                         "column": 2,
-                        "offset": 517
+                        "offset": 445
                       },
                       "end": {
-                        "line": 14,
+                        "line": 15,
                         "column": 30,
-                        "offset": 545
+                        "offset": 473
                       }
                     },
                     "left": {
@@ -1229,14 +1136,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 14,
+                          "line": 15,
                           "column": 2,
-                          "offset": 517
+                          "offset": 445
                         },
                         "end": {
-                          "line": 14,
+                          "line": 15,
                           "column": 8,
-                          "offset": 523
+                          "offset": 451
                         }
                       },
                       "name": "first",
@@ -1247,14 +1154,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 14,
+                          "line": 15,
                           "column": 11,
-                          "offset": 526
+                          "offset": 454
                         },
                         "end": {
-                          "line": 14,
+                          "line": 15,
                           "column": 29,
-                          "offset": 544
+                          "offset": 472
                         }
                       },
                       "what": {
@@ -1262,14 +1169,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 14,
+                            "line": 15,
                             "column": 11,
-                            "offset": 526
+                            "offset": 454
                           },
                           "end": {
-                            "line": 14,
+                            "line": 15,
                             "column": 15,
-                            "offset": 530
+                            "offset": 458
                           }
                         },
                         "name": "row",
@@ -1280,14 +1187,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 14,
+                            "line": 15,
                             "column": 16,
-                            "offset": 531
+                            "offset": 459
                           },
                           "end": {
-                            "line": 14,
+                            "line": 15,
                             "column": 28,
-                            "offset": 543
+                            "offset": 471
                           }
                         },
                         "value": "first_name",
@@ -1304,14 +1211,14 @@
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 15,
+                      "line": 16,
                       "column": 2,
-                      "offset": 548
+                      "offset": 476
                     },
                     "end": {
-                      "line": 15,
+                      "line": 16,
                       "column": 29,
-                      "offset": 575
+                      "offset": 503
                     }
                   },
                   "expression": {
@@ -1319,14 +1226,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 15,
+                        "line": 16,
                         "column": 2,
-                        "offset": 548
+                        "offset": 476
                       },
                       "end": {
-                        "line": 15,
+                        "line": 16,
                         "column": 29,
-                        "offset": 575
+                        "offset": 503
                       }
                     },
                     "left": {
@@ -1334,14 +1241,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 15,
+                          "line": 16,
                           "column": 2,
-                          "offset": 548
+                          "offset": 476
                         },
                         "end": {
-                          "line": 15,
+                          "line": 16,
                           "column": 7,
-                          "offset": 553
+                          "offset": 481
                         }
                       },
                       "name": "last",
@@ -1352,14 +1259,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 15,
+                          "line": 16,
                           "column": 11,
-                          "offset": 557
+                          "offset": 485
                         },
                         "end": {
-                          "line": 15,
+                          "line": 16,
                           "column": 28,
-                          "offset": 574
+                          "offset": 502
                         }
                       },
                       "what": {
@@ -1367,14 +1274,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 15,
+                            "line": 16,
                             "column": 11,
-                            "offset": 557
+                            "offset": 485
                           },
                           "end": {
-                            "line": 15,
+                            "line": 16,
                             "column": 15,
-                            "offset": 561
+                            "offset": 489
                           }
                         },
                         "name": "row",
@@ -1385,14 +1292,14 @@
                         "loc": {
                           "source": null,
                           "start": {
-                            "line": 15,
+                            "line": 16,
                             "column": 16,
-                            "offset": 562
+                            "offset": 490
                           },
                           "end": {
-                            "line": 15,
+                            "line": 16,
                             "column": 27,
-                            "offset": 573
+                            "offset": 501
                           }
                         },
                         "value": "last_name",
@@ -1412,31 +1319,31 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 17,
+                          "line": 18,
                           "column": 2,
-                          "offset": 579
+                          "offset": 507
                         },
                         "end": {
-                          "line": 18,
+                          "line": 19,
                           "column": 0,
-                          "offset": 604
+                          "offset": 532
                         }
                       },
                       "value": "// Feedback for end user\n",
-                      "offset": 579
+                      "offset": 507
                     }
                   ],
                   "loc": {
                     "source": null,
                     "start": {
-                      "line": 18,
+                      "line": 19,
                       "column": 2,
-                      "offset": 606
+                      "offset": 534
                     },
                     "end": {
-                      "line": 18,
+                      "line": 19,
                       "column": 82,
-                      "offset": 686
+                      "offset": 614
                     }
                   },
                   "expression": {
@@ -1444,14 +1351,14 @@
                     "loc": {
                       "source": null,
                       "start": {
-                        "line": 18,
+                        "line": 19,
                         "column": 2,
-                        "offset": 606
+                        "offset": 534
                       },
                       "end": {
-                        "line": 18,
+                        "line": 19,
                         "column": 82,
-                        "offset": 686
+                        "offset": 614
                       }
                     },
                     "left": {
@@ -1459,14 +1366,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 18,
+                          "line": 19,
                           "column": 2,
-                          "offset": 606
+                          "offset": 534
                         },
                         "end": {
-                          "line": 18,
+                          "line": 19,
                           "column": 7,
-                          "offset": 611
+                          "offset": 539
                         }
                       },
                       "name": "html",
@@ -1477,14 +1384,14 @@
                       "loc": {
                         "source": null,
                         "start": {
-                          "line": 18,
+                          "line": 19,
                           "column": 11,
-                          "offset": 615
+                          "offset": 543
                         },
                         "end": {
-                          "line": 18,
+                          "line": 19,
                           "column": 81,
-                          "offset": 685
+                          "offset": 613
                         }
                       },
                       "value": [
@@ -1493,14 +1400,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 12,
-                              "offset": 616
+                              "offset": 544
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 21,
-                              "offset": 625
+                              "offset": 553
                             }
                           },
                           "expression": {
@@ -1508,14 +1415,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 12,
-                                "offset": 616
+                                "offset": 544
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 21,
-                                "offset": 625
+                                "offset": 553
                               }
                             },
                             "value": "<pre>ID: ",
@@ -1531,14 +1438,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 21,
-                              "offset": 625
+                              "offset": 553
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 26,
-                              "offset": 630
+                              "offset": 558
                             }
                           },
                           "expression": {
@@ -1546,14 +1453,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 22,
-                                "offset": 626
+                                "offset": 554
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 25,
-                                "offset": 629
+                                "offset": 557
                               }
                             },
                             "name": "id",
@@ -1567,14 +1474,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 26,
-                              "offset": 630
+                              "offset": 558
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 44,
-                              "offset": 648
+                              "offset": 576
                             }
                           },
                           "expression": {
@@ -1582,14 +1489,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 26,
-                                "offset": 630
+                                "offset": 558
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 44,
-                                "offset": 648
+                                "offset": 576
                               }
                             },
                             "value": "<br />First name: ",
@@ -1605,14 +1512,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 44,
-                              "offset": 648
+                              "offset": 576
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 52,
-                              "offset": 656
+                              "offset": 584
                             }
                           },
                           "expression": {
@@ -1620,14 +1527,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 45,
-                                "offset": 649
+                                "offset": 577
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 51,
-                                "offset": 655
+                                "offset": 583
                               }
                             },
                             "name": "first",
@@ -1641,14 +1548,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 52,
-                              "offset": 656
+                              "offset": 584
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 67,
-                              "offset": 671
+                              "offset": 599
                             }
                           },
                           "expression": {
@@ -1656,14 +1563,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 52,
-                                "offset": 656
+                                "offset": 584
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 67,
-                                "offset": 671
+                                "offset": 599
                               }
                             },
                             "value": "<br />Surname: ",
@@ -1679,14 +1586,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 67,
-                              "offset": 671
+                              "offset": 599
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 74,
-                              "offset": 678
+                              "offset": 606
                             }
                           },
                           "expression": {
@@ -1694,14 +1601,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 68,
-                                "offset": 672
+                                "offset": 600
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 73,
-                                "offset": 677
+                                "offset": 605
                               }
                             },
                             "name": "last",
@@ -1715,14 +1622,14 @@
                           "loc": {
                             "source": null,
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 74,
-                              "offset": 678
+                              "offset": 606
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 80,
-                              "offset": 684
+                              "offset": 612
                             }
                           },
                           "expression": {
@@ -1730,14 +1637,14 @@
                             "loc": {
                               "source": null,
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 74,
-                                "offset": 678
+                                "offset": 606
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 80,
-                                "offset": 684
+                                "offset": 612
                               }
                             },
                             "value": "</pre>",
@@ -1758,117 +1665,953 @@
               ]
             },
             "shortForm": false
-          },
-          {
-            "kind": "expressionstatement",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 21,
-                "column": 1,
-                "offset": 692
-              },
-              "end": {
-                "line": 21,
-                "column": 42,
-                "offset": 733
-              }
-            },
-            "expression": {
-              "kind": "call",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 21,
-                  "column": 1,
-                  "offset": 692
-                },
-                "end": {
-                  "line": 21,
-                  "column": 42,
-                  "offset": 733
-                }
-              },
-              "what": {
-                "kind": "name",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 21,
-                    "column": 1,
-                    "offset": 692
-                  },
-                  "end": {
-                    "line": 21,
-                    "column": 13,
-                    "offset": 704
-                  }
-                },
-                "resolution": "uqn",
-                "name": "mysqli_close"
-              },
-              "arguments": [
-                {
-                  "kind": "offsetlookup",
-                  "loc": {
-                    "source": null,
-                    "start": {
-                      "line": 21,
-                      "column": 14,
-                      "offset": 705
-                    },
-                    "end": {
-                      "line": 21,
-                      "column": 40,
-                      "offset": 731
-                    }
-                  },
-                  "what": {
-                    "kind": "variable",
-                    "loc": {
-                      "source": null,
-                      "start": {
-                        "line": 21,
-                        "column": 14,
-                        "offset": 705
-                      },
-                      "end": {
-                        "line": 21,
-                        "column": 22,
-                        "offset": 713
-                      }
-                    },
-                    "name": "GLOBALS",
-                    "curly": false
-                  },
-                  "offset": {
-                    "kind": "string",
-                    "loc": {
-                      "source": null,
-                      "start": {
-                        "line": 21,
-                        "column": 23,
-                        "offset": 714
-                      },
-                      "end": {
-                        "line": 21,
-                        "column": 39,
-                        "offset": 730
-                      }
-                    },
-                    "value": "___mysqli_ston",
-                    "raw": "\"___mysqli_ston\"",
-                    "unicode": false,
-                    "isDoubleQuote": true
-                  }
-                }
-              ]
-            }
           }
         ]
       },
       "alternate": null,
       "shortForm": false
+    },
+    {
+      "kind": "expressionstatement",
+      "leadingComments": [
+        {
+          "kind": "commentline",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 24,
+              "column": 0,
+              "offset": 622
+            },
+            "end": {
+              "line": 25,
+              "column": 0,
+              "offset": 669
+            }
+          },
+          "value": "// This is used later on in the index.php page\n",
+          "offset": 622
+        },
+        {
+          "kind": "commentline",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 25,
+              "column": 0,
+              "offset": 669
+            },
+            "end": {
+              "line": 26,
+              "column": 0,
+              "offset": 775
+            }
+          },
+          "value": "// Setting it here so we can close the database connection in here like in the rest of the source scripts\n",
+          "offset": 669
+        }
+      ],
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 26,
+          "column": 0,
+          "offset": 775
+        },
+        "end": {
+          "line": 26,
+          "column": 40,
+          "offset": 815
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 26,
+            "column": 0,
+            "offset": 775
+          },
+          "end": {
+            "line": 26,
+            "column": 40,
+            "offset": 815
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 26,
+              "column": 0,
+              "offset": 775
+            },
+            "end": {
+              "line": 26,
+              "column": 6,
+              "offset": 781
+            }
+          },
+          "name": "query",
+          "curly": false
+        },
+        "right": {
+          "kind": "string",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 26,
+              "column": 10,
+              "offset": 785
+            },
+            "end": {
+              "line": 26,
+              "column": 39,
+              "offset": 814
+            }
+          },
+          "value": "SELECT COUNT(*) FROM users;",
+          "raw": "\"SELECT COUNT(*) FROM users;\"",
+          "unicode": false,
+          "isDoubleQuote": true
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 27,
+          "column": 0,
+          "offset": 816
+        },
+        "end": {
+          "line": 27,
+          "column": 248,
+          "offset": 1064
+        }
+      },
+      "expression": {
+        "kind": "bin",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 27,
+            "column": 0,
+            "offset": 816
+          },
+          "end": {
+            "line": 27,
+            "column": 248,
+            "offset": 1064
+          }
+        },
+        "type": "or",
+        "left": {
+          "kind": "assign",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 27,
+              "column": 0,
+              "offset": 816
+            },
+            "end": {
+              "line": 27,
+              "column": 247,
+              "offset": 1063
+            }
+          },
+          "left": {
+            "kind": "variable",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 27,
+                "column": 0,
+                "offset": 816
+              },
+              "end": {
+                "line": 27,
+                "column": 7,
+                "offset": 823
+              }
+            },
+            "name": "result",
+            "curly": false
+          },
+          "right": {
+            "kind": "call",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 27,
+                "column": 10,
+                "offset": 826
+              },
+              "end": {
+                "line": 27,
+                "column": 248,
+                "offset": 1064
+              }
+            },
+            "what": {
+              "kind": "name",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 27,
+                  "column": 10,
+                  "offset": 826
+                },
+                "end": {
+                  "line": 27,
+                  "column": 22,
+                  "offset": 838
+                }
+              },
+              "resolution": "uqn",
+              "name": "mysqli_query"
+            },
+            "arguments": [
+              {
+                "kind": "offsetlookup",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 27,
+                    "column": 23,
+                    "offset": 839
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 49,
+                    "offset": 865
+                  }
+                },
+                "what": {
+                  "kind": "variable",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 27,
+                      "column": 23,
+                      "offset": 839
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 31,
+                      "offset": 847
+                    }
+                  },
+                  "name": "GLOBALS",
+                  "curly": false
+                },
+                "offset": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 27,
+                      "column": 32,
+                      "offset": 848
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 48,
+                      "offset": 864
+                    }
+                  },
+                  "value": "___mysqli_ston",
+                  "raw": "\"___mysqli_ston\"",
+                  "unicode": false,
+                  "isDoubleQuote": true
+                }
+              },
+              {
+                "kind": "variable",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 27,
+                    "column": 52,
+                    "offset": 868
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 58,
+                    "offset": 874
+                  }
+                },
+                "name": "query",
+                "curly": false
+              }
+            ]
+          },
+          "operator": "="
+        },
+        "right": {
+          "kind": "exit",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 27,
+              "column": 64,
+              "offset": 880
+            },
+            "end": {
+              "line": 27,
+              "column": 247,
+              "offset": 1063
+            }
+          },
+          "expression": {
+            "kind": "bin",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 27,
+                "column": 69,
+                "offset": 885
+              },
+              "end": {
+                "line": 27,
+                "column": 245,
+                "offset": 1061
+              }
+            },
+            "type": ".",
+            "left": {
+              "kind": "bin",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 27,
+                  "column": 69,
+                  "offset": 885
+                },
+                "end": {
+                  "line": 27,
+                  "column": 233,
+                  "offset": 1049
+                }
+              },
+              "type": ".",
+              "left": {
+                "kind": "string",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 27,
+                    "column": 69,
+                    "offset": 885
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 76,
+                    "offset": 892
+                  }
+                },
+                "value": "<pre>",
+                "raw": "'<pre>'",
+                "unicode": false,
+                "isDoubleQuote": false
+              },
+              "right": {
+                "kind": "retif",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 27,
+                    "column": 80,
+                    "offset": 896
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 233,
+                    "offset": 1049
+                  }
+                },
+                "test": {
+                  "kind": "call",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 27,
+                      "column": 81,
+                      "offset": 897
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 118,
+                      "offset": 934
+                    }
+                  },
+                  "what": {
+                    "kind": "name",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 27,
+                        "column": 81,
+                        "offset": 897
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 90,
+                        "offset": 906
+                      }
+                    },
+                    "resolution": "uqn",
+                    "name": "is_object"
+                  },
+                  "arguments": [
+                    {
+                      "kind": "offsetlookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 27,
+                          "column": 91,
+                          "offset": 907
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 117,
+                          "offset": 933
+                        }
+                      },
+                      "what": {
+                        "kind": "variable",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 27,
+                            "column": 91,
+                            "offset": 907
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 99,
+                            "offset": 915
+                          }
+                        },
+                        "name": "GLOBALS",
+                        "curly": false
+                      },
+                      "offset": {
+                        "kind": "string",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 27,
+                            "column": 100,
+                            "offset": 916
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 116,
+                            "offset": 932
+                          }
+                        },
+                        "value": "___mysqli_ston",
+                        "raw": "\"___mysqli_ston\"",
+                        "unicode": false,
+                        "isDoubleQuote": true
+                      }
+                    }
+                  ],
+                  "parenthesizedExpression": true
+                },
+                "trueExpr": {
+                  "kind": "call",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 27,
+                      "column": 122,
+                      "offset": 938
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 162,
+                      "offset": 978
+                    }
+                  },
+                  "what": {
+                    "kind": "name",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 27,
+                        "column": 122,
+                        "offset": 938
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 134,
+                        "offset": 950
+                      }
+                    },
+                    "resolution": "uqn",
+                    "name": "mysqli_error"
+                  },
+                  "arguments": [
+                    {
+                      "kind": "offsetlookup",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 27,
+                          "column": 135,
+                          "offset": 951
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 161,
+                          "offset": 977
+                        }
+                      },
+                      "what": {
+                        "kind": "variable",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 27,
+                            "column": 135,
+                            "offset": 951
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 143,
+                            "offset": 959
+                          }
+                        },
+                        "name": "GLOBALS",
+                        "curly": false
+                      },
+                      "offset": {
+                        "kind": "string",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 27,
+                            "column": 144,
+                            "offset": 960
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 160,
+                            "offset": 976
+                          }
+                        },
+                        "value": "___mysqli_ston",
+                        "raw": "\"___mysqli_ston\"",
+                        "unicode": false,
+                        "isDoubleQuote": true
+                      }
+                    }
+                  ]
+                },
+                "falseExpr": {
+                  "kind": "retif",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 27,
+                      "column": 166,
+                      "offset": 982
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 232,
+                      "offset": 1048
+                    }
+                  },
+                  "test": {
+                    "kind": "assign",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 27,
+                        "column": 167,
+                        "offset": 983
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 206,
+                        "offset": 1022
+                      }
+                    },
+                    "left": {
+                      "kind": "variable",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 27,
+                          "column": 167,
+                          "offset": 983
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 181,
+                          "offset": 997
+                        }
+                      },
+                      "name": "___mysqli_res",
+                      "curly": false
+                    },
+                    "right": {
+                      "kind": "call",
+                      "loc": {
+                        "source": null,
+                        "start": {
+                          "line": 27,
+                          "column": 184,
+                          "offset": 1000
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 206,
+                          "offset": 1022
+                        }
+                      },
+                      "what": {
+                        "kind": "name",
+                        "loc": {
+                          "source": null,
+                          "start": {
+                            "line": 27,
+                            "column": 184,
+                            "offset": 1000
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 204,
+                            "offset": 1020
+                          }
+                        },
+                        "resolution": "uqn",
+                        "name": "mysqli_connect_error"
+                      },
+                      "arguments": []
+                    },
+                    "operator": "=",
+                    "parenthesizedExpression": true
+                  },
+                  "trueExpr": {
+                    "kind": "variable",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 27,
+                        "column": 210,
+                        "offset": 1026
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 224,
+                        "offset": 1040
+                      }
+                    },
+                    "name": "___mysqli_res",
+                    "curly": false
+                  },
+                  "falseExpr": {
+                    "kind": "boolean",
+                    "loc": {
+                      "source": null,
+                      "start": {
+                        "line": 27,
+                        "column": 227,
+                        "offset": 1043
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 232,
+                        "offset": 1048
+                      }
+                    },
+                    "value": false,
+                    "raw": "false"
+                  },
+                  "parenthesizedExpression": true
+                },
+                "parenthesizedExpression": true
+              }
+            },
+            "right": {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 27,
+                  "column": 237,
+                  "offset": 1053
+                },
+                "end": {
+                  "line": 27,
+                  "column": 245,
+                  "offset": 1061
+                }
+              },
+              "value": "</pre>",
+              "raw": "'</pre>'",
+              "unicode": false,
+              "isDoubleQuote": false
+            }
+          },
+          "useDie": true
+        }
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 28,
+          "column": 0,
+          "offset": 1065
+        },
+        "end": {
+          "line": 28,
+          "column": 49,
+          "offset": 1114
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 28,
+            "column": 0,
+            "offset": 1065
+          },
+          "end": {
+            "line": 28,
+            "column": 49,
+            "offset": 1114
+          }
+        },
+        "left": {
+          "kind": "variable",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 28,
+              "column": 0,
+              "offset": 1065
+            },
+            "end": {
+              "line": 28,
+              "column": 15,
+              "offset": 1080
+            }
+          },
+          "name": "number_of_rows",
+          "curly": false
+        },
+        "right": {
+          "kind": "offsetlookup",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 28,
+              "column": 18,
+              "offset": 1083
+            },
+            "end": {
+              "line": 28,
+              "column": 48,
+              "offset": 1113
+            }
+          },
+          "what": {
+            "kind": "call",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 28,
+                "column": 18,
+                "offset": 1083
+              },
+              "end": {
+                "line": 28,
+                "column": 45,
+                "offset": 1110
+              }
+            },
+            "what": {
+              "kind": "name",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 28,
+                  "column": 18,
+                  "offset": 1083
+                },
+                "end": {
+                  "line": 28,
+                  "column": 34,
+                  "offset": 1099
+                }
+              },
+              "resolution": "uqn",
+              "name": "mysqli_fetch_row"
+            },
+            "arguments": [
+              {
+                "kind": "variable",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 28,
+                    "column": 36,
+                    "offset": 1101
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 43,
+                    "offset": 1108
+                  }
+                },
+                "name": "result",
+                "curly": false
+              }
+            ]
+          },
+          "offset": {
+            "kind": "number",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 28,
+                "column": 46,
+                "offset": 1111
+              },
+              "end": {
+                "line": 28,
+                "column": 47,
+                "offset": 1112
+              }
+            },
+            "value": "0"
+          }
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 30,
+          "column": 0,
+          "offset": 1116
+        },
+        "end": {
+          "line": 30,
+          "column": 41,
+          "offset": 1157
+        }
+      },
+      "expression": {
+        "kind": "call",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 30,
+            "column": 0,
+            "offset": 1116
+          },
+          "end": {
+            "line": 30,
+            "column": 41,
+            "offset": 1157
+          }
+        },
+        "what": {
+          "kind": "name",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 30,
+              "column": 0,
+              "offset": 1116
+            },
+            "end": {
+              "line": 30,
+              "column": 12,
+              "offset": 1128
+            }
+          },
+          "resolution": "uqn",
+          "name": "mysqli_close"
+        },
+        "arguments": [
+          {
+            "kind": "offsetlookup",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 30,
+                "column": 13,
+                "offset": 1129
+              },
+              "end": {
+                "line": 30,
+                "column": 39,
+                "offset": 1155
+              }
+            },
+            "what": {
+              "kind": "variable",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 30,
+                  "column": 13,
+                  "offset": 1129
+                },
+                "end": {
+                  "line": 30,
+                  "column": 21,
+                  "offset": 1137
+                }
+              },
+              "name": "GLOBALS",
+              "curly": false
+            },
+            "offset": {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 30,
+                  "column": 22,
+                  "offset": 1138
+                },
+                "end": {
+                  "line": 30,
+                  "column": 38,
+                  "offset": 1154
+                }
+              },
+              "value": "___mysqli_ston",
+              "raw": "\"___mysqli_ston\"",
+              "unicode": false,
+              "isDoubleQuote": true
+            }
+          }
+        ]
+      }
     }
   ],
   "errors": [],
@@ -1880,88 +2623,106 @@
         "start": {
           "line": 4,
           "column": 1,
-          "offset": 47
+          "offset": 44
         },
         "end": {
           "line": 5,
           "column": 0,
-          "offset": 60
+          "offset": 57
         }
       },
       "value": "// Get input\n",
-      "offset": 47
+      "offset": 44
     },
     {
       "kind": "commentline",
       "loc": {
         "source": null,
         "start": {
-          "line": 7,
-          "column": 1,
-          "offset": 88
-        },
-        "end": {
-          "line": 8,
-          "column": 0,
-          "offset": 106
-        }
-      },
-      "value": "// Check database\n",
-      "offset": 88
-    },
-    {
-      "kind": "commentline",
-      "loc": {
-        "source": null,
-        "start": {
-          "line": 11,
-          "column": 1,
-          "offset": 435
-        },
-        "end": {
           "line": 12,
+          "column": 1,
+          "offset": 359
+        },
+        "end": {
+          "line": 13,
           "column": 0,
-          "offset": 450
+          "offset": 374
         }
       },
       "value": "// Get results\n",
-      "offset": 435
+      "offset": 359
     },
     {
       "kind": "commentline",
       "loc": {
         "source": null,
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 2,
-          "offset": 501
+          "offset": 425
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 0,
-          "offset": 515
+          "offset": 443
         }
       },
-      "value": "// Get values\n",
-      "offset": 501
+      "value": "// Display values\n",
+      "offset": 425
     },
     {
       "kind": "commentline",
       "loc": {
         "source": null,
         "start": {
-          "line": 17,
+          "line": 18,
           "column": 2,
-          "offset": 579
+          "offset": 507
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 0,
-          "offset": 604
+          "offset": 532
         }
       },
       "value": "// Feedback for end user\n",
-      "offset": 579
+      "offset": 507
+    },
+    {
+      "kind": "commentline",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 24,
+          "column": 0,
+          "offset": 622
+        },
+        "end": {
+          "line": 25,
+          "column": 0,
+          "offset": 669
+        }
+      },
+      "value": "// This is used later on in the index.php page\n",
+      "offset": 622
+    },
+    {
+      "kind": "commentline",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 25,
+          "column": 0,
+          "offset": 669
+        },
+        "end": {
+          "line": 26,
+          "column": 0,
+          "offset": 775
+        }
+      },
+      "value": "// Setting it here so we can close the database connection in here like in the rest of the source scripts\n",
+      "offset": 669
     }
   ]
 }

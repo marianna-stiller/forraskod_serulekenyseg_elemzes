@@ -106,7 +106,7 @@ class Vectorizer:
 
 
 if __name__ == '__main__':
-    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated.csv',2000,200)
+    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated_titled.csv',2000,200)
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()
