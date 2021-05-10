@@ -9,6 +9,7 @@ import numpy as np
 import itertools
 import matplotlib.pyplot as plt
 import pickle
+from prettytable import PrettyTable
 from matplotlib import cm
 from keras.utils import to_categorical
 from sklearn import svm
@@ -24,7 +25,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.svm import LinearSVC
 
-develop = False
 gnb_pr_ar = []
 rfc = RandomForestClassifier()
 rfc_pr_ar = []
@@ -68,23 +68,27 @@ def main(argv=None):
         lsvc_pr_ar.append(test_bmodel(testX, testY, lsvc))
 
     classifier2(origX2,origY2)
-    print("Gaussian Naive Bayes precision:", average(gnb_pr_ar))
-    print("Random Forest preicison:", average(rfc_pr_ar))
-    print("K-Nearest Neighbors precision:", average(nknc_pr_ar))
-    print("Logistic Regression precision:", average(lr_pr_ar))
-    print("LinearSVC precision:", average(lsvc_pr_ar))
+    t = PrettyTable(['classifier', 'recall'])
+    t.add_row(['Gaussian Naive Bayes',average(gnb_pr_ar)])
+    t.add_row(['Random Forest',average(rfc_pr_ar)])
+    t.add_row(['K-Nearest Neighbors',average(nknc_pr_ar)])
+    t.add_row(['Logistic Regression',average(lr_pr_ar)])
+    t.add_row(['LinearSVC',average(lsvc_pr_ar)])
+    print(t)
 
 
 def average(lst):
     return sum(lst) / len(lst)
 
+
 def classifier2(X, Y):
     myClassifier2 = pickle.loads(s)
 
     predict = myClassifier2.predict_proba(X)
+    predict2 = myClassifier2.predict(X)
     print(predict.item(0))
     print(predict.item(1))
-    print(myClassifier2.predict(X))
+    print("Result of classification:",predict2)
 
 
 def classifier(X, Y):
