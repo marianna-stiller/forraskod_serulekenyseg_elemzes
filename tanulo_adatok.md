@@ -1,8 +1,7 @@
-### Sérülékeny példák (58)
+### Sérülékeny példák (57)
 
-* dvwa_high --> dvwa_high_ast 0
-* dvwa_low --> dvwa_low_ast 0
-* dvwa_medium --> dvwa_medium_ast 0
+1. dvwa_low --> dvwa_low_ast 0
+1. dvwa_medium --> dvwa_medium_ast 0
 1. CVE-2020-5515 (`CVE-2020-5515`) --> CVE-2020-5515_ast 0
 1. CVE-2020-6117 (`CVE-2020-6117`, `CVE-2020-6118`, `CVE-2020-6119`, `CVE-2020-6120`, `CVE-2020-6121`, `CVE-2020-6122`) -->  CVE-2020-6117_ast 0
 1. CVE-2020-6123 (`CVE-2020-6123`) --> CVE-2020-6132_ast 0
@@ -59,52 +58,53 @@
 1. php-reaper18 --> php-reaper18_ast 0
 1. stackoverflow --> stackoverflow_ast 0
 
-### Nem sérülékeny példák (44)
+### Nem sérülékeny példák (45)
 
 1. dvwa_impossible --> dvwa_impossible_ast 1
-1. sql-injection-in-php_safeinsert --> sql-injection-in-php_safeinsert_ast 1
-1. sql-injection-in-php_safedelete --> sql-injection-in-php_safedelete_ast 1
-1. sql-injection-in-php_safesearch --> sql-injection-in-php_safesearch_ast 1
-1. sql-injection-in-php_safeupdate --> sql-injection-in-php_safeupdate_ast 1
-1. bobby-tables_adodb --> bobby-tables_adodb_ast 1
-1. bobby-tables_mysqli --> bobby-tables_mysqli_ast 1
-1. bobby-tables_odbc1 --> bobby-tables_odbc1_ast 1
-1. bobby-tables_odbc2 --> bobby-tables_odbc2_ast 1
-1. bobby-tables_pdo1 --> bobby-tables_pdo1_ast 1
-1. bobby-tables_pdo2 --> bobby-tables_pdo2_ast 1
-1. acunetix_safe --> acunetix_safe_ast 1
-1. pdo-prepared-statements --> pdo-prepared-statements_ast 1
-1. lionblogger1 --> lionblogger1_ast 1
-1. lionblogger2 --> lionblogger2_ast 1
-1. lionblogger3 --> lionblogger3_ast 1
-1. lionblogger4 --> lionblogger4_ast 1
-1. lionblogger5 --> lionblogger5_ast 1
-1. php-security_safe_pdo -->  php-security_safe_pdo_ast 1
-1. php-security_safe_mysql --> php-security_safe_mysql_ast 1
-1. securityonline1_safe --> securityonline1_safe_ast 1
-1. securityonline2_safe --> securityonline2_safe_ast 1
-1. php-reaper_safe1 --> php-reaper_safe1_ast 1
-1. php-reaper_safe2 --> php-reaper_safe2_ast 1
-1. php-reaper_safe3 --> php-reaper_safe3_ast 1
-1. php-reaper_safe4 --> php-reaper_safe4_ast 1
-1. php-reaper_safe5 --> php-reaper_safe5_ast 1
-1. pdo1 --> pdo1_ast 1
-1. pdo2 --> pdo2_ast 1
-1. pdo3 --> pdo3_ast 1
-1. pdo4 --> pdo4_ast 1
-1. pdo5 --> pdo5_ast 1
-1. stackoverflow_safe --> stackoverflow_safe_ast 1
-1. docs-php-earth --> docs-php-earth_ast 1
-1. agernic_escapingstrings --> agernic_escapingstrings_ast 1
-1. agernic_mysqli --> agernic_mysqli_ast 1
-1. agernic_pdo --> agernic_pdo_ast 1
-1. php-net1 --> php-net1_ast 1
-1. php-net2 --> php-net2_ast 1
-1. php-net3 --> php-net3_ast 1
-1. php-net4 --> php-net4_ast 1
-1. php-net5 --> php-net5_ast 1
-1. php-net6 --> php-net6_ast 1
-1. php-net7 --> php-net7_ast 1
+2. dvwa_high --> dvwa_high_ast 1
+3. sql-injection-in-php_safeinsert --> sql-injection-in-php_safeinsert_ast 1
+4. sql-injection-in-php_safedelete --> sql-injection-in-php_safedelete_ast 1
+5. sql-injection-in-php_safesearch --> sql-injection-in-php_safesearch_ast 1
+6. sql-injection-in-php_safeupdate --> sql-injection-in-php_safeupdate_ast 1
+7. bobby-tables_adodb --> bobby-tables_adodb_ast 1
+8. bobby-tables_mysqli --> bobby-tables_mysqli_ast 1
+9. bobby-tables_odbc1 --> bobby-tables_odbc1_ast 1
+10. bobby-tables_odbc2 --> bobby-tables_odbc2_ast 1
+11. bobby-tables_pdo1 --> bobby-tables_pdo1_ast 1
+12. bobby-tables_pdo2 --> bobby-tables_pdo2_ast 1
+13. acunetix_safe --> acunetix_safe_ast 1
+14. pdo-prepared-statements --> pdo-prepared-statements_ast 1
+15. lionblogger1 --> lionblogger1_ast 1
+16. lionblogger2 --> lionblogger2_ast 1
+17. lionblogger3 --> lionblogger3_ast 1
+18. lionblogger4 --> lionblogger4_ast 1
+19. lionblogger5 --> lionblogger5_ast 1
+20. php-security_safe_pdo -->  php-security_safe_pdo_ast 1
+21. php-security_safe_mysql --> php-security_safe_mysql_ast 1
+22. securityonline1_safe --> securityonline1_safe_ast 1
+23. securityonline2_safe --> securityonline2_safe_ast 1
+24. php-reaper_safe1 --> php-reaper_safe1_ast 1
+25. php-reaper_safe2 --> php-reaper_safe2_ast 1
+26. php-reaper_safe3 --> php-reaper_safe3_ast 1
+27. php-reaper_safe4 --> php-reaper_safe4_ast 1
+28. php-reaper_safe5 --> php-reaper_safe5_ast 1
+29. pdo1 --> pdo1_ast 1
+30. pdo2 --> pdo2_ast 1
+31. pdo3 --> pdo3_ast 1
+32. pdo4 --> pdo4_ast 1
+33. pdo5 --> pdo5_ast 1
+34. stackoverflow_safe --> stackoverflow_safe_ast 1
+35. docs-php-earth --> docs-php-earth_ast 1
+36. agernic_escapingstrings --> agernic_escapingstrings_ast 1
+37. agernic_mysqli --> agernic_mysqli_ast 1
+38. agernic_pdo --> agernic_pdo_ast 1
+39. php-net1 --> php-net1_ast 1
+40. php-net2 --> php-net2_ast 1
+41. php-net3 --> php-net3_ast 1
+42. php-net4 --> php-net4_ast 1
+43. php-net5 --> php-net5_ast 1
+44. php-net6 --> php-net6_ast 1
+45. php-net7 --> php-net7_ast 1
 
 ### Sérülékeny?
 
