@@ -52,8 +52,7 @@ def main(argv=None):
 
         # Naive Bayes: Gaussian
         Classifier = classifier(trainX, trainY)
-        results = test_bmodel(testX, testY, Classifier)
-        gnb_pr_ar.append(results)
+        gnb_pr_ar.append(test_bmodel(testX, testY, Classifier))
         # Ensemble Method: Random Forest
         rfc.fit(trainX, trainY)
         rfc_pr_ar.append(test_bmodel(testX, testY, rfc))
@@ -109,7 +108,7 @@ def classifier(X, Y):
 
 
 def test_bmodel(X, Y, classifier):
-    """This method tests a classifier using validation data.
+    """This method tests a classifier using test data.
 
         Parameters:
         -----------
