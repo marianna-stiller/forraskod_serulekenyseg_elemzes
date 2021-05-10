@@ -46,26 +46,26 @@ def main(argv=None):
 
     kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
 
-    for train_index, validation_index in kFold.split(origX, origY):
-        trainX, validationX = origX[train_index], origX[validation_index]
-        trainY, validationY = origY[train_index], origY[validation_index]
+    for train_index, test_index in kFold.split(origX, origY):
+        trainX, testX = origX[train_index], origX[test_index]
+        trainY, testY = origY[train_index], origY[test_index]
 
         # Naive Bayes: Gaussian
         Classifier = classifier(trainX, trainY)
-        results = test_bmodel(validationX, validationY, Classifier)
+        results = test_bmodel(testX, testY, Classifier)
         gnb_pr_ar.append(results)
         # Ensemble Method: Random Forest
         rfc.fit(trainX, trainY)
-        rfc_pr_ar.append(test_bmodel(validationX, validationY, rfc))
+        rfc_pr_ar.append(test_bmodel(testX, testY, rfc))
         # Nearest Neighbors: K-Nearest Neighbors
         nknc.fit(trainX, trainY)
-        nknc_pr_ar.append(test_bmodel(validationX, validationY, nknc))
+        nknc_pr_ar.append(test_bmodel(testX, testY, nknc))
         # Linear Model: Logistic Regression
         lr.fit(trainX, trainY)
-        lr_pr_ar.append(test_bmodel(validationX, validationY, lr))
+        lr_pr_ar.append(test_bmodel(testX, testY, lr))
         # Support Vector Machine: LinearSVC
         lsvc.fit(trainX, trainY)
-        lsvc_pr_ar.append(test_bmodel(validationX, validationY, lsvc))
+        lsvc_pr_ar.append(test_bmodel(testX, testY, lsvc))
 
     classifier2(origX2,origY2)
     print("Gaussian Naive Bayes precision:", average(gnb_pr_ar))
