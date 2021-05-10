@@ -42,7 +42,6 @@ def main(argv=None):
     origX = np.load("testX.npy")
     origY = np.load("testy.npy").astype(int)
     origX2 = np.load("toimportX.npy")
-    origY2 = np.load("toimporty.npy").astype(int)
 
     kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
 
@@ -66,7 +65,7 @@ def main(argv=None):
         lsvc.fit(trainX, trainY)
         lsvc_pr_ar.append(test_bmodel(testX, testY, lsvc))
 
-    classifier2(origX2,origY2)
+    classifier2(origX2)
     t = PrettyTable(['classifier', 'recall'])
     t.add_row(['Gaussian Naive Bayes',average(gnb_pr_ar)])
     t.add_row(['Random Forest',average(rfc_pr_ar)])
@@ -80,7 +79,7 @@ def average(lst):
     return sum(lst) / len(lst)
 
 
-def classifier2(X, Y):
+def classifier2(X):
     myClassifier2 = pickle.loads(s)
 
     predict = myClassifier2.predict_proba(X)
