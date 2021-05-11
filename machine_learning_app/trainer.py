@@ -5,6 +5,7 @@ This is a temporary script file.
 """
 
 import sys
+import json
 import numpy as np
 import itertools
 import matplotlib.pyplot as plt
@@ -25,6 +26,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.svm import LinearSVC
 
+gnb = GaussianNB()
 gnb_pr_ar = []
 rfc = RandomForestClassifier()
 rfc_pr_ar = []
@@ -41,71 +43,78 @@ def main(p1, p2, p3):
     origX2 = np.load(p3)
 
     kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
-
+    i = 0
     for train_index, test_index in kFold.split(origX, origY):
         trainX, testX = origX[train_index], origX[test_index]
         trainY, testY = origY[train_index], origY[test_index]
 
         # Naive Bayes: Gaussian
-        Classifier = classifier(trainX, trainY)
-        gnb_pr_ar.append(test_bmodel(testX, testY, Classifier))
+        recall_gnb_i = classifier(trainX, trainY, testX, testY, gnb, i)
+        gnb_pr_ar.append(recall_gnb_i)
         # Ensemble Method: Random Forest
-        rfc.fit(trainX, trainY)
-        rfc_pr_ar.append(test_bmodel(testX, testY, rfc))
+        recall_rfc_i = classifier(trainX, trainY, testX, testY, rfc, i)
+        rfc_pr_ar.append(recall_rfc_i)
         # Nearest Neighbors: K-Nearest Neighbors
-        nknc.fit(trainX, trainY)
-        nknc_pr_ar.append(test_bmodel(testX, testY, nknc))
+        recall_nknc_i = classifier(trainX, trainY, testX, testY, nknc, i)
+        nknc_pr_ar.append(recall_nknc_i)
         # Linear Model: Logistic Regression
-        lr.fit(trainX, trainY)
-        lr_pr_ar.append(test_bmodel(testX, testY, lr))
+        recall_lr_i = classifier(trainX, trainY, testX, testY, lr, i)
+        lr_pr_ar.append(recall_lr_i)
         # Support Vector Machine: LinearSVC
-        lsvc.fit(trainX, trainY)
-        lsvc_pr_ar.append(test_bmodel(testX, testY, lsvc))
+        recall_lsvc_i = classifier(trainX, trainY, testX, testY, lsvc, i)
+        lsvc_pr_ar.append(recall_lsvc_i)
+        
+        i += 1
 
-    classifier2(origX2)
+    d = {}
+    d[gnb] = average(gnb_pr_ar)
+    d[rfc] = average(rfc_pr_ar)
+    d[nknc] = average(nknc_pr_ar)
+    d[lr] = average(lr_pr_ar)
+    d[lsvc] = average(lsvc_pr_ar)
     t = PrettyTable(['classifier', 'recall'])
-    t.add_row(['Gaussian Naive Bayes',average(gnb_pr_ar)])
-    t.add_row(['Random Forest',average(rfc_pr_ar)])
-    t.add_row(['K-Nearest Neighbors',average(nknc_pr_ar)])
-    t.add_row(['Logistic Regression',average(lr_pr_ar)])
-    t.add_row(['LinearSVC',average(lsvc_pr_ar)])
+    for key, value in d.items():
+        t.add_row([key, value])
     print(t)
+
+    the_classifier = get_key(d,max(d.values()))
+    classifier2(origX2, the_classifier)
+
+
+def get_key(dictionary, val):
+    for key, value in dictionary.items():
+         if val == value:
+             return key
 
 
 def average(lst):
-    return sum(lst) / len(lst)
+    avg = sum(lst)/len(lst)
+    return round(avg,2)
 
 
-def classifier2(X):
-    myClassifier2 = pickle.loads(s)
+def classifier2(X, classifier2):
+    # classifier2 = pickle.loads(s)
+    predict = classifier2.predict(X)
+    print("Choosed classifier:",classifier2)
+    print("Result of classification:",predict)
 
-    predict = myClassifier2.predict_proba(X)
-    predict2 = myClassifier2.predict(X)
-    print(predict.item(0))
-    print(predict.item(1))
-    print("Result of classification:",predict2)
+    predict2 = classifier2.predict_proba(X)
+    print(predict2.item(0))
+    print(predict2.item(1))
 
 
-def classifier(X, Y):
-    global s
-    """Linear SVM
-
-       Parameters:
-       -----------
-       X           : array like test samples [n sample, m features]
-       Y           : n element array like vector containing real labels
-
-       Returns the trained classifier.
-    """
-    myClassifier = GaussianNB()
-    myClassifier.fit(X, Y)
-    s = pickle.dumps(myClassifier)
-    return myClassifier
+def classifier(trainX, trainY, testX, testY, classifier, i):
+    # global s
+    classifier.fit(trainX, trainY)
+    recall_i = round(test_bmodel(testX, testY, classifier),2)
+    # s = pickle.dumps(classifier)
+    print(i,"\t",recall_i,"\t",classifier)
+    return recall_i
 
 
 def test_bmodel(X, Y, classifier):
     """This method tests a classifier using test data.
-
+    
         Parameters:
         -----------
         X           : array like test samples [n sample, m features]
@@ -137,6 +146,6 @@ if __name__ == "__main__":
                 parameter3 = arg
         sys.exit(main(parameter1, parameter2, parameter3))
     elif "-h" in opts:
-        print("Usage: "+sys.argv[0]+" [-h] [-x filename] [-y filename] [-z filename]\n\nThe parsing commands lists.\n\nMandatory arguments:\n\t-x\ttestX.npy\n\t-y\ttesty.npy\n\t-z\ttoimport.npy\n\nOptional argument:\n\t-h\tshow this help message")
+        print("Usage: "+sys.argv[0]+" [-h] [-x filename] [-y filename] [-z filename]\n\nThe parsing commands lists.\n\nMandatory arguments:\n\t-x\tnumpy file of vector X for learning\n\t-y\tnumpy file of vector Y for learning\n\t-z\tnumpy file of vector X for prediction\n\nOptional argument:\n\t-h\tprint this help message")
     else:
         raise SystemExit(f"Usage: {sys.argv[0]} [-h] [-x filename] [-y filename] [-z filename]")

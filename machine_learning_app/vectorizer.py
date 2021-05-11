@@ -14,7 +14,6 @@ from keras.preprocessing import sequence
 class Vectorizer:
     
     def __init__(self, filename, max_vocab, max_length):
-
         print("Processing: {}".format(filename))
 
         self.MAX_VOCABULARY = max_vocab
@@ -26,7 +25,7 @@ class Vectorizer:
         self.index2word = {}
 
         self.dataset = pd.read_csv(filename, sep='^', header=None)
-        
+
         num_recs = self.dataset.shape[0]
 
         self.X = np.empty((num_recs, ), dtype=list)
@@ -34,7 +33,8 @@ class Vectorizer:
 
     def collectVocab(self):
         """This method counts the occurrence of words"""
-        for i in range(self.dataset.shape[0]):  
+
+        for i in range(self.dataset.shape[0]):
 
             samples = self.dataset.iloc[i,0].split()
 
@@ -79,8 +79,6 @@ class Vectorizer:
                 else:
                     w = self.word2index['QUNKN']
         
-                #Two different collections! To avoid the same index:
-
                 seqs.append(w)    
 
             if len(seqs) > maxlen:    
@@ -106,13 +104,20 @@ class Vectorizer:
 
 
 if __name__ == '__main__':
-    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated_titled.csv',2000,200)
+    dataset = pd.read_csv('tanulo_adatok/AST/concatenated_titled.csv', sep='^', header=None)
+    search_maxlength = []
+    for i in range(dataset.shape[0]):
+            samples = dataset.iloc[i,0].split()
+            search_maxlength.append(len(samples))
+    search_maxlength.sort()
+    
+    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated_titled.csv', 2000, search_maxlength[90])
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()
     myvectorizer.saveVectorAs('test')
     
-    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities_ast.csv',2000,200)
+    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities_ast.csv', 2000, search_maxlength[90])
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()

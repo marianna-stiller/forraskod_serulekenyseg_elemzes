@@ -60,9 +60,9 @@ public class PrimaryController implements Initializable {
         try {
             Runtime runtime = Runtime.getRuntime();
             runtime.exec("node parser.js");
-            runtime.exec("py nodes.py");
+            runtime.exec("py tokenizer.py");
             runtime.exec("py vectorizer.py");
-            Process process = runtime.exec("py trainer.py");
+            Process process = runtime.exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
             InputStream is = process.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
@@ -97,11 +97,11 @@ public class PrimaryController implements Initializable {
         }
 
         assert list != null;
-        double vulnerable = Double.parseDouble(list.get(0))*100;
-        double notvulnerable = Double.parseDouble(list.get(1))*100;
+        double vulnerable = Double.parseDouble(list.get(list.size()-1))*100;
+        double notvulnerable = Double.parseDouble(list.get(list.size()-2))*100;
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
                         new PieChart.Data("Sérülékeny", Math.round(vulnerable)),
-                        new PieChart.Data("Nem sérülékeny",Math.round(notvulnerable)));
+                        new PieChart.Data("Nem sérülékeny", Math.round(notvulnerable)));
         piechart.setData(pieChartData);
         pieChartData.forEach(data -> {
             data.nameProperty().bind(Bindings.concat(data.getName()," [",data.pieValueProperty(),"%]"));
