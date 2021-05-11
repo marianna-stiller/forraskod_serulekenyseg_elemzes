@@ -35,13 +35,10 @@ lr_pr_ar = []
 lsvc = CalibratedClassifierCV(LinearSVC(max_iter=10000, multi_class='ovr'))
 lsvc_pr_ar = []
 
-def main(argv=None):
-    if argv is None:
-        argv = sys.argv
-
-    origX = np.load("testX.npy")
-    origY = np.load("testy.npy").astype(int)
-    origX2 = np.load("toimportX.npy")
+def main(p1, p2, p3):
+    origX = np.load(p1)
+    origY = np.load(p2).astype(int)
+    origX2 = np.load(p3)
 
     kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
 
@@ -127,4 +124,19 @@ def test_bmodel(X, Y, classifier):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    opts = [opt for opt in sys.argv[1:] if opt.startswith("-")]
+    args = [arg for arg in sys.argv[1:] if not arg.startswith("-")]
+
+    if "-x" in opts and "-y" in opts and "-z" in opts:
+        for i, arg in enumerate(sys.argv):
+            if i == 2:
+                parameter1 = arg
+            if i == 4:
+                parameter2 = arg
+            if i == 6:
+                parameter3 = arg
+        sys.exit(main(parameter1, parameter2, parameter3))
+    elif "-h" in opts:
+        print("Usage: "+sys.argv[0]+" [-h] [-x filename] [-y filename] [-z filename]\n\nThe parsing commands lists.\n\nMandatory arguments:\n\t-x\ttestX.npy\n\t-y\ttesty.npy\n\t-z\ttoimport.npy\n\nOptional argument:\n\t-h\tshow this help message")
+    else:
+        raise SystemExit(f"Usage: {sys.argv[0]} [-h] [-x filename] [-y filename] [-z filename]")
