@@ -111,7 +111,7 @@ if __name__ == '__main__':
             search_maxlength.append(len(samples))
     search_maxlength.sort()
     
-    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated_titled.csv', 2000, search_maxlength[90])
+    myvectorizer = Vectorizer('tanulo_adatok/AST/concatenated_titled.csv', 2000, search_maxlength[round(len(search_maxlength)*0.9)])
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()

@@ -5,19 +5,16 @@ This is a temporary script file.
 """
 
 import sys
-import json
 import numpy as np
 import itertools
-import matplotlib.pyplot as plt
 import pickle
-from prettytable import PrettyTable
+import matplotlib.pyplot as plt
+
 from matplotlib import cm
-from keras.utils import to_categorical
+from prettytable import PrettyTable
 from sklearn import svm
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import precision_recall_fscore_support
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
 
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
@@ -82,17 +79,27 @@ def main(p1, p2, p3):
 
 
 def get_key(dictionary, val):
+    """This simple method returns item key from dictionary using item value."""
     for key, value in dictionary.items():
          if val == value:
              return key
 
 
 def average(lst):
+    """This simple method returns the average of list."""
     avg = sum(lst)/len(lst)
     return round(avg,2)
 
 
 def classifier2(X, classifier2):
+    """ This method classify the vector X.
+
+        Parameters:
+        -----------
+        X:          : vector X to be classified
+        classifier  : classifier to be used
+
+    """
     # classifier2 = pickle.loads(s)
     predict = classifier2.predict(X)
     print("Choosed classifier:",classifier2)
@@ -104,6 +111,19 @@ def classifier2(X, classifier2):
 
 
 def classifier(trainX, trainY, testX, testY, classifier, i):
+    """ This method trains a classifier using train data.
+
+        Parameters:
+        -----------
+        trainX      : train data of vector X
+        trainY      : train data of vector Y
+        testX       : test data of vector X
+        testY       : test data of vector Y
+        classifier  : classifier to be trained and tested
+        i           : i of for cycle
+
+        Returns the metric from method test_bmodel.
+    """
     # global s
     classifier.fit(trainX, trainY)
     recall_i = round(test_bmodel(testX, testY, classifier),2)
@@ -113,16 +133,15 @@ def classifier(trainX, trainY, testX, testY, classifier, i):
 
 
 def test_bmodel(X, Y, classifier):
-    """This method tests a classifier using test data.
-    
+    """ This method tests a classifier using test data.
+        
         Parameters:
         -----------
-        X           : array like test samples [n sample, m features]
-        Y           : n element array like vector containing real labels
-        classifier  : a list of binary classifiers to be tested
+        X           : test data of vector X
+        Y           : test data of vector Y
+        classifier  : classifier to be tested
        
-        This function returns a dictionary containing labels and the
-        corresponding metrics (precision, recall, Fscore and support).
+        Returns the metric recall.
     """
 
     Y_pred = np.argmax(classifier.predict_proba(X), axis=1)
