@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 
 from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import RepeatedStratifiedKFold
-from sklearn.metrics import precision_recall_fscore_support
 from sklearn.calibration import calibration_curve
 from sklearn.datasets import make_moons, make_circles, make_classification
 from sklearn.preprocessing import StandardScaler
@@ -40,7 +38,6 @@ def main(argv=None):
     y_test = y[train_samples:] # 95
     plot_classification(X_train, y_train, X_test, y_test, 100)
     Classifier = classifier(X_train, y_train)
-    
     confusionm(X_test, y_test, Classifier, 100)
 
     X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)

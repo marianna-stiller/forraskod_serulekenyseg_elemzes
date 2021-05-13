@@ -117,7 +117,7 @@ if __name__ == '__main__':
     myvectorizer.createVectors()
     myvectorizer.saveVectorAs('test')
     
-    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities_ast.csv', 2000, search_maxlength[90])
+    myvectorizer = Vectorizer('tanulo_adatok/AST/toimport_vulnerabilities_ast.csv', 2000, search_maxlength[round(len(search_maxlength)*0.9)])
     myvectorizer.collectVocab()
     myvectorizer.createLookupTables()
     myvectorizer.createVectors()
