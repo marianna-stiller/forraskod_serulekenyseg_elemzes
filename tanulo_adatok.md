@@ -1,110 +1,110 @@
 ### Sérülékeny példák (57)
 
-1. dvwa_low --> dvwa_low_ast 0
-1. dvwa_medium --> dvwa_medium_ast 0
-1. CVE-2020-5515 (`CVE-2020-5515`) --> CVE-2020-5515_ast 0
-1. CVE-2020-6117 (`CVE-2020-6117`, `CVE-2020-6118`, `CVE-2020-6119`, `CVE-2020-6120`, `CVE-2020-6121`, `CVE-2020-6122`) -->  CVE-2020-6117_ast 0
-1. CVE-2020-6123 (`CVE-2020-6123`) --> CVE-2020-6132_ast 0
-1. CVE-2020-6124 (`CVE-2020-6124`) --> CVE-2020-6124_ast 0
-1. CVE-2020-6125 (`CVE-2020-6125`) --> CVE-2020-6125_ast 0
-1. CVE-2020-6126 (`CVE-2020-6126`, `CVE-2020-6127`, `CVE-2020-6128`) --> CVE-2020-6126_ast 0
-1. CVE-2020-6129 (`CVE-2020-6129`) --> CVE-2020-6129_ast 0
-1. CVE-2020-6130 (`CVE-2020-6130`) --> CVE-2020-6130_ast 0
-1. CVE-2020-6131 (`CVE-2020-6131`) --> CVE-2020-6131_ast 0
-1. CVE-2020-6132 (`CVE-2020-6132`) --> CVE-2020-6132_ast 0
-1. CVE-2020-6134 (`CVE-2020-6134`) --> CVE-2020-6134_ast 0
-1. CVE-2020-6136 (`CVE-2020-6136`) --> CVE-2020-6136_ast 0
-1. CVE-2020-6137 (`CVE-2020-6137`) --> CVE-2020-6137_ast 0
-1. CVE-2020-6138 (`CVE-2020-6138`) --> CVE-2020-6138_ast 0
-1. CVE-2020-6139 (`CVE-2020-6139`) --> CVE-2020-6139_ast 0
-1. CVE-2020-6140 (`CVE-2020-6140`) --> CVE-2020-6140_ast 0
-1. CVE-2020-6141 (`CVE-2020-6141`) --> CVE-2020-6141_ast 0
-1. php-sploits_index --> php-sploits_index_ast 0
-1. php-sploits_login --> php-sploits_login_ast 0
-1. sql-injection-in-php_insert --> sql-injection-in-php_insert_ast 0
-1. sql-injection-in-php_delete --> sql-injection-in-php_delete_ast 0
-1. sql-injection-in-php_search --> sql-injection-in-php_search_ast 0
-1. sql-injection-in-php_update --> sql-injection-in-php_update_ast 0
-1. vulnerable-php-code-example_1 --> vulnerable-php-code-example_1_ast 0
-1. vulnerable-php-code-example_2 --> vulnerable-php-code-example_2_ast 0
-1. vulnerable-web-application_sql1 --> vulnerable-web-application_sql1_ast 0
-1. vulnerable-web-application_sql2 --> vulnerable-web-application_sql2_ast 0
-1. vulnerable-web-application_sql3 --> vulnerable-web-application_sql3_ast 0
-1. vulnerable-web-application_sql4 --> vulnerable-web-application_sql4_ast 0
-1. vulnerable-web-application_sql5 --> vulnerable-web-application_sql5_ast 0
-1. vulnerable-web-application_sql6 --> vulnerable-web-application_sql6_ast 0
-1. yooz-vulnerable-webapp --> yooz-vulnerable-webapp_as 0
-1. acunetix --> acunetix_ast 0
-1. php-security --> php-security_ast 0
-1. securityonline1 --> securityonline1_ast 0
-1. securityonline2 --> securityonline2_ast 0
-1. php-reaper1 --> php-reaper1_ast 0
-1. php-reaper2 --> php-reaper2_ast 0
-1. php-reaper3 --> php-reaper3_ast 0
-1. php-reaper4 --> php-reaper4_ast 0
-1. php-reaper5 --> php-reaper5_ast 0
-1. php-reaper6 --> php-reaper6_ast 0
-1. php-reaper7 --> php-reaper7_ast 0
-1. php-reaper8 --> php-reaper8_ast 0
-1. php-reaper9 --> php-reaper9_ast 0
-1. php-reaper10 --> php-reaper10_ast 0
-1. php-reaper11 --> php-reaper11_ast 0
-1. php-reaper12 --> php-reaper12_ast 0
-1. php-reaper13 --> php-reaper13_ast 0
-1. php-reaper14 --> php-reaper14_ast 0
-1. php-reaper15 --> php-reaper15_ast 0
-1. php-reaper16 --> php-reaper16_ast 0
-1. php-reaper17 --> php-reaper17_ast 0
-1. php-reaper18 --> php-reaper18_ast 0
-1. stackoverflow --> stackoverflow_ast 0
+1. dvwa_low.php (https://dvwa.co.uk/)
+1. dvwa_medium.php (https://dvwa.co.uk/)
+1. CVE-2020-5515.php (https://infosecdb.wordpress.com/2020/01/05/gilacms-1-11-8-admin-sqlquery-sql-injection/)
+1. CVE-2020-6117.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1072)
+1. CVE-2020-6123.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1073)
+1. CVE-2020-6124.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1073)
+1. CVE-2020-6125.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1074)
+1. CVE-2020-6126.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1075)
+1. CVE-2020-6129.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1076)
+1. CVE-2020-6130.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1076)
+1. CVE-2020-6131.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1076)
+1. CVE-2020-6132.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1077)
+1. CVE-2020-6134.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1077)
+1. CVE-2020-6136.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1079)
+1. CVE-2020-6137.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1080)
+1. CVE-2020-6138.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1080)
+1. CVE-2020-6139.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1080)
+1. CVE-2020-6140.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1080)
+1. CVE-2020-6141.php (https://talosintelligence.com/vulnerability_reports/TALOS-2020-1081)
+1. php-sploits_index.php (https://github.com/jadz/php-sploits/blob/master/index.php)
+1. php-sploits_login.php (https://github.com/jadz/php-sploits/blob/master/login.php)
+1. sql-injection-in-php_insert.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/insert.php)
+1. sql-injection-in-php_delete.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/delete.php)
+1. sql-injection-in-php_search.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/search.php)
+1. sql-injection-in-php_update.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/update.php)
+1. vulnerable-php-code-example_1.php (https://github.com/rubennati/vulnerable-php-code-examples/blob/master/src/sql-injection.php)
+1. vulnerable-php-code-example_2.php (https://github.com/rubennati/vulnerable-php-code-examples/blob/master/src/sql-injection_2.php)
+1. vulnerable-web-application_sql1.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql1.php)
+1. vulnerable-web-application_sql2.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql2.php)
+1. vulnerable-web-application_sql3.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql3.php)
+1. vulnerable-web-application_sql4.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql4.php)
+1. vulnerable-web-application_sql5.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql5.php)
+1. vulnerable-web-application_sql6.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql6.php)
+1. yooz-vulnerable-webapp.php (https://github.com/milad00ahmadi/yooz-vulnerable-webapp/blob/master/src/includes/sql.php)
+1. acunetix.php (https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/)
+1. **php-security.php**
+1. securityonline1.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
+1. securityonline2.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
+1. php-reaper1.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInIfElseIfStatement.php)
+1. php-reaper2.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInForLoop.php)
+1. php-reaper3.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInTernaryOperator.php)
+1. php-reaper4.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInElseStatement.php)
+1. php-reaper5.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLQueryNotInAClass.php)
+1. php-reaper6.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/AdditionToSQLStatementInIfStatement.php)
+1. php-reaper7.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/ConcatinatedVariable.php)
+1. php-reaper8.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/StringInterpolationWithBracesInArgument.php)
+1. php-reaper9.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SingleConcatenation.php)
+1. php-reaper10.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLQueryInTheReturnStatement.php)
+1. php-reaper11.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInIfCondition.php)
+1. php-reaper12.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/StringInterpolationWithoutBracesInArgument.php)
+1. php-reaper13.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/IgnoreSQLQueryThenInterpolationIsDoneWithAConstant.php)
+1. php-reaper14.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInIfStatement.php)
+1. php-reaper15.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/StringConcatenationInArgument.php)
+1. php-reaper16.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInSwitchStatement.php)
+1. php-reaper17.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInFunctionWithinIfStatement.php)
+1. php-reaper18.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInElseIfStatement.php)
+1. stackoverflow.php (https://stackoverflow.com/questions/28840932/how-to-prevent-sql-injection-when-using-mysqli)
 
 ### Nem sérülékeny példák (45)
 
-1. dvwa_impossible --> dvwa_impossible_ast 1
-2. dvwa_high --> dvwa_high_ast 1
-3. sql-injection-in-php_safeinsert --> sql-injection-in-php_safeinsert_ast 1
-4. sql-injection-in-php_safedelete --> sql-injection-in-php_safedelete_ast 1
-5. sql-injection-in-php_safesearch --> sql-injection-in-php_safesearch_ast 1
-6. sql-injection-in-php_safeupdate --> sql-injection-in-php_safeupdate_ast 1
-7. bobby-tables_adodb --> bobby-tables_adodb_ast 1
-8. bobby-tables_mysqli --> bobby-tables_mysqli_ast 1
-9. bobby-tables_odbc1 --> bobby-tables_odbc1_ast 1
-10. bobby-tables_odbc2 --> bobby-tables_odbc2_ast 1
-11. bobby-tables_pdo1 --> bobby-tables_pdo1_ast 1
-12. bobby-tables_pdo2 --> bobby-tables_pdo2_ast 1
-13. acunetix_safe --> acunetix_safe_ast 1
-14. pdo-prepared-statements --> pdo-prepared-statements_ast 1
-15. lionblogger1 --> lionblogger1_ast 1
-16. lionblogger2 --> lionblogger2_ast 1
-17. lionblogger3 --> lionblogger3_ast 1
-18. lionblogger4 --> lionblogger4_ast 1
-19. lionblogger5 --> lionblogger5_ast 1
-20. php-security_safe_pdo -->  php-security_safe_pdo_ast 1
-21. php-security_safe_mysql --> php-security_safe_mysql_ast 1
-22. securityonline1_safe --> securityonline1_safe_ast 1
-23. securityonline2_safe --> securityonline2_safe_ast 1
-24. php-reaper_safe1 --> php-reaper_safe1_ast 1
-25. php-reaper_safe2 --> php-reaper_safe2_ast 1
-26. php-reaper_safe3 --> php-reaper_safe3_ast 1
-27. php-reaper_safe4 --> php-reaper_safe4_ast 1
-28. php-reaper_safe5 --> php-reaper_safe5_ast 1
-29. pdo1 --> pdo1_ast 1
-30. pdo2 --> pdo2_ast 1
-31. pdo3 --> pdo3_ast 1
-32. pdo4 --> pdo4_ast 1
-33. pdo5 --> pdo5_ast 1
-34. stackoverflow_safe --> stackoverflow_safe_ast 1
-35. docs-php-earth --> docs-php-earth_ast 1
-36. agernic_escapingstrings --> agernic_escapingstrings_ast 1
-37. agernic_mysqli --> agernic_mysqli_ast 1
-38. agernic_pdo --> agernic_pdo_ast 1
-39. php-net1 --> php-net1_ast 1
-40. php-net2 --> php-net2_ast 1
-41. php-net3 --> php-net3_ast 1
-42. php-net4 --> php-net4_ast 1
-43. php-net5 --> php-net5_ast 1
-44. php-net6 --> php-net6_ast 1
-45. php-net7 --> php-net7_ast 1
+1. dvwa_impossible.php (https://dvwa.co.uk/)
+1. dvwa_high.php (https://dvwa.co.uk/)
+1. sql-injection-in-php_safeinsert.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/insertSafe.php)
+1. sql-injection-in-php_safedelete.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/deleteSafe.php)
+1. sql-injection-in-php_safesearch.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/searchSafe.php)
+1. sql-injection-in-php_safeupdate.php (https://github.com/oktadev/sql-injection-in-php/blob/main/includes/updateSafe.php)
+1. bobby-tables_adodb.php (https://bobby-tables.com/php)
+1. bobby-tables_mysqli.php (https://bobby-tables.com/php)
+1. bobby-tables_odbc1.php (https://bobby-tables.com/php)
+1. bobby-tables_odbc2.php (https://bobby-tables.com/php)
+1. bobby-tables_pdo1.php (https://bobby-tables.com/php)
+1. bobby-tables_pdo2.php (https://bobby-tables.com/php)
+1. acunetix_safe.php (https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/)
+1. **pdo-prepared-statements.php**
+1. lionblogger1.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
+1. lionblogger2.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
+1. lionblogger3.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
+1. lionblogger4.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
+1. lionblogger5.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
+1. **php-security_safe_pdo.php**
+1. **php-security_safe_mysql.php**
+1. securityonline1_safe.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
+1. securityonline2_safe.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
+1. **php-reaper_safe1.php**
+1. **php-reaper_safe2.php**
+1. **php-reaper_safe3.php**
+1. **php-reaper_safe4.php**
+1. **php-reaper_safe5.php**
+1. **pdo1.php**
+1. **pdo2.php**
+1. **pdo3.php**
+1. **pdo4.php**
+1. **pdo5.php**
+1. stackoverflow_safe.php (https://stackoverflow.com/questions/28840932/how-to-prevent-sql-injection-when-using-mysqli)
+1. docs-php-earth.php (https://docs.php.earth/security/sql-injection/)
+1. agernic_escapingstrings.php (https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html)
+1. agernic_mysqli.php (https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html)
+1. agernic_pdo.php (https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html)
+1. php-net1.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net2.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net3.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net4.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net5.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net6.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+1. php-net7.php (https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
 
 ### Sérülékeny?
 
@@ -112,7 +112,7 @@
 
 -----------------------
 
-### Javaslatok PHP példákra:
+### Példák forrásai:
 
 * https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
 * https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html

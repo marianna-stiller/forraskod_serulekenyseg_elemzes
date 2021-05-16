@@ -1,1 +1,1 @@
-program expressionstatement assign variable var call name mysql_real_escape_string offsetlookup variable _POST string 'var'^
+program expressionstatement assign name uName call name getRequestString string \username\ expressionstatement assign name uPass call name getRequestString string \userpassword\ expressionstatement assign name sql bin bin bin bin string 'SELECT * FROM Users WHERE Name =\' name uName string '\ AND Pass =\' name uPass string '\'^

@@ -1,2 +1,5 @@
 <?php
-$var = mysql_real_escape_string($_POST['var']);
+uName = getRequestString("username");
+uPass = getRequestString("userpassword");
+
+sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + '"'

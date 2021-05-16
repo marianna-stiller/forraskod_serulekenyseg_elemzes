@@ -8,9 +8,9 @@
       "offset": 0
     },
     "end": {
-      "line": 2,
-      "column": 47,
-      "offset": 53
+      "line": 5,
+      "column": 81,
+      "offset": 168
     }
   },
   "children": [
@@ -25,8 +25,8 @@
         },
         "end": {
           "line": 2,
-          "column": 47,
-          "offset": 53
+          "column": 37,
+          "offset": 43
         }
       },
       "expression": {
@@ -40,12 +40,12 @@
           },
           "end": {
             "line": 2,
-            "column": 47,
-            "offset": 53
+            "column": 37,
+            "offset": 43
           }
         },
         "left": {
-          "kind": "variable",
+          "kind": "name",
           "loc": {
             "source": null,
             "start": {
@@ -55,12 +55,12 @@
             },
             "end": {
               "line": 2,
-              "column": 4,
-              "offset": 10
+              "column": 5,
+              "offset": 11
             }
           },
-          "name": "var",
-          "curly": false
+          "resolution": "uqn",
+          "name": "uName"
         },
         "right": {
           "kind": "call",
@@ -68,13 +68,13 @@
             "source": null,
             "start": {
               "line": 2,
-              "column": 7,
-              "offset": 13
+              "column": 8,
+              "offset": 14
             },
             "end": {
               "line": 2,
-              "column": 46,
-              "offset": 52
+              "column": 36,
+              "offset": 42
             }
           },
           "what": {
@@ -83,74 +83,362 @@
               "source": null,
               "start": {
                 "line": 2,
-                "column": 7,
-                "offset": 13
+                "column": 8,
+                "offset": 14
               },
               "end": {
                 "line": 2,
-                "column": 31,
-                "offset": 37
+                "column": 24,
+                "offset": 30
               }
             },
             "resolution": "uqn",
-            "name": "mysql_real_escape_string"
+            "name": "getRequestString"
           },
           "arguments": [
             {
-              "kind": "offsetlookup",
+              "kind": "string",
               "loc": {
                 "source": null,
                 "start": {
                   "line": 2,
-                  "column": 32,
-                  "offset": 38
+                  "column": 25,
+                  "offset": 31
                 },
                 "end": {
                   "line": 2,
-                  "column": 45,
-                  "offset": 51
+                  "column": 35,
+                  "offset": 41
                 }
               },
-              "what": {
-                "kind": "variable",
+              "value": "username",
+              "raw": "\"username\"",
+              "unicode": false,
+              "isDoubleQuote": true
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 44
+        },
+        "end": {
+          "line": 3,
+          "column": 41,
+          "offset": 85
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 3,
+            "column": 0,
+            "offset": 44
+          },
+          "end": {
+            "line": 3,
+            "column": 41,
+            "offset": 85
+          }
+        },
+        "left": {
+          "kind": "name",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 44
+            },
+            "end": {
+              "line": 3,
+              "column": 5,
+              "offset": 49
+            }
+          },
+          "resolution": "uqn",
+          "name": "uPass"
+        },
+        "right": {
+          "kind": "call",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 8,
+              "offset": 52
+            },
+            "end": {
+              "line": 3,
+              "column": 40,
+              "offset": 84
+            }
+          },
+          "what": {
+            "kind": "name",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 3,
+                "column": 8,
+                "offset": 52
+              },
+              "end": {
+                "line": 3,
+                "column": 24,
+                "offset": 68
+              }
+            },
+            "resolution": "uqn",
+            "name": "getRequestString"
+          },
+          "arguments": [
+            {
+              "kind": "string",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 3,
+                  "column": 25,
+                  "offset": 69
+                },
+                "end": {
+                  "line": 3,
+                  "column": 39,
+                  "offset": 83
+                }
+              },
+              "value": "userpassword",
+              "raw": "\"userpassword\"",
+              "unicode": false,
+              "isDoubleQuote": true
+            }
+          ]
+        },
+        "operator": "="
+      }
+    },
+    {
+      "kind": "expressionstatement",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 87
+        },
+        "end": {
+          "line": 5,
+          "column": 81,
+          "offset": 168
+        }
+      },
+      "expression": {
+        "kind": "assign",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 5,
+            "column": 0,
+            "offset": 87
+          },
+          "end": {
+            "line": 5,
+            "column": 81,
+            "offset": 168
+          }
+        },
+        "left": {
+          "kind": "name",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 87
+            },
+            "end": {
+              "line": 5,
+              "column": 3,
+              "offset": 90
+            }
+          },
+          "resolution": "uqn",
+          "name": "sql"
+        },
+        "right": {
+          "kind": "bin",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 5,
+              "column": 6,
+              "offset": 93
+            },
+            "end": {
+              "line": 5,
+              "column": 81,
+              "offset": 168
+            }
+          },
+          "type": "+",
+          "left": {
+            "kind": "bin",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 6,
+                "offset": 93
+              },
+              "end": {
+                "line": 5,
+                "column": 75,
+                "offset": 162
+              }
+            },
+            "type": "+",
+            "left": {
+              "kind": "bin",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 5,
+                  "column": 6,
+                  "offset": 93
+                },
+                "end": {
+                  "line": 5,
+                  "column": 67,
+                  "offset": 154
+                }
+              },
+              "type": "+",
+              "left": {
+                "kind": "bin",
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 2,
-                    "column": 32,
-                    "offset": 38
+                    "line": 5,
+                    "column": 6,
+                    "offset": 93
                   },
                   "end": {
-                    "line": 2,
-                    "column": 38,
-                    "offset": 44
+                    "line": 5,
+                    "column": 49,
+                    "offset": 136
                   }
                 },
-                "name": "_POST",
-                "curly": false
+                "type": "+",
+                "left": {
+                  "kind": "string",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 5,
+                      "column": 6,
+                      "offset": 93
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 41,
+                      "offset": 128
+                    }
+                  },
+                  "value": "SELECT * FROM Users WHERE Name =\"",
+                  "raw": "'SELECT * FROM Users WHERE Name =\"'",
+                  "unicode": false,
+                  "isDoubleQuote": false
+                },
+                "right": {
+                  "kind": "name",
+                  "loc": {
+                    "source": null,
+                    "start": {
+                      "line": 5,
+                      "column": 44,
+                      "offset": 131
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 49,
+                      "offset": 136
+                    }
+                  },
+                  "resolution": "uqn",
+                  "name": "uName"
+                }
               },
-              "offset": {
+              "right": {
                 "kind": "string",
                 "loc": {
                   "source": null,
                   "start": {
-                    "line": 2,
-                    "column": 39,
-                    "offset": 45
+                    "line": 5,
+                    "column": 52,
+                    "offset": 139
                   },
                   "end": {
-                    "line": 2,
-                    "column": 44,
-                    "offset": 50
+                    "line": 5,
+                    "column": 67,
+                    "offset": 154
                   }
                 },
-                "value": "var",
-                "raw": "'var'",
+                "value": "\" AND Pass =\"",
+                "raw": "'\" AND Pass =\"'",
                 "unicode": false,
                 "isDoubleQuote": false
               }
+            },
+            "right": {
+              "kind": "name",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 5,
+                  "column": 70,
+                  "offset": 157
+                },
+                "end": {
+                  "line": 5,
+                  "column": 75,
+                  "offset": 162
+                }
+              },
+              "resolution": "uqn",
+              "name": "uPass"
             }
-          ]
+          },
+          "right": {
+            "kind": "string",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 5,
+                "column": 78,
+                "offset": 165
+              },
+              "end": {
+                "line": 5,
+                "column": 81,
+                "offset": 168
+              }
+            },
+            "value": "\"",
+            "raw": "'\"'",
+            "unicode": false,
+            "isDoubleQuote": false
+          }
         },
         "operator": "="
       }

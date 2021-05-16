@@ -28,27 +28,24 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
 
-    plot_classifier_comparison()
+    # plot_classifier_comparison()
 
-    X, y = datasets.make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=2)
-    train_samples = 5
-    X_train = X[:train_samples] # 5
-    X_test = X[train_samples:] # 95
-    y_train = y[:train_samples] # 5
-    y_test = y[train_samples:] # 95
-    plot_classification(X_train, y_train, X_test, y_test, 100)
+    origX = np.load("testX.npy")
+    origY = np.load("testy.npy").astype(int)
+    X_train, X_test, y_train, y_test = train_test_split(origX, origY, test_size=0.2)
+    plot_classification(X_train, y_train, X_test, y_test, 102)
     Classifier = classifier(X_train, y_train)
-    confusionm(X_test, y_test, Classifier, 100)
+    confusionm(X_test, y_test, Classifier, 102)
 
-    X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
-    train_samples = 100
-    X_train = X[:train_samples] # 100
-    X_test = X[train_samples:] # 99.900
-    y_train = y[:train_samples] # 100
-    y_test = y[train_samples:] # 99.900
-    plot_classification(X_train, y_train, X_test, y_test, 100000)
-    Classifier = classifier(X_train, y_train)
-    confusionm(X_test, y_test, Classifier, 100000)
+    # X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
+    # train_samples = 100
+    # X_train = X[:train_samples] # 100
+    # X_test = X[train_samples:] # 99.900
+    # y_train = y[:train_samples] # 100
+    # y_test = y[train_samples:] # 99.900
+    # plot_classification(X_train, y_train, X_test, y_test, 100000)
+    # Classifier = classifier(X_train, y_train)
+    # confusionm(X_test, y_test, Classifier, 100000)
 
 
 def classifier(X, Y):
@@ -69,7 +66,7 @@ def confusionm(X, Y, classifier, title):
     plot_confusion_matrix(confusion_m, target_names=classes, title='Confusion matrix, without normalization for '+str(title)+' samples', cmap=plt.cm.Blues)
 
     # Plot normalized confusion matrix
-    plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix for'+str(title)+' samples', cmap=plt.cm.Blues, normalize=True)
+    plot_confusion_matrix(confusion_m, target_names=classes, title='Normalized confusion matrix for '+str(title)+' samples', cmap=plt.cm.Blues, normalize=True)
 
 
 def plot_confusion_matrix(cm, target_names, title='Confusion matrix', cmap=plt.cm.Blues, normalize=False):

@@ -9,11 +9,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -50,6 +53,8 @@ public class PrimaryController implements Initializable {
     @FXML
     public TextArea the_code;
 
+    public double vulnerable;
+    public double notvulnerable;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,60 +63,72 @@ public class PrimaryController implements Initializable {
         String line;
         long before_timeMilli = before_date.getTime();
         try {
-            Runtime runtime = Runtime.getRuntime();
-            runtime.exec("node parser.js");
-            runtime.exec("py tokenizer.py");
-            runtime.exec("py vectorizer.py");
-            Process process = runtime.exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
-            InputStream is = process.getInputStream();
-            InputStreamReader isr = new InputStreamReader(is);
-            BufferedReader br = new BufferedReader(isr);
-
-            list = new ArrayList<>();
-            while ((line = br.readLine()) != null) {
-                list.add(line);
-            }
-            progress.setProgress(100);
-            progress_no.setText(progress.getProgress() +"%");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Date after_date = new Date();
-        long after_timeMilli = after_date.getTime();
-        long runtime_in_mili = after_timeMilli - before_timeMilli;
-        int runtime_in_sec = (int)((runtime_in_mili / 1000) % 60);
-        rtime.setText(runtime_in_sec +" mp");
-
-        var fileName = "tanulo_adatok/toimport_vulnerabilities.php";
-        try (BufferedReader br = new BufferedReader(
-                new FileReader(fileName, StandardCharsets.UTF_8))) {
-            var sb = new StringBuilder();
-            String lines;
-            while ((lines = br.readLine()) != null) {
-                sb.append(lines);
-                sb.append(System.lineSeparator());
-            }
-            the_code.setText(String.valueOf(sb));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        assert list != null;
-        double vulnerable = Double.parseDouble(list.get(list.size()-1))*100;
-        double notvulnerable = Double.parseDouble(list.get(list.size()-2))*100;
-        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                        new PieChart.Data("Sérülékeny", Math.round(vulnerable)),
-                        new PieChart.Data("Nem sérülékeny", Math.round(notvulnerable)));
-        piechart.setData(pieChartData);
-        pieChartData.forEach(data -> {
-            data.nameProperty().bind(Bindings.concat(data.getName()," [",data.pieValueProperty(),"%]"));
-            if(vulnerable > 50) {
-                piechart.getStylesheets().add("css/style.css");
+            Process p1 = Runtime.getRuntime().exec("node parser.js");
+            int pc1 = p1.waitFor();
+            Process p2 = Runtime.getRuntime().exec("py tokenizer.py");
+            int pc2 = p2.waitFor();
+            Process p3 = Runtime.getRuntime().exec("py vectorizer.py");
+            int pc3 = p3.waitFor();
+            if(pc1!=0 || pc2!=0 || pc3!=0) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setHeaderText("A megadott kóddal valami probléma van!");
+                alert.setContentText("Kérlek ellenőrizd a helyességét és kattints a 'Vissza' gombra új programkód megadásához.");
+                alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                alert.showAndWait();
             } else {
-                piechart.getStylesheets().add("css/style2.css");
+                Process p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
+                InputStream is = p4.getInputStream();
+                InputStreamReader isr = new InputStreamReader(is);
+                BufferedReader br = new BufferedReader(isr);
+
+                list = new ArrayList<>();
+                while ((line = br.readLine()) != null) {
+                    list.add(line);
+                }
+                progress.setProgress(100);
+                progress_no.setText(progress.getProgress() +"%");
+                vulnerable = Double.parseDouble(list.get(list.size()-2))*100;
+                notvulnerable = Double.parseDouble(list.get(list.size()-1))*100;
+
+                Date after_date = new Date();
+                long after_timeMilli = after_date.getTime();
+                long runtime_in_mili = after_timeMilli - before_timeMilli;
+                int runtime_in_sec = (int)((runtime_in_mili / 1000) % 60);
+                rtime.setText(runtime_in_sec +" mp");
+        
+                var fileName = "tanulo_adatok/toimport_vulnerabilities.php";
+                try (BufferedReader brr = new BufferedReader(
+                        new FileReader(fileName, StandardCharsets.UTF_8))) {
+                    var sb = new StringBuilder();
+                    String lines;
+                    while ((lines = brr.readLine()) != null) {
+                        sb.append(lines);
+                        sb.append(System.lineSeparator());
+                    }
+                    the_code.setText(String.valueOf(sb));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert list != null;
+                ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+                                new PieChart.Data("Sérülékeny", Math.round(vulnerable)),
+                                new PieChart.Data("Nem sérülékeny", Math.round(notvulnerable)));
+                piechart.setData(pieChartData);
+                pieChartData.forEach(data -> {
+                    data.nameProperty().bind(Bindings.concat(data.getName()," [",data.pieValueProperty(),"%]"));
+                    if(vulnerable > 50) {
+                        piechart.getStylesheets().add("css/style.css");
+                    } else {
+                        piechart.getStylesheets().add("css/style2.css");
+                    }
+                });
+                describe1.setText("A program "+Math.round(vulnerable)+"%-os (pontosabban "+vulnerable+"%-os) valószínűségűre állapította meg a kód sérülékenységét SQL Injection-el szemben.");        
             }
-        });
-        describe1.setText("A program "+Math.round(vulnerable)+"%-os (pontosabban "+vulnerable+"%-os) valószínűségűre állapította meg a kód sérülékenységét SQL Injection-el szemben.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void back() throws IOException {
