@@ -28,7 +28,7 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
 
-    # plot_classifier_comparison()
+    plot_classifier_comparison()
 
     origX = np.load("testX.npy")
     origY = np.load("testy.npy").astype(int)
@@ -36,16 +36,16 @@ def main(argv=None):
     plot_classification(X_train, y_train, X_test, y_test, 102)
     Classifier = classifier(X_train, y_train)
     confusionm(X_test, y_test, Classifier, 102)
-
-    # X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
-    # train_samples = 100
-    # X_train = X[:train_samples] # 100
-    # X_test = X[train_samples:] # 99.900
-    # y_train = y[:train_samples] # 100
-    # y_test = y[train_samples:] # 99.900
-    # plot_classification(X_train, y_train, X_test, y_test, 100000)
-    # Classifier = classifier(X_train, y_train)
-    # confusionm(X_test, y_test, Classifier, 100000)
+  
+    X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
+    train_samples = 100
+    X_train = X[:train_samples] # 100
+    X_test = X[train_samples:] # 99.900
+    y_train = y[:train_samples] # 100
+    y_test = y[train_samples:] # 99.900
+    plot_classification(X_train, y_train, X_test, y_test, 100000)
+    Classifier = classifier(X_train, y_train)
+    confusionm(X_test, y_test, Classifier, 100000)
 
 
 def classifier(X, Y):
