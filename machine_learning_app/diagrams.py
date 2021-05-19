@@ -34,7 +34,7 @@ def main(argv=None):
     origY = np.load("testy.npy").astype(int)
     X_train, X_test, y_train, y_test = train_test_split(origX, origY, test_size=0.2)
     plot_classification(X_train, y_train, X_test, y_test, 102)
-    Classifier = classifier(X_train, y_train)
+    Classifier = classifier(X_train, y_train, gnb)
     confusionm(X_test, y_test, Classifier, 102)
   
     X, y = datasets.make_classification(n_samples=100000, n_features=20, n_informative=2, n_redundant=2)
@@ -44,12 +44,12 @@ def main(argv=None):
     y_train = y[:train_samples] # 100
     y_test = y[train_samples:] # 99.900
     plot_classification(X_train, y_train, X_test, y_test, 100000)
-    Classifier = classifier(X_train, y_train)
+    Classifier = classifier(X_train, y_train, gnb)
     confusionm(X_test, y_test, Classifier, 100000)
 
 
-def classifier(X, Y):
-    myClassifier = gnb
+def classifier(X, Y, classifier):
+    myClassifier = classifier
     myClassifier.fit(X, Y)
     return myClassifier
 
