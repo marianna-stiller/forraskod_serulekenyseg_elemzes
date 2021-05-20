@@ -23,15 +23,21 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.svm import LinearSVC
 
+SOLVER = 'lbfgs'
+MAX_ITER = 10000
+MULTI_CLASS = 'ovr'
+SPLITS = 5
+REPEATS = 5
+
 gnb = GaussianNB()
 gnb_pr_ar = []
 rfc = RandomForestClassifier()
 rfc_pr_ar = []
 nknc = KNeighborsClassifier()
 nknc_pr_ar = []
-lr = LogisticRegression(solver='lbfgs', max_iter=10000, multi_class='ovr')
+lr = LogisticRegression(solver=SOLVER, max_iter=MAX_ITER, multi_class=MULTI_CLASS)
 lr_pr_ar = []
-lsvc = CalibratedClassifierCV(LinearSVC(max_iter=10000, multi_class='ovr'))
+lsvc = CalibratedClassifierCV(LinearSVC(max_iter=MAX_ITER, multi_class=MULTI_CLASS))
 lsvc_pr_ar = []
 
 def main(p1, p2, p3):
@@ -39,7 +45,7 @@ def main(p1, p2, p3):
     origY = np.load(p2).astype(int)
     origX2 = np.load(p3)
 
-    kFold = RepeatedStratifiedKFold(n_splits=5, n_repeats=5)
+    kFold = RepeatedStratifiedKFold(n_splits=SPLITS, n_repeats=REPEATS)
     i = 0
     for train_index, test_index in kFold.split(origX, origY):
         trainX, testX = origX[train_index], origX[test_index]
@@ -87,8 +93,12 @@ def get_key(dictionary, val):
 
 def average(lst):
     """This simple method returns the average of list."""
-    avg = sum(lst)/len(lst)
-    return round(avg,2)
+    if len(lst) == 0:
+        avg = sum(lst)/len(lst)
+        return round(avg,2)
+    else:
+        print("The list is empty!")
+        return 0
 
 
 def classifier2(X, classifier2):
