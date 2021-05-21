@@ -20,7 +20,11 @@ Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion 
 npm install php-parser --save
 ```
 ### Letöltés
-1. `git clone https://github.com/marianna-stiller/forraskod_serulekenyseg_elemzes.git` vagy Download ZIP
+```sh
+git clone https://github.com/marianna-stiller/forraskod_serulekenyseg_elemzes.git
+```
+
+vagy Download ZIP
 ```
 ├───.idea
 │   └───libraries
@@ -43,6 +47,15 @@ npm install php-parser --save
     └───target
 ```
 ### Futtatás:
-2. `cd machine_learning_app`
-3. `mvn compile test package`
-4. `mvn exec:java`
+1. 
+```sh
+cd machine_learning_app
+```
+2. 
+```sh
+mvn compile test package
+```
+3.
+```sh
+mvn exec:java
+```
