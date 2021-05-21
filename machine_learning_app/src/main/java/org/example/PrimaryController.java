@@ -55,6 +55,21 @@ public class PrimaryController implements Initializable {
 
     public double vulnerable;
     public double notvulnerable;
+    public Process p1;
+    public int pc1;
+    public Process p2;
+    public int pc2;
+    public Process p3;
+    public int pc3;
+    public Process p4;
+
+    public boolean isWindows() {
+        if(System.getProperty("os.name").toLowerCase().startsWith("windows")){
+            return true; // windows
+        } else {
+            return false; // linux
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -63,12 +78,21 @@ public class PrimaryController implements Initializable {
         String line;
         long before_timeMilli = before_date.getTime();
         try {
-            Process p1 = Runtime.getRuntime().exec("node parser.js");
-            int pc1 = p1.waitFor();
-            Process p2 = Runtime.getRuntime().exec("py tokenizer.py");
-            int pc2 = p2.waitFor();
-            Process p3 = Runtime.getRuntime().exec("py vectorizer.py");
-            int pc3 = p3.waitFor();
+            p1 = Runtime.getRuntime().exec("node parser.js");
+            pc1 = p1.waitFor();
+            if(isWindows()) {
+                p2 = Runtime.getRuntime().exec("py tokenizer.py");
+                pc2 = p2.waitFor();
+                p3 = Runtime.getRuntime().exec("py vectorizer.py");
+                pc3 = p3.waitFor();
+            } else {
+                p1 = Runtime.getRuntime().exec("node parser.js");
+                pc1 = p1.waitFor();
+                p2 = Runtime.getRuntime().exec("python3 tokenizer.py");
+                pc2 = p2.waitFor();
+                p3 = Runtime.getRuntime().exec("python3 vectorizer.py");
+                pc3 = p3.waitFor();
+            }            
             if(pc1!=0 || pc2!=0 || pc3!=0) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setHeaderText("A megadott kóddal valami probléma van!");
@@ -76,7 +100,11 @@ public class PrimaryController implements Initializable {
                 alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
                 alert.showAndWait();
             } else {
-                Process p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
+                if(isWindows()) {
+                    p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
+                } else {
+                    
+                }
                 InputStream is = p4.getInputStream();
                 InputStreamReader isr = new InputStreamReader(is);
                 BufferedReader br = new BufferedReader(isr);

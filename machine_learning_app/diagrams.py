@@ -3,8 +3,8 @@ import numpy as np
 import itertools
 import sys
 import matplotlib.pyplot as plt
-from sklearn import datasets
 
+from sklearn import datasets
 from sklearn.metrics import confusion_matrix
 from sklearn.calibration import calibration_curve
 from sklearn.datasets import make_moons, make_circles, make_classification

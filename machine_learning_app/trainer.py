@@ -6,13 +6,8 @@ This is a temporary script file.
 
 import sys
 import numpy as np
-import itertools
-import pickle
-import matplotlib.pyplot as plt
 
-from matplotlib import cm
 from prettytable import PrettyTable
-from sklearn import svm
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import precision_recall_fscore_support
 
