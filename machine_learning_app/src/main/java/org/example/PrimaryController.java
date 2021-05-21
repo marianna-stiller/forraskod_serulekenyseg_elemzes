@@ -17,8 +17,6 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -65,13 +63,12 @@ public class PrimaryController implements Initializable {
     public int pc3;
     public Process p4;
 
-    public String op() {
+    public boolean isWindows() {
         if(System.getProperty("os.name").toLowerCase().startsWith("windows")){
-            return "windows"; // windows
-        } else if(System.getProperty("os.name").toLowerCase().startsWith("windows")) {
-            return "linux"; // linux
+            return true; // windows
+        } else {
+            return false; // linux
         }
-        return "A(z) "+System.getProperty("os.name")+" operációs rendszer nem támogatott";
     }
 
     @Override
@@ -93,7 +90,7 @@ public class PrimaryController implements Initializable {
             while ((s1 = p1err.readLine()) != null) {
                 l1 += s1 + '\n';
             }
-            if(op()=="windows") {
+            if(isWindows()) {
                 p2 = Runtime.getRuntime().exec("py tokenizer.py");
                 pc2 = p2.waitFor();
                 BufferedReader p2err = new BufferedReader(new InputStreamReader(p2.getErrorStream()));
@@ -106,14 +103,21 @@ public class PrimaryController implements Initializable {
                 while ((s3 = p3err.readLine()) != null) {
                     l3 += s3 + '\n';
                 }
-            } else if(op()=="linux"){
+            } else {
                 p2 = Runtime.getRuntime().exec("python3 tokenizer.py");
                 pc2 = p2.waitFor();
+                BufferedReader p2err = new BufferedReader(new InputStreamReader(p2.getErrorStream()));
+                while ((s2 = p2err.readLine()) != null) {
+                    l2 += s2 + '\n';
+                }
                 p3 = Runtime.getRuntime().exec("python3 vectorizer.py");
                 pc3 = p3.waitFor();
-            } else {
-                System.out.println(op());
+                BufferedReader p3err = new BufferedReader(new InputStreamReader(p3.getErrorStream()));
+                while ((s3 = p3err.readLine()) != null) {
+                    l3 += s3 + '\n';
+                }
             }
+
             if(pc1!=0 || pc2!=0 || pc3!=0) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setHeaderText("Valami probléma van!");
@@ -143,12 +147,10 @@ public class PrimaryController implements Initializable {
                 alert.getDialogPane().setExpandableContent(expContent);
                 alert.showAndWait();
             } else {
-                if(op()=="windows") {
+                if(isWindows()) {
                     p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
-                } else if(op()=="linux"){
-                    p4 = Runtime.getRuntime().exec("python3 trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
                 } else {
-                    System.out.println(op());
+                    p4 = Runtime.getRuntime().exec("python3 trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
                 }
                 InputStream is = p4.getInputStream();
                 InputStreamReader isr = new InputStreamReader(is);
