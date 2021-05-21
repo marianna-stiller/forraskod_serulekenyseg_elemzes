@@ -10,15 +10,15 @@ Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion 
 * [Node.js](https://nodejs.dev/download)
 * [Python3](https://www.python.org/downloads/)
 * [Apache Maven](https://maven.apache.org/download.cgi)
-* php-parser 
-```sh
-npm install php-parser --save
-```
 * [PrettyTable](https://pypi.org/project/prettytable/)
 * [Numpy](https://numpy.org/install/)
 * [scikit-learn](https://scikit-learn.org/stable/install.html)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
+* php-parser 
+```sh
+npm install php-parser --save
+```
 
 ### Lépések:
 * cd machine_learning_app
