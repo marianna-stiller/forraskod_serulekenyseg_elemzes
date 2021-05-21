@@ -16,6 +16,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
@@ -77,15 +79,33 @@ public class PrimaryController implements Initializable {
         ArrayList<String> list = null;
         Date before_date = new Date();
         String line;
+        String s1 = null;
+        String l1 = null;
+        String s2 = null;
+        String l2 = null;
+        String s3 = null;
+        String l3 = null;
         long before_timeMilli = before_date.getTime();
         try {
             p1 = Runtime.getRuntime().exec("node parser.js");
             pc1 = p1.waitFor();
+            BufferedReader p1err = new BufferedReader(new InputStreamReader(p1.getErrorStream()));
+            while ((s1 = p1err.readLine()) != null) {
+                l1 += s1 + '\n';
+            }
             if(op()=="windows") {
                 p2 = Runtime.getRuntime().exec("py tokenizer.py");
                 pc2 = p2.waitFor();
+                BufferedReader p2err = new BufferedReader(new InputStreamReader(p2.getErrorStream()));
+                while ((s2 = p2err.readLine()) != null) {
+                    l2 += s2 + '\n';
+                }
                 p3 = Runtime.getRuntime().exec("py vectorizer.py");
                 pc3 = p3.waitFor();
+                BufferedReader p3err = new BufferedReader(new InputStreamReader(p3.getErrorStream()));
+                while ((s3 = p3err.readLine()) != null) {
+                    l3 += s3 + '\n';
+                }
             } else if(op()=="linux"){
                 p2 = Runtime.getRuntime().exec("python3 tokenizer.py");
                 pc2 = p2.waitFor();
@@ -96,9 +116,31 @@ public class PrimaryController implements Initializable {
             }
             if(pc1!=0 || pc2!=0 || pc3!=0) {
                 Alert alert = new Alert(AlertType.ERROR);
-                alert.setHeaderText("A megadott kóddal valami probléma van!");
-                alert.setContentText("Kérlek ellenőrizd a helyességét és kattints a 'Vissza' gombra új programkód megadásához.");
-                alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                alert.setHeaderText("Valami probléma van!");
+                alert.setContentText("Ellenőrizd a függőségeket és kattints a 'Vissza' gombra új programkód megadásához.");
+
+                TextArea textArea1 = new TextArea(l1);
+                textArea1.setEditable(false);
+                textArea1.setWrapText(true);
+                textArea1.setMaxHeight(70);
+                textArea1.setMaxWidth(Double.MAX_VALUE);
+                TextArea textArea2 = new TextArea(l2);
+                textArea2.setEditable(false);
+                textArea2.setWrapText(true);
+                textArea2.setMaxHeight(70);
+                textArea2.setMaxWidth(Double.MAX_VALUE);
+                TextArea textArea3 = new TextArea(l3);
+                textArea3.setEditable(false);
+                textArea3.setWrapText(true);
+                textArea3.setMaxHeight(70);
+                textArea3.setMaxWidth(Double.MAX_VALUE);
+
+                GridPane expContent = new GridPane();
+                expContent.setMaxWidth(Double.MAX_VALUE);
+                expContent.add(textArea1, 0, 0);
+                expContent.add(textArea2, 0, 1);
+                expContent.add(textArea3, 0, 2);
+                alert.getDialogPane().setExpandableContent(expContent);
                 alert.showAndWait();
             } else {
                 if(op()=="windows") {

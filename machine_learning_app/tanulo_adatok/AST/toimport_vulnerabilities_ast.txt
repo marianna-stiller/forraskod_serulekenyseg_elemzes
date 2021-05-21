@@ -8,9 +8,9 @@
       "offset": 0
     },
     "end": {
-      "line": 8,
-      "column": 1,
-      "offset": 279
+      "line": 9,
+      "column": 0,
+      "offset": 280
     }
   },
   "children": [

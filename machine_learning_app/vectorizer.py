@@ -5,10 +5,7 @@ This file gets the concatenated CSV and creates numpy files about it.
 import collections
 import pandas as pd
 import numpy as np
-import re
-import os
 
-from keras import utils
 from keras.preprocessing import sequence
 
 class Vectorizer:

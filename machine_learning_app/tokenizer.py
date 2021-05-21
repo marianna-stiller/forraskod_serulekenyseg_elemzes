@@ -7,9 +7,7 @@ acunetix_ast.csv word 1:	program
 """
 
 import csv
-import re
 import os
-import pandas as pd
 
 array = []
 
