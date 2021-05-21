@@ -9,7 +9,7 @@ Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion 
 * [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 * [Node.js](https://nodejs.dev/download)
 * [Python3](https://www.python.org/downloads/)
-* [Apache Maven](https://maven.apache.org/download.cgi)
+* [Apache Maven 3.8.1](https://maven.apache.org/download.cgi)
 * [PrettyTable](https://pypi.org/project/prettytable/)
 * [Numpy](https://numpy.org/install/)
 * [scikit-learn](https://scikit-learn.org/stable/install.html)
