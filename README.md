@@ -15,6 +15,8 @@ Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion 
 * [scikit-learn](https://scikit-learn.org/stable/install.html)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
+* [Keras](https://pypi.org/project/keras/)
+* [TensorFlow](https://www.tensorflow.org/install)
 * php-parser 
 ```sh
 npm install php-parser --save
