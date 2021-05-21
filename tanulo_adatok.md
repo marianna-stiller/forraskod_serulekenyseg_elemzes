@@ -35,7 +35,7 @@
 1. vulnerable-web-application_sql6.php (https://github.com/OWASP/Vulnerable-Web-Application/blob/master/SQL/sql6.php)
 1. yooz-vulnerable-webapp.php (https://github.com/milad00ahmadi/yooz-vulnerable-webapp/blob/master/src/includes/sql.php)
 1. acunetix.php (https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/)
-1. **php-security.php**
+1. php-security.php (https://github.com/msanvarov/php-security)
 1. securityonline1.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
 1. securityonline2.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
 1. php-reaper1.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLInIfElseIfStatement.php)
@@ -73,26 +73,26 @@
 1. bobby-tables_pdo1.php (https://bobby-tables.com/php)
 1. bobby-tables_pdo2.php (https://bobby-tables.com/php)
 1. acunetix_safe.php (https://www.acunetix.com/blog/articles/prevent-sql-injection-vulnerabilities-in-php-applications/)
-1. **pdo-prepared-statements.php**
+1. pdo-prepared-statements.php (https://www.php.net/manual/en/pdo.prepared-statements.php)
 1. lionblogger1.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
 1. lionblogger2.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
 1. lionblogger3.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
 1. lionblogger4.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
 1. lionblogger5.php (https://www.lionblogger.com/ways-to-prevent-sql-injection-attacks-in-php/)
-1. **php-security_safe_pdo.php**
-1. **php-security_safe_mysql.php**
+1. php-security_safe_pdo.php (https://github.com/msanvarov/php-security)
+1. php-security_safe_mysql.php (https://github.com/msanvarov/php-security)
 1. securityonline1_safe.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
 1. securityonline2_safe.php (https://securityonline.info/php-reaper-php-tool-to-scan-adodb-code-for-sql-injections/)
-1. **php-reaper_safe1.php**
-1. **php-reaper_safe2.php**
-1. **php-reaper_safe3.php**
-1. **php-reaper_safe4.php**
-1. **php-reaper_safe5.php**
-1. **pdo1.php**
-1. **pdo2.php**
-1. **pdo3.php**
-1. **pdo4.php**
-1. **pdo5.php**
+1. php-reaper_safe1.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/DoubleVariableAssignment.php)
+1. php-reaper_safe2.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/IgnoreProperlyCommentedCode.php)
+1. php-reaper_safe3.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/NoStringInterpolationInArgument.php)
+1. php-reaper_safe4.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/SQLQueryWithAdodbParamMethod.php)
+1. php-reaper_safe5.php (https://github.com/emanuil/php-reaper/blob/master/tests/SecurityChecks/exampleFiles/StaticStringVariable.php)
+1. pdo1.php (https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection)
+1. pdo2.php (https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection)
+1. pdo3.php (https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection)
+1. pdo4.php (https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection)
+1. pdo5.php (https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection)
 1. stackoverflow_safe.php (https://stackoverflow.com/questions/28840932/how-to-prevent-sql-injection-when-using-mysqli)
 1. docs-php-earth.php (https://docs.php.earth/security/sql-injection/)
 1. agernic_escapingstrings.php (https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html)
@@ -112,7 +112,7 @@
 
 -----------------------
 
-### Példák forrásai:
+### Egyéb források:
 
 * https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
 * https://www.agernic.com/php-mysqli/how-to-prevent-sql-injection-in-php-mysqli.html

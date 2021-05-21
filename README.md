@@ -1,7 +1,8 @@
-# SQL Injection detektálás természetes nyelvi feldolgozó rendszerek és gépi tanulás által.
+# SQL Injection detektálás természetes nyelvi feldolgozó rendszerek és gépi tanulás által
 
 Előfeltétel:
 * java version "11"
+* apache maven
 
 Lépések:
 * cd machine_learning_app
