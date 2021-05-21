@@ -86,8 +86,6 @@ public class PrimaryController implements Initializable {
                 p3 = Runtime.getRuntime().exec("py vectorizer.py");
                 pc3 = p3.waitFor();
             } else {
-                p1 = Runtime.getRuntime().exec("node parser.js");
-                pc1 = p1.waitFor();
                 p2 = Runtime.getRuntime().exec("python3 tokenizer.py");
                 pc2 = p2.waitFor();
                 p3 = Runtime.getRuntime().exec("python3 vectorizer.py");
@@ -103,7 +101,7 @@ public class PrimaryController implements Initializable {
                 if(isWindows()) {
                     p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
                 } else {
-                    
+                    p4 = Runtime.getRuntime().exec("python3 trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
                 }
                 InputStream is = p4.getInputStream();
                 InputStreamReader isr = new InputStreamReader(is);
