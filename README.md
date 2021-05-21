@@ -3,7 +3,7 @@ Gépi tanuló algoritmusok és természetes nyelvi feldolgozó rendszerek alkalm
 
 Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion matrix`, `recall`.
 
-Előfeltételek:
+### Előfeltételek:
 * [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 * [Node.js](https://nodejs.dev/download)
 * [Python3](https://www.python.org/downloads/)
@@ -18,7 +18,7 @@ npm install php-parser --save
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
 
-Lépések:
+### Lépések:
 * cd machine_learning_app
 * mvn compile test package
 * mvn exec:java
