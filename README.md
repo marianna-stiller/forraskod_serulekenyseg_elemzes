@@ -19,33 +19,6 @@ Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion 
 ```sh
 npm install php-parser --save
 ```
-### Letöltés
-```sh
-git clone https://github.com/marianna-stiller/forraskod_serulekenyseg_elemzes.git
-```
-
-vagy Download ZIP
-```
-├───.idea
-│   └───libraries
-├───.vscode
-│   └───.ropeproject
-└───machine_learning_app
-    ├───.idea
-    ├───.settings
-    ├───src
-    │   └───main
-    │       ├───java
-    │       │   └───org
-    │       │       └───example
-    │       └───resources
-    │           ├───css
-    │           └───org
-    │               └───example
-    ├───tanulo_adatok
-    │   └───AST
-    └───target
-```
 ### Futtatás:
 1. 
 ```sh
