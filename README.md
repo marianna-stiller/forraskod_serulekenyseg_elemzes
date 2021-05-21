@@ -1,6 +1,8 @@
 # SQL Injection detektálás természetes nyelvi feldolgozó rendszerek és gépi tanulás által
 Gépi tanuló algoritmusok és természetes nyelvi feldolgozó rendszerek alkalmazásával tanított program képes detektálni SQL injection típusú sérülékenységet.
 
+> :warning: A program csak Linux és Windows operációs rendszerekre van konfigurálva!
+
 Kulcsszavak: `felügyelt tanulás`, `train/test készlet`, `K-Fold`, `confusion matrix`, `recall`.
 
 ### Előfeltételek:
