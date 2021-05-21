@@ -63,12 +63,13 @@ public class PrimaryController implements Initializable {
     public int pc3;
     public Process p4;
 
-    public boolean isWindows() {
+    public String op() {
         if(System.getProperty("os.name").toLowerCase().startsWith("windows")){
-            return true; // windows
-        } else {
-            return false; // linux
+            return "windows"; // windows
+        } else if(System.getProperty("os.name").toLowerCase().startsWith("windows")) {
+            return "linux"; // linux
         }
+        return "A(z) "+System.getProperty("os.name")+" operációs rendszer nem támogatott";
     }
 
     @Override
@@ -80,17 +81,19 @@ public class PrimaryController implements Initializable {
         try {
             p1 = Runtime.getRuntime().exec("node parser.js");
             pc1 = p1.waitFor();
-            if(isWindows()) {
+            if(op()=="windows") {
                 p2 = Runtime.getRuntime().exec("py tokenizer.py");
                 pc2 = p2.waitFor();
                 p3 = Runtime.getRuntime().exec("py vectorizer.py");
                 pc3 = p3.waitFor();
-            } else {
+            } else if(op()=="linux"){
                 p2 = Runtime.getRuntime().exec("python3 tokenizer.py");
                 pc2 = p2.waitFor();
                 p3 = Runtime.getRuntime().exec("python3 vectorizer.py");
                 pc3 = p3.waitFor();
-            }            
+            } else {
+                System.out.println(op());
+            }
             if(pc1!=0 || pc2!=0 || pc3!=0) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setHeaderText("A megadott kóddal valami probléma van!");
@@ -98,10 +101,12 @@ public class PrimaryController implements Initializable {
                 alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
                 alert.showAndWait();
             } else {
-                if(isWindows()) {
+                if(op()=="windows") {
                     p4 = Runtime.getRuntime().exec("py trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
-                } else {
+                } else if(op()=="linux"){
                     p4 = Runtime.getRuntime().exec("python3 trainer.py -x testX.npy -y testy.npy -z toimportX.npy");
+                } else {
+                    System.out.println(op());
                 }
                 InputStream is = p4.getInputStream();
                 InputStreamReader isr = new InputStreamReader(is);
